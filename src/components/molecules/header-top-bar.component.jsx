@@ -1,32 +1,31 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import { HeaderTopBarContainer, WrapIcon, TextCenter, TopBarRight } from './header-top-bar.styles';
+
 function HeaderTopBar(props) {
   return (
-    <div>
-      <div>
-        {/* <FontAwesomeIcon icon={faUser} /> */}
-        <ion-icon name='person-outline'></ion-icon>
+    <HeaderTopBarContainer>
+      <WrapIcon>
+        <ion-icon name="person-outline"></ion-icon>
         <span>Tài Khoản</span>
-      </div>
+      </WrapIcon>
 
-      <div>
-        <p>Đảm bảo 100% sự hài lòng</p>
-      </div>
+      <TextCenter>Đảm bảo 100% sự hài lòng</TextCenter>
 
-      <div>
-        <div>
-          {/* <FontAwesomeIcon icon={faSearch} /> */}
+      <TopBarRight>
+        <WrapIcon>
+          <ion-icon name="search-outline"></ion-icon>
           <span>Tìm kiếm</span>
-        </div>
+        </WrapIcon>
 
-        <div>
-          {/* <FontAwesomeIcon icon={faSearch} /> */}
+        <WrapIcon>
+          <ion-icon name="cart-outline"></ion-icon>
           <span>Giỏ hàng</span>
           <span>(1)</span>
-        </div>
-      </div>
-    </div>
+        </WrapIcon>
+      </TopBarRight>
+    </HeaderTopBarContainer>
   );
 }
 

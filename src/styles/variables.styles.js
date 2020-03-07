@@ -7,7 +7,8 @@ export const curves = {
 };
 
 export const fw = {
-  thin: 400,
+  thin: 300,
+  light: 400,
   normal: 500,
   semiBold: 600,
   bold: 700,

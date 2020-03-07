@@ -5,8 +5,8 @@ import { ThemeProvider } from 'styled-components';
 
 import GlobalStyle from './styles/_global.styles';
 import styles from './styles/theme.styles';
+import colors from './styles/colors.styles';
 import * as animations from './styles/animations.styles';
-import * as colors from './styles/colors.styles';
 import * as mixins from './styles/mixins.styles';
 import * as variables from './styles/variables.styles';
 

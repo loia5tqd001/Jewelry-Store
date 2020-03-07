@@ -46,6 +46,12 @@ export const absoluteCenter = `
   transform: translate(-50%, -50%);
 `;
 
+export const flexCenter = `
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
 /**
  * @param {*} width
  * @param {*} height

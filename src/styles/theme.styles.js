@@ -7,7 +7,17 @@ export default {
   cardPadding: '1.25rem 1.5rem',
   pageContainerWidth: '99rem',
 
+
   fontPrimary: '"Montserrat", sans-serif',
   colorText: colors.greyDark1,
   background: colors.white,
+
+  colorPrimary: colors.blue,
+  colorPrimaryDarker1: colors.blueDarker1,
+  colorPrimaryDarker2: colors.blueDarker2,
+  colorPrimaryDarker3: colors.blueDarker3,
+
+  transNormal: '.2s',
+  transSlow1: '.3s',
+  transFast1: '.15s',
 };
