@@ -4,13 +4,16 @@ export const SubNavList = styled.ul`
   text-transform: initial;
   color: initial;
   font-weight: ${(props) => props.theme.fw.thin};
+  background: ${(props) => props.theme.styles.background};
 
   transition: ${(props) => props.theme.styles.transSlow1};
   transform: scaleY(0);
   transform-origin: top;
 
   position: absolute;
+  z-index: 999;
   top: 100%;
+  left: 0;
   width: max-content;
   border: 1px solid ${(props) => props.theme.colors.greyLight1};
   border-top: 0.2rem solid ${(props) => props.theme.colors.greyDark2};
@@ -47,7 +50,8 @@ export const MainNavItem = styled.li`
   text-transform: uppercase;
   transition: ${(props) => props.theme.styles.transNormal};
   position: relative;
-  padding: 1rem 1.5rem;
+  padding: 1.5rem;
+  margin-top: -1.5rem;
 
   &:hover {
     &,
