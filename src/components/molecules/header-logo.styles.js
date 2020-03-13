@@ -8,4 +8,5 @@ export const LogoHeading = styled.h1`
   color: ${(props) => props.theme.styles.colorPrimaryDarker1};
   text-align: center;
   font-size: 4.2rem;
+  letter-spacing: .2rem;
 `;

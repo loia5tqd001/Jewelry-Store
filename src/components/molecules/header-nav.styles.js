@@ -23,14 +23,10 @@ export const SubNavList = styled.ul`
 
 export const SubNavItem = styled.li`
   padding: 0.5rem 2rem;
-  transition: ${(props) => props.theme.styles.transFast1};
+  ${(props) => props.theme.mixins.hoverColorPrimary};
 
   &:not(:last-child) {
     border-bottom: 1px solid ${(props) => props.theme.colors.greyLight1};
-  }
-
-  &:hover {
-    color: ${(props) => props.theme.styles.colorPrimaryDarker3};
   }
 `;
 
@@ -48,22 +44,18 @@ export const MainNavList = styled.ul`
 
 export const MainNavItem = styled.li`
   text-transform: uppercase;
-  transition: ${(props) => props.theme.styles.transNormal};
   position: relative;
   padding: 1.5rem;
   margin-top: -1.5rem;
+  ${(props) => props.theme.mixins.hoverColorPrimary};
 
   &:hover {
-    &,
-    ion-icon {
-      color: ${(props) => props.theme.styles.colorPrimaryDarker1};
-    }
-
     ${SubNavList} {
       transform: scaleY(1);
     }
 
     ion-icon {
+      color: ${(props) => props.theme.styles.colorPrimaryDarker1};
       transform: rotate(180deg);
     }
   }

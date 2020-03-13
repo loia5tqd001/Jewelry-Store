@@ -1,3 +1,5 @@
+import { css } from 'styled-components';
+
 const pxToEm = (pixel) => pixel / 16;
 
 /**
@@ -39,23 +41,39 @@ export const applyScale = (scaleStatement) => `
  * ${absoluteCenter}
  *
  */
-export const absoluteCenter = `
+export const absoluteCenter = css`
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
 `;
 
-export const flexCenter = `
+export const flexCenter = css`
   display: flex;
   justify-content: center;
   align-items: center;
 `;
 
-export const imageFrame = `
+export const imageFrame = css`
   img {  
     display: block;
     width: 100%;
     height: 100%;
+  }
+`;
+
+// https://stackoverflow.com/q/486563/9787887
+export const ellipsisTextOverflow = css`
+  text-overflow: ellipsis;
+  overflow: hidden; 
+  white-space: nowrap;
+`;
+
+export const hoverColorPrimary = css`
+  transition: ${(props) => props.theme.styles.transNormal};
+  cursor: pointer;
+
+  &:hover {
+    color: ${(props) => props.theme.styles.colorPrimaryDarker3};
   }
 `;
