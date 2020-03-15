@@ -20,7 +20,7 @@ export default {
   black: '#000000',
   greyDark1: '#252a2b',
   greyDark2: '#5c5c5c',
-  greyLight1: '#eee',
+  greyLight1: '#eeeeee',
   blue: '#b5e2ef',
   blueDarker1: '#90cdde',
   blueDarker2: '#67c1d9',

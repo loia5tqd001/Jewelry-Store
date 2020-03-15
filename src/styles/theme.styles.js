@@ -21,4 +21,5 @@ export default {
   transFast1: '.15s',
 
   shadowSuttle1: '.1rem .1rem .4rem #8881',
+  shadowSuttle2: '0 .2rem 1rem #6664',
 };

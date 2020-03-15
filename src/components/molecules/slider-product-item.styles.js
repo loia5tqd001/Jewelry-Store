@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+export const SliderItem = styled.div`
+  padding: 1rem;
+`;
+
 export const SaleLabel = styled.span`
   display: block;
   position: absolute;
@@ -41,5 +45,5 @@ export const ProPrice = styled.span`
 export const ComparePrice = styled.span`
   text-decoration: line-through;
   margin-left: 1rem;
-  opacity: .6;
+  opacity: 0.6;
 `;
