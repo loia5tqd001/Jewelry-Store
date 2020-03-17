@@ -15,6 +15,7 @@ export const ActionContainer = styled.div`
   left: 1.5rem;
   bottom: 1.5rem;
   padding: 1rem 2rem;
+  text-transform: uppercase;
 `;
 
 export const Title = styled.h3`
@@ -33,7 +34,6 @@ export const ButtonTitle = styled.p`
 `;
 
 export const Container = styled.div`
-  padding: 0.5rem;
   position: relative;
 
   &:hover {

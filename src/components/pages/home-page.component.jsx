@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import HomePageSlick from '../molecules/home-page-slick.component';
 import SliderNewProducts from '../organisms/slider-new-products.component';
 import SectionBrands from '../organisms/section-brands.component';
+import SectionBanner from '../organisms/section-banner.component';
 
 function HomePage(props) {
   return (
@@ -11,6 +12,7 @@ function HomePage(props) {
       <HomePageSlick></HomePageSlick>
       <SectionBrands></SectionBrands>
       <SliderNewProducts></SliderNewProducts>
+      <SectionBanner></SectionBanner>
     </div>
   );
 }
