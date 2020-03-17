@@ -6,6 +6,7 @@ import SliderNewProducts from '../organisms/slider-new-products.component';
 import SectionBrands from '../organisms/section-brands.component';
 import SectionBanner from '../organisms/section-banner.component';
 import SectionHotProducts from '../organisms/section-hot-products.component';
+import SectionPreviewArticles from '../organisms/section-preview-articles.component';
 
 function HomePage(props) {
   return (
@@ -15,6 +16,7 @@ function HomePage(props) {
       <SliderNewProducts></SliderNewProducts>
       <SectionBanner></SectionBanner>
       <SectionHotProducts></SectionHotProducts>
+      <SectionPreviewArticles></SectionPreviewArticles>
     </div>
   );
 }
