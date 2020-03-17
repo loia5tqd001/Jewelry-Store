@@ -33,7 +33,7 @@ export default createGlobalStyle`
     text-decoration: none;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1, h2 {
     text-align: center;
   }
   h1 {
@@ -46,6 +46,6 @@ export default createGlobalStyle`
     margin: 5rem auto;
   }
   h3 {
-
+    letter-spacing: .1rem;
   }
 `;

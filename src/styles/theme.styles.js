@@ -18,6 +18,7 @@ export default {
 
   transNormal: '.2s',
   transSlow1: '.3s',
+  transSlow2: '1.1s',
   transFast1: '.15s',
 
   shadowSuttle1: '.1rem .1rem .4rem #8881',
