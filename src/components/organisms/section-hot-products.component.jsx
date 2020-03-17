@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 
 import SliderProductItem from '../molecules/slider-product-item.component';
 
-import { Link, ProductsContainer } from './section-hot-products.styles';
+import { SectionContainer, Link, ProductsContainer } from './section-hot-products.styles';
 import DATA from './section-hot-products.data'
 
 function SectionHotProducts(props) {
   return (
-    <div>
+    <SectionContainer>
       <h2>
         <Link>Sản phẩm bán chạy</Link>
       </h2>
@@ -17,7 +17,7 @@ function SectionHotProducts(props) {
           <SliderProductItem key={i} {...item} />
         ))}
       </ProductsContainer>
-    </div>
+    </SectionContainer>
   );
 }
 

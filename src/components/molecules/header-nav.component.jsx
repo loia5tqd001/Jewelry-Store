@@ -20,6 +20,34 @@ function HeaderNav(props) {
 
         <MainNavItem>
           <MainNavLink>
+            Nhãn hiệu
+            <ion-icon name="chevron-down-outline"></ion-icon>
+          </MainNavLink>
+
+          <SubNavList>
+            <SubNavItem>
+              <span>D'ORO</span>
+            </SubNavItem>
+            <SubNavItem>
+              <span>PAVE CLASSICA</span>
+            </SubNavItem>
+            <SubNavItem>
+              <span>TRIO</span>
+            </SubNavItem>
+            <SubNavItem>
+              <span>PAVE ROSE</span>
+            </SubNavItem>
+            <SubNavItem>
+              <span>BOUQUET</span>
+            </SubNavItem>
+            <SubNavItem>
+              <span>DUO</span>
+            </SubNavItem>
+          </SubNavList>
+        </MainNavItem>
+
+        <MainNavItem>
+          <MainNavLink>
             Sản phẩm
             <ion-icon name="chevron-down-outline"></ion-icon>
           </MainNavLink>
