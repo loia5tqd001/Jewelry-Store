@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const SliderItem = styled.div`
+  width: 100%;
   padding: 1rem;
 `;
 
@@ -22,6 +23,7 @@ export const ProductImage = styled.div`
 `;
 
 export const ProductDetail = styled.div`
+  text-align: center;
   padding: 2rem 5rem;
 `;
 
@@ -32,7 +34,6 @@ export const ProductName = styled.h3`
 `;
 
 export const ProductPrice = styled.p`
-  text-align: center;
   font-weight: ${(props) => props.theme.fw.thin};
   letter-spacing: 0.1rem;
 `;

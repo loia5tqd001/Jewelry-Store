@@ -19,7 +19,6 @@ export const ImageOnHover = styled.img`
 
 export const ImageContainer = styled.div`
   ${(props) => props.theme.mixins.imageFrame};
-
   position: relative;
 
   &:hover {

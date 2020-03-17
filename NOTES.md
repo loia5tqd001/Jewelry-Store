@@ -1,9 +1,8 @@
 ### Setting eslint and Prettier
 
-> If you want to enforce a coding style for your project, consider using *Prettier* instead of *ESLint* style rules.
+> If you want to enforce a coding style for your project, consider using _Prettier_ instead of _ESLint_ style rules.
 
 - Source: https://create-react-app.dev/docs/setting-up-your-editor/#displaying-lint-output-in-the-editor
-
 
 ### React slick
 
@@ -16,4 +15,39 @@
 - 100% free, better than Fontawesome (IMO)
 - Included the cdn link in `index.html`
 - Get the more updated link (than the one in the documentation) from the console window:
-![](./.github/images/ionicon-warning.png)
+  ![](./.github/images/ionicon-warning.png)
+
+### Scrape
+
+- Crawl product list
+```js
+// Sản phẩm mới
+a = Array.from(document.querySelectorAll('.wrapper-collection-2 .product-block'))
+// Sản phẩm bán chạy
+a = Array.from(document.querySelectorAll('.wrapper-collection-2 .product-block'))
+
+b = a.map((x) => {
+  const productName = x.querySelector('h3.pro-name a').title;
+  const price = x.querySelector('.pro-price');
+  let originalPrice = 0;
+  if (price.classList.contains('highlight')) {
+    originalPrice = price.querySelector('.pro-price-del').innerText;
+  } else {
+    originalPrice = price.innerText;
+  }
+  originalPrice = +originalPrice.replace(/,|₫/g, '');
+  const sale = x.querySelector('.product-sale span');
+  const productSale = sale ? +sale.innerText.replace(/-|%/g, '') : null;
+  const pictures = x.querySelectorAll('picture');
+  const srcImage = pictures[0].children[1].srcset.slice(2);
+  const srcOnHover = pictures[1].children[1].srcset.slice(2);
+
+  return {
+    productName,
+    srcImage,
+    srcOnHover,
+    originalPrice,
+    productSale,
+  };
+});
+```

@@ -5,58 +5,7 @@ import Slider from 'react-slick';
 import SliderProductItem from '../molecules/slider-product-item.component';
 
 import { Link, SliderArrow } from './slider-new-products.styles';
-
-const DATA = [
-  {
-    productName: 'Yellow Gold Multi Sapphire & Diamond Ring',
-    srcImage: 'http://product.hstatic.net/1000327411/product/sp07-2_grande.jpg',
-    srcOnHover: 'http://product.hstatic.net/1000327411/product/sp07-1_grande.jpg',
-    originalPrice: 1500000,
-    productSale: 13,
-  },
-  {
-    productName: 'Yellow Gold Multi Sapphire & Diamond Ring',
-    srcImage: 'http://product.hstatic.net/1000327411/product/sp07-2_grande.jpg',
-    srcOnHover: 'http://product.hstatic.net/1000327411/product/sp07-1_grande.jpg',
-    originalPrice: 1200000,
-    productSale: 13,
-  },
-  {
-    productName: 'Yellow Gold Multi Sapphire & Diamond Ring',
-    srcImage: 'http://product.hstatic.net/1000327411/product/sp07-2_grande.jpg',
-    srcOnHover: 'http://product.hstatic.net/1000327411/product/sp07-1_grande.jpg',
-    originalPrice: 1400000,
-    productSale: 13,
-  },
-  {
-    productName: 'Yellow Gold Multi Sapphire & Diamond Ring',
-    srcImage: 'http://product.hstatic.net/1000327411/product/sp07-2_grande.jpg',
-    srcOnHover: 'http://product.hstatic.net/1000327411/product/sp07-1_grande.jpg',
-    originalPrice: 1500000,
-    productSale: 6,
-  },
-  {
-    productName: 'Yellow Gold Multi Sapphire & Diamond Ring',
-    srcImage: 'http://product.hstatic.net/1000327411/product/sp07-2_grande.jpg',
-    srcOnHover: 'http://product.hstatic.net/1000327411/product/sp07-1_grande.jpg',
-    originalPrice: 1300000,
-    productSale: null,
-  },
-  {
-    productName: 'Yellow Gold Multi Sapphire & Diamond Ring',
-    srcImage: 'http://product.hstatic.net/1000327411/product/sp07-2_grande.jpg',
-    srcOnHover: 'http://product.hstatic.net/1000327411/product/sp07-1_grande.jpg',
-    originalPrice: 1500000,
-    productSale: null,
-  },
-  {
-    productName: 'Yellow Gold Multi Sapphire & Diamond Ring',
-    srcImage: 'http://product.hstatic.net/1000327411/product/sp07-2_grande.jpg',
-    srcOnHover: 'http://product.hstatic.net/1000327411/product/sp07-1_grande.jpg',
-    originalPrice: 1400000,
-    productSale: 40,
-  },
-];
+import DATA from './slider-new-products.data';
 
 const sliderSettings = {
   prevArrow: <SliderArrow data-anchor="left" />,
