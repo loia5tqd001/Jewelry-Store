@@ -7,6 +7,7 @@ import SectionBrands from '../organisms/section-brands.component';
 import SectionBanner from '../organisms/section-banner.component';
 import SectionHotProducts from '../organisms/section-hot-products.component';
 import SectionPreviewArticles from '../organisms/section-preview-articles.component';
+import SectionAboutUs from '../organisms/section-about-us.component';
 
 function HomePage(props) {
   return (
@@ -17,6 +18,7 @@ function HomePage(props) {
       <SectionBanner></SectionBanner>
       <SectionHotProducts></SectionHotProducts>
       <SectionPreviewArticles></SectionPreviewArticles>
+      <SectionAboutUs></SectionAboutUs>
     </div>
   );
 }
