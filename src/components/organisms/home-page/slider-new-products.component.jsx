@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Slider from 'react-slick';
 
-import SliderProductItem from '../molecules/slider-product-item.component';
+import SliderProductItem from '../../molecules/slider-product-item.component';
 
 import { Link, SliderArrow } from './slider-new-products.styles';
 import DATA from './slider-new-products.data';

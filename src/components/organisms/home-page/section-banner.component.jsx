@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import ImageSlowlyHover from '../atoms/image-slowly-hover.component';
+import ImageSlowlyHover from '../../atoms/image-slowly-hover.component';
 
 import { BannerContainer } from './section-banner.styles';
 import DATA from './section-banner.data';

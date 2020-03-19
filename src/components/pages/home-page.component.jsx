@@ -1,13 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import HomePageSlick from '../molecules/home-page-slick.component';
-import SliderNewProducts from '../organisms/slider-new-products.component';
-import SectionBrands from '../organisms/section-brands.component';
-import SectionBanner from '../organisms/section-banner.component';
-import SectionHotProducts from '../organisms/section-hot-products.component';
-import SectionPreviewArticles from '../organisms/section-preview-articles.component';
-import SectionAboutUs from '../organisms/section-about-us.component';
+import HomePageSlick from '../organisms/home-page/home-page-slick.component';
+import SliderNewProducts from '../organisms/home-page/slider-new-products.component';
+import SectionBrands from '../organisms/home-page/section-brands.component';
+import SectionBanner from '../organisms/home-page/section-banner.component';
+import SectionHotProducts from '../organisms/home-page/section-hot-products.component';
+import SectionPreviewArticles from '../organisms/home-page/section-preview-articles.component';
+import SectionAboutUs from '../organisms/home-page/section-about-us.component';
+import SectionGallery from '../organisms/home-page/section-gallery.component';
 
 function HomePage(props) {
   return (
@@ -19,6 +20,7 @@ function HomePage(props) {
       <SectionHotProducts></SectionHotProducts>
       <SectionPreviewArticles></SectionPreviewArticles>
       <SectionAboutUs></SectionAboutUs>
+      <SectionGallery></SectionGallery>
     </div>
   );
 }

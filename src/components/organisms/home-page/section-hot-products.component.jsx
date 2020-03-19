@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import SliderProductItem from '../molecules/slider-product-item.component';
+import SliderProductItem from '../../molecules/slider-product-item.component';
 
 import { SectionContainer, Link, ProductsContainer } from './section-hot-products.styles';
 import DATA from './section-hot-products.data'

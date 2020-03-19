@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import ArticlePreview from '../molecules/article-preview.component';
+import ArticlePreview from '../../molecules/article-preview.component';
 
 import { SectionContainer, Link, ArticlesContainer } from './section-preview-articles.styles';
 import DATA from './section-preview-articles.data';

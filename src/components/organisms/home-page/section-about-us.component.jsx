@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import { SectionContainer, Left, Heading, Right } from './section-about-us.styles';
 
-import ButtonSliding from '../atoms/button-sliding.component';
+import ButtonSliding from '../../atoms/button-sliding.component';
 
 function SectionAboutUs(props) {
   return (

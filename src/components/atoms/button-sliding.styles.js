@@ -10,7 +10,7 @@ export const Button = styled.button`
 
   border: 1px solid ${(props) => props.bgStatic};
 
-  transition: ${(props) => props.theme.styles.transSlow3};
+  transition: ${(props) => props.theme.styles.transSlow4};
   background: linear-gradient(
     to right,
     ${(props) => props.bgSliding} 0%,
@@ -24,7 +24,7 @@ export const Button = styled.button`
   &:hover {
     background-position-x: 0%;
     color: ${(props) => props.fgSliding};
-    transition: ${(props) => props.theme.styles.transSlow1};
+    transition: ${(props) => props.theme.styles.transSlow5};
   }
 
   box-shadow: -1px -1px 0 0 ${(props) => props.bgStatic};

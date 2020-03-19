@@ -21,6 +21,8 @@ export default {
   transSlow1: '0.3s',
   transSlow2: '1.1s',
   transSlow3: '0.7s',
+  transSlow4: '0.4s',
+  transSlow5: '0.5s',
   transFast1: '0.15s',
 
   shadowSuttle1: '.1rem .1rem .4rem #8881',
