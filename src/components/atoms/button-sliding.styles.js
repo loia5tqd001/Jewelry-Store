@@ -7,7 +7,7 @@ export const Button = styled.button`
   border-radius: 0;
   cursor: pointer;
   outline: none;
-
+  color: ${(props) => props.fgStatic};
   border: 1px solid ${(props) => props.bgStatic};
 
   transition: ${(props) => props.theme.styles.transSlow4};
@@ -27,7 +27,6 @@ export const Button = styled.button`
     transition: ${(props) => props.theme.styles.transSlow5};
   }
 
-  box-shadow: -1px -1px 0 0 ${(props) => props.bgStatic};
   position: relative;
   &::before,
   &::after {
