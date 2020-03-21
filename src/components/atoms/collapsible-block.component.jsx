@@ -11,9 +11,17 @@ function CollapsibleBlock({ color, heading, children }) {
 
   const [isFolded, setIsFolded] = useState(false);
   const contentRef = useRef(null);
+  const isInitialMount = useRef(true);
 
   useEffect(() => {
-    contentRef.current.style.height = isFolded ? '0px' : `${contentRef.current.scrollHeight + 1}px`;
+    if (!isInitialMount.current) {
+      contentRef.current.style.height = isFolded
+        ? '0px'
+        : `${contentRef.current.scrollHeight + 1}px`;
+    }
+
+    isInitialMount.current = false;
+    
     // NOTE 1:
     // we must set height to 'px' unit to make the content animated,
     // units like 'max-content', '%' are "vague" units, won't be animatable
@@ -21,6 +29,12 @@ function CollapsibleBlock({ color, heading, children }) {
     // NOTE 2:
     // We need + 1 px like above, because sometimes it'd lack 1px
     // Look at .github/images/border-stripped.jpg to see the captured image
+
+    // NOTE 3:
+    // React hooks useEffect only on updated, not mounted:
+    // https://stackoverflow.com/a/55075818/9787887
+    // See the problem if call effect onMounted in .github/images/collapsed-fanpage.png
+    // due to the FacebookPagePlugin load slower than my page
   }, [contentRef, isFolded]);
 
   return (

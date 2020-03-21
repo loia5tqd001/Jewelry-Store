@@ -9,6 +9,7 @@ import SectionHotProducts from '../organisms/home-page/section-hot-products.comp
 import SectionPreviewArticles from '../organisms/home-page/section-preview-articles.component';
 import SectionAboutUs from '../organisms/home-page/section-about-us.component';
 import SectionGallery from '../organisms/home-page/section-gallery.component';
+import Footer from '../templates/footer.component';
 
 function HomePage(props) {
   return (
@@ -21,6 +22,7 @@ function HomePage(props) {
       <SectionPreviewArticles></SectionPreviewArticles>
       <SectionAboutUs></SectionAboutUs>
       <SectionGallery></SectionGallery>
+      <Footer></Footer>
     </div>
   );
 }
