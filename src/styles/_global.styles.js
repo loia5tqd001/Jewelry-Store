@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import media from './media.styles';
 
 export default createGlobalStyle`
   *,
@@ -12,7 +13,11 @@ export default createGlobalStyle`
   html {
     box-sizing: border-box;
     scroll-behavior: smooth;
-    font-size: 62.5%; /* 1rem -> 10px: In Big Desktop (1920+) */
+    font-size: 62.5%; /* 1rem -> 10px */
+
+    ${media.lessThan('huge')` font-size: 56.25%; `} /* 9px */
+    ${media.lessThan('medium')` font-size: 53.125%; `} /* 8.5px */
+    ${media.lessThan('small')` font-size: 50%; `} /* 8px */
   }
 
   body {

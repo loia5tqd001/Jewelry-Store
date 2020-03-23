@@ -5,6 +5,7 @@ import { ThemeProvider } from 'styled-components';
 
 import GlobalStyle from './styles/_global.styles';
 import styles from './styles/theme.styles';
+import media from './styles/media.styles';
 import colors from './styles/colors.styles';
 import * as animations from './styles/animations.styles';
 import * as mixins from './styles/mixins.styles';
@@ -21,7 +22,7 @@ ReactDOM.render(
   // props => props.theme.colors.white
   // props => props.theme.animations.pulse
   // props => props.theme.mixins.imageFrame
-  <ThemeProvider theme={{ ...variables, styles, colors, animations, mixins }}>
+  <ThemeProvider theme={{ ...variables, styles, media, colors, animations, mixins }}>
     <GlobalStyle />
     <App />
   </ThemeProvider>,

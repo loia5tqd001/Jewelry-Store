@@ -1,27 +1,8 @@
 import { css } from 'styled-components';
 
-const pxToEm = (pixel) => pixel / 16;
-
-/**
- * @param {*} sizeInPixel
- * @param {*} type
- * @param {*} content
- *
- * Usage:
- *
- * ${media(1920, 'min-width')} {
- *    font-size: 18px;
- *  }
- *
- * !!! Only for desktop first approach
- */
-export const media = (sizeInPixel, type = 'max-width') =>
-  `@media only screen and (${type}: (${pxToEm(sizeInPixel)}em))`;
-
-
-// mitigate blurried text when applying scaling transform: 
+// mitigate blurried text when applying scaling transform:
 // https://github.com/NearHuscarl/nearacademy/blob/12dad8a0b8ad3daf374fbd3deaff024b3209f261/src/styles.js#L66-L73
-export const applyScale = (scaleStatement) =>`
+export const applyScale = (scaleStatement) => `
   backface-visibility: hidden;
   transform: translateZ(0);
   -webkit-font-smoothing: subpixel-antialiased;
@@ -42,7 +23,7 @@ export const flexCenter = css`
 `;
 
 export const imageFrame = css`
-  img {  
+  img {
     display: block;
     width: 100%;
     height: 100%;
@@ -52,7 +33,7 @@ export const imageFrame = css`
 // https://stackoverflow.com/q/486563/9787887
 export const ellipsisTextOverflow = css`
   text-overflow: ellipsis;
-  overflow: hidden; 
+  overflow: hidden;
   white-space: nowrap;
 `;
 
