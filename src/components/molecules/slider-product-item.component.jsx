@@ -1,10 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import routes, { Link } from '../../routes';
+
+import StyledLink from '../atoms/styled-link.component';
+import ImageDuoHover from '../atoms/image-duo-hover.component';
 
 import { formatVnd, roundVnd } from '../../utils';
 import { getSale } from './slider-product-item.utils';
-
-import ImageDuoHover from '../atoms/image-duo-hover.component';
 
 import {
   SliderItem,
@@ -17,16 +19,29 @@ import {
   ComparePrice,
 } from './slider-product-item.styles';
 
-function SliderProductItem({ productName, srcImage, srcOnHover, originalPrice, productSale }) {
+function SliderProductItem({
+  productId,
+  productName,
+  srcImage,
+  srcOnHover,
+  originalPrice,
+  productSale,
+}) {
+  const to = `${routes.products.path}/${productId}`;
+
   return (
     <SliderItem>
       <ProductImage title={productName}>
-        {productSale ? <SaleLabel>{`-${productSale}%`}</SaleLabel> : ''}
-        <ImageDuoHover srcImage={srcImage} srcOnHover={srcOnHover} alt={productName} />
+        <Link to={to}>
+          {productSale ? <SaleLabel>{`-${productSale}%`}</SaleLabel> : ''}
+          <ImageDuoHover srcImage={srcImage} srcOnHover={srcOnHover} alt={productName} />
+        </Link>
       </ProductImage>
 
       <ProductDetail>
-        <ProductName title={productName}>{productName}</ProductName>
+        <ProductName title={productName}>
+          <StyledLink to={to}>{productName}</StyledLink>
+        </ProductName>
         <ProductPrice>
           {productSale ? (
             <>
@@ -43,11 +58,16 @@ function SliderProductItem({ productName, srcImage, srcOnHover, originalPrice, p
 }
 
 SliderProductItem.propTypes = {
+  productId: PropTypes.oneOfType([PropTypes.string.isRequired, PropTypes.number.isRequired]),
   productName: PropTypes.string.isRequired,
   srcImage: PropTypes.string.isRequired,
   srcOnHover: PropTypes.string.isRequired,
   originalPrice: PropTypes.number.isRequired,
   productSale: PropTypes.number,
+};
+
+SliderProductItem.propTypes = {
+  productSale: 0,
 };
 
 export default SliderProductItem;

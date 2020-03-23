@@ -17,7 +17,6 @@ export const Paragraph = styled.p`
 `;
 
 export const Title = styled.h3`
-  ${(props) => props.theme.mixins.hoverColorPrimary};
   ${(props) => props.theme.mixins.ellipsisTextOverflow};
   font-size: 1.3em;
 

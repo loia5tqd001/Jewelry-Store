@@ -1,6 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Slider from 'react-slick';
+import routes, { Link } from '../../../routes';
 
 import { SliderItem, SliderDots } from './home-page-slick.styles';
 import DATA from './home-page-slick.data';
@@ -17,18 +17,21 @@ const slickSettings = {
   ),
 };
 
-function HomePageSlick(props) {
+function HomePageSlick() {
   return (
     <Slider {...slickSettings}>
       {DATA.map((item) => (
-        <SliderItem key={item.src}>
+        <SliderItem
+          as={Link}
+          to={`${routes.collections.path}/${item.id}`}
+          title={item.alt}
+          key={item.id}
+        >
           <img src={item.src} alt={item.alt} />
         </SliderItem>
       ))}
     </Slider>
   );
 }
-
-HomePageSlick.propTypes = {};
 
 export default HomePageSlick;

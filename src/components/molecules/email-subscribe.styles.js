@@ -19,3 +19,7 @@ export const Button = styled(ButtonSliding)`
   top: 50%;
   transform: translateY(-50%);
 `;
+
+export const Sentence = styled.p`
+  margin-top: 0.5rem;
+`;

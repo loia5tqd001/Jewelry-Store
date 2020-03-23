@@ -1,26 +1,24 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import DATA from './section-hot-products.data';
 
+import routes, { StyledLink } from '../../../routes';
 import SliderProductItem from '../../molecules/slider-product-item.component';
 
-import { SectionContainer, Link, ProductsContainer } from './section-hot-products.styles';
-import DATA from './section-hot-products.data'
+import { SectionContainer, ProductsContainer } from './section-hot-products.styles';
 
-function SectionHotProducts(props) {
+function SectionHotProducts() {
   return (
     <SectionContainer>
       <h2>
-        <Link>Sản phẩm bán chạy</Link>
+        <StyledLink to={routes.hotProducts.path}>Sản phẩm bán chạy</StyledLink>
       </h2>
       <ProductsContainer>
-        {DATA.map((item, i) => (
-          <SliderProductItem key={i} {...item} />
+        {DATA.map((item) => (
+          <SliderProductItem key={item.productId} {...item} />
         ))}
       </ProductsContainer>
     </SectionContainer>
   );
 }
-
-SectionHotProducts.propTypes = {};
 
 export default SectionHotProducts;

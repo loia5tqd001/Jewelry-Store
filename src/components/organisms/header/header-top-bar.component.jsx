@@ -1,34 +1,37 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import routes from '../../../routes';
 
-import { HeaderTopBarContainer, WrapIcon, TextCenter, TopBarRight } from './header-top-bar.styles';
+import {
+  HeaderTopBarContainer,
+  StyledLink,
+  TextCenter,
+  TopBarRight,
+} from './header-top-bar.styles';
 
 function HeaderTopBar(props) {
   return (
     <HeaderTopBarContainer>
-      <WrapIcon>
+      <StyledLink to={routes.account.path}>
         <ion-icon name="person-outline"></ion-icon>
         <span>Tài Khoản</span>
-      </WrapIcon>
+      </StyledLink>
 
       <TextCenter>Đảm bảo 100% sự hài lòng</TextCenter>
 
       <TopBarRight>
-        <WrapIcon>
+        <StyledLink to={routes.search.path}>
           <ion-icon name="search-outline"></ion-icon>
           <span>Tìm kiếm</span>
-        </WrapIcon>
+        </StyledLink>
 
-        <WrapIcon>
+        <StyledLink to={routes.cart.path}>
           <ion-icon name="cart-outline"></ion-icon>
           <span>Giỏ hàng</span>
           <span>(1)</span>
-        </WrapIcon>
+        </StyledLink>
       </TopBarRight>
     </HeaderTopBarContainer>
   );
 }
-
-HeaderTopBar.propTypes = {};
 
 export default HeaderTopBar;

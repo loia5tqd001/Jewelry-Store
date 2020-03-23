@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect, useContext } from 'react';
 import PropTypes from 'prop-types';
 import { ThemeContext } from 'styled-components';
 
-import { Container, Heading, Content } from './collapsible-block.styles';
+import { Heading, Content } from './collapsible-block.styles';
 
 // Animated Accordion in React: https://www.youtube.com/watch?v=MAD2HnUFjgg&lc=UgyBPbBQKFDTn4fF8ud4AaABAg
 
@@ -38,7 +38,7 @@ function CollapsibleBlock({ color, heading, children }) {
   }, [contentRef, isFolded]);
 
   return (
-    <Container>
+    <div>
       <Heading
         onClick={() => setIsFolded(!isFolded)}
         color={color || colors.greyLight2}
@@ -49,7 +49,7 @@ function CollapsibleBlock({ color, heading, children }) {
       </Heading>
 
       <Content ref={contentRef}>{children}</Content>
-    </Container>
+    </div>
   );
 }
 

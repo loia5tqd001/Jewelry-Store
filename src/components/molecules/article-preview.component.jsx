@@ -1,17 +1,30 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import routes, { Link, StyledLink } from '../../routes';
 
-import { Container, ImageContainer, ContentContainer, Title, Paragraph } from './article-preview.styles';
+import {
+  Container,
+  ImageContainer,
+  ContentContainer,
+  Title,
+  Paragraph,
+} from './article-preview.styles';
 
-function ArticlePreview({ srcImage, time, title, previewContent }) {
+function ArticlePreview({ articleId, srcImage, time, title, previewContent }) {
+  const to = `${routes.blog.path}/${articleId}`;
+
   return (
     <Container>
       <ImageContainer>
-        <img src={srcImage} alt={title} />
+        <Link to={to} title={title}>
+          <img src={srcImage} alt={title} />
+        </Link>
       </ImageContainer>
       <ContentContainer>
         <Paragraph>{time}</Paragraph>
-        <Title>{title}</Title>
+        <Title>
+          <StyledLink to={to}>{title}</StyledLink>
+        </Title>
         <Paragraph>{previewContent}</Paragraph>
       </ContentContainer>
     </Container>
@@ -19,6 +32,7 @@ function ArticlePreview({ srcImage, time, title, previewContent }) {
 }
 
 ArticlePreview.propTypes = {
+  articleId: PropTypes.oneOfType([PropTypes.string.isRequired, PropTypes.number.isRequired]),
   srcImage: PropTypes.string.isRequired,
   time: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,

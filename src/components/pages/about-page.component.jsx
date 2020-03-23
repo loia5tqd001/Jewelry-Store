@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 function AboutPage(props) {
   return (
@@ -8,7 +7,5 @@ function AboutPage(props) {
     </div>
   );
 }
-
-AboutPage.propTypes = {};
 
 export default AboutPage;

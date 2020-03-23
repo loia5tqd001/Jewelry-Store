@@ -29,7 +29,6 @@ export const ProductDetail = styled.div`
 export const ProductName = styled.h3`
   font-weight: ${(props) => props.theme.fw.normal};
   ${(props) => props.theme.mixins.ellipsisTextOverflow};
-  ${(props) => props.theme.mixins.hoverColorPrimary};
 `;
 
 export const ProductPrice = styled.p`

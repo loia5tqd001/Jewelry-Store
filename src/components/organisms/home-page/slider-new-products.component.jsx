@@ -1,11 +1,11 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Slider from 'react-slick';
+import DATA from './slider-new-products.data';
 
+import routes, { StyledLink } from '../../../routes';
 import SliderProductItem from '../../molecules/slider-product-item.component';
 
-import { Link, SliderArrow } from './slider-new-products.styles';
-import DATA from './slider-new-products.data';
+import { SliderArrow } from './slider-new-products.styles';
 
 const sliderSettings = {
   prevArrow: <SliderArrow data-anchor="left" />,
@@ -32,17 +32,15 @@ function SliderNewProducts(props) {
   return (
     <div>
       <h2>
-        <Link>Sản phẩm mới</Link>
+        <StyledLink to={routes.newProducts.path}>Sản phẩm mới</StyledLink>
       </h2>
       <Slider {...sliderSettings}>
-        {DATA.map((item, i) => (
-          <SliderProductItem key={i} {...item} />
+        {DATA.map((item) => (
+          <SliderProductItem key={item.productId} {...item} />
         ))}
       </Slider>
     </div>
   );
 }
-
-SliderNewProducts.propTypes = {};
 
 export default SliderNewProducts;

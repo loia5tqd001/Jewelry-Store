@@ -1,10 +1,9 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import DATA from './section-gallery.data';
 
 import GalleryItem from '../../atoms/gallery-item.component';
 
 import { SectionContainer } from './section-gallery.styles';
-import DATA from './section-gallery.data';
 
 function SectionGallery(props) {
   return (
@@ -15,7 +14,5 @@ function SectionGallery(props) {
     </SectionContainer>
   );
 }
-
-SectionGallery.propTypes = {};
 
 export default SectionGallery;

@@ -1,9 +1,5 @@
 import styled from 'styled-components';
 
-export const Link = styled.span`
-  ${(props) => props.theme.mixins.hoverColorPrimary};
-`;
-
 export const SliderArrow = styled.div`
   position: absolute;
   z-index: 999;

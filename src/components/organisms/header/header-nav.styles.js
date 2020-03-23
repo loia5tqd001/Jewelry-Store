@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import { NavLink } from 'react-router-dom';
+import StyledLink from '../../atoms/styled-link.component';
 
 export const SubNavList = styled.ul`
   text-transform: initial;
@@ -22,12 +24,14 @@ export const SubNavList = styled.ul`
 `;
 
 export const SubNavItem = styled.li`
-  padding: 0.5rem 2rem;
-  ${(props) => props.theme.mixins.hoverColorPrimary};
-
   &:not(:last-child) {
     border-bottom: 1px solid ${(props) => props.theme.colors.greyLight1};
   }
+`;
+
+export const SubNavLink = styled(StyledLink)`
+  display: block;
+  padding: 0.5rem 2rem;
 `;
 
 export const MainNav = styled.nav`
@@ -43,29 +47,31 @@ export const MainNavList = styled.ul`
 `;
 
 export const MainNavItem = styled.li`
-  text-transform: uppercase;
   position: relative;
-  padding: 1.5rem;
-  margin-top: -1.5rem;
-  ${(props) => props.theme.mixins.hoverColorPrimary};
 
-  &:hover {
-    ${SubNavList} {
-      transform: scaleY(1);
-    }
-
-    ion-icon {
-      color: ${(props) => props.theme.styles.colorPrimaryDarker1};
-      transform: rotate(180deg);
-    }
+  &:hover ${SubNavList} {
+    transform: scaleY(1);
   }
 `;
 
-export const MainNavLink = styled.span`
+export const MainNavLink = styled(NavLink)`
+  text-transform: uppercase;
+  padding: 1.5rem;
+  margin-top: -1.5rem;
   ${(props) => props.theme.mixins.flexCenter}
+  ${(props) => props.theme.mixins.hoverColorPrimary};
 
   ion-icon {
-    transition: ${(props) => props.theme.styles.transNormal};
+    transition: transform ${(props) => props.theme.styles.transNormal};
     margin: 0 0 0.2rem 0.5rem;
+  }
+
+  &:hover ion-icon {
+    color: ${(props) => props.theme.styles.colorPrimaryDarker1};
+    transform: rotate(180deg);
+  }
+
+  &.active {
+    color: ${(props) => props.theme.styles.colorPrimaryDarker3};
   }
 `;

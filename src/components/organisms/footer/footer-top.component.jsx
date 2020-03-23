@@ -1,29 +1,29 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+
+import routes, { StyledLink } from '../../../routes';
 
 import CollapsibleBlock from '../../atoms/collapsible-block.component';
-import StyledLink from '../../atoms/styled-link.component';
 import EmailSubscribe from '../../molecules/email-subscribe.component';
 
 import { FooterTopContainer, Li, SubscribeParagraph } from './footer-top.styles';
 
 const ListPolicy = () => (
   <ul>
-    <Li> <StyledLink>Tìm kiếm</StyledLink> </Li>
-    <Li> <StyledLink>Giới thiệu</StyledLink> </Li>
-    <Li> <StyledLink>Chính sách đổi trả</StyledLink> </Li>
-    <Li> <StyledLink>Chính sách bảo mật</StyledLink> </Li>
-    <Li> <StyledLink>Điều khoản dịch vụ</StyledLink> </Li>
+    <Li><StyledLink to={routes.search.path}>Tìm kiếm</StyledLink></Li>
+    <Li><StyledLink to={routes.about.path}>Giới thiệu</StyledLink></Li>
+    <Li><StyledLink to={routes.returnPolicy.path}>Chính sách đổi trả</StyledLink></Li>
+    <Li><StyledLink to={routes.privacyPolicy.path}>Chính sách bảo mật</StyledLink></Li>
+    <Li><StyledLink to={routes.termsOfService.path}>Điều khoản dịch vụ</StyledLink></Li>
   </ul>
 );
 
 const ListCategory = () => (
   <ul>
-    <Li> <StyledLink>Trang chủ</StyledLink> </Li>
-    <Li> <StyledLink>Nhãn hiệu</StyledLink> </Li>
-    <Li> <StyledLink>Sản phẩm</StyledLink> </Li>
-    <Li> <StyledLink>Blog</StyledLink> </Li>
-    <Li> <StyledLink>Giới thiệu</StyledLink> </Li>
+    <Li><StyledLink to={routes.home.path}>Trang chủ</StyledLink></Li>
+    <Li><StyledLink to="/">Nhãn hiệu</StyledLink></Li>
+    <Li><StyledLink to="/">Sản phẩm</StyledLink></Li>
+    <Li><StyledLink to={routes.blog.path}>Blog</StyledLink></Li>
+    <Li><StyledLink to={routes.about.path}>Giới thiệu</StyledLink></Li>
   </ul>
 );
 
@@ -69,7 +69,5 @@ function FooterTop(props) {
     </FooterTopContainer>
   );
 }
-
-FooterTop.propTypes = {};
 
 export default FooterTop;

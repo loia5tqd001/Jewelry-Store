@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const HeaderTopBarContainer = styled.div`
   display: grid;
@@ -14,7 +15,7 @@ export const TextCenter = styled.p`
   text-align: center;
 `;
 
-export const WrapIcon = styled.div`
+export const StyledLink = styled(Link)`
   display: flex;
   align-items: center;
 
@@ -27,7 +28,7 @@ export const TopBarRight = styled.div`
   justify-self: end;
   display: flex;
 
-  ${WrapIcon}:first-child {
+  ${StyledLink}:first-child {
     margin-right: 1.5rem;
   }
 `;

@@ -18,12 +18,13 @@ export const Button = styled.button`
     ${(props) => props.bgStatic} 50%,
     ${(props) => props.bgStatic} 100%
   );
+  ${(props) => props.disabled && `background: ${props.bgStatic}`};
   background-size: 200%;
   background-position-x: 100%;
 
   &:hover {
     background-position-x: 0%;
-    color: ${(props) => props.fgSliding};
+    color: ${(props) => !props.disabled && props.fgSliding};
     transition: ${(props) => props.theme.styles.transSlow5};
   }
 

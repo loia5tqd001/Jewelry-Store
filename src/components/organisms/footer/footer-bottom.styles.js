@@ -6,14 +6,6 @@ export const FooterBottomContainer = styled.div`
   margin-top: 3rem;
 `;
 
-export const Link = styled.a`
-  &:link,
-  &:visited {
-    color: ${(props) => props.theme.styles.colorText};
-  }
-  ${(props) => props.theme.mixins.hoverColorPrimary};
-`;
-
 export const IconRotate = styled.a`
   display: inline-block;
   width: 4rem;

@@ -1,3 +1,3 @@
-export function getSale(compare, salePercent) {
-  return compare * (1 - salePercent / 100);
+export function getSale(comparePrice, salePercent) {
+  return comparePrice * (1 - salePercent / 100);
 }

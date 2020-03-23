@@ -1,7 +1,5 @@
 import styled, { css } from 'styled-components';
 
-export const Container = styled.div``;
-
 export const Content = styled.div`
   transition: ${(props) => props.theme.styles.transSlow4};
   overflow: hidden;

@@ -1,26 +1,25 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import routes, { Link } from '../../../routes';
+import DATA from './section-brands.data';
 
 import ImageSlowlyHover from '../../atoms/image-slowly-hover.component';
 
 import { SectionContainer } from './section-brands.styles';
-import DATA from './section-brands.data';
 
-function SectionBrands(props) {
+function SectionBrands() {
   return (
     <SectionContainer>
-      {DATA.map((item, i) => (
-        <ImageSlowlyHover
-          key={i}
-          srcImage={item.srcImage}
-          title={item.brand}
-          buttonTitle="Mua ngay"
-        />
+      {DATA.map((item) => (
+        <Link key={item.id} to={`${routes.brands.path}/${item.id}`}>
+          <ImageSlowlyHover
+            srcImage={item.srcImage}
+            title={item.brand}
+            buttonTitle="Mua ngay"
+          />
+        </Link>
       ))}
     </SectionContainer>
   );
 }
-
-SectionBrands.propTypes = {};
 
 export default SectionBrands;

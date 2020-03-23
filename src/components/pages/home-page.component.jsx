@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import HomePageSlick from '../organisms/home-page/home-page-slick.component';
 import SliderNewProducts from '../organisms/home-page/slider-new-products.component';
@@ -10,21 +9,19 @@ import SectionPreviewArticles from '../organisms/home-page/section-preview-artic
 import SectionAboutUs from '../organisms/home-page/section-about-us.component';
 import SectionGallery from '../organisms/home-page/section-gallery.component';
 
-function HomePage(props) {
+function HomePage() {
   return (
-    <div>
-      <HomePageSlick></HomePageSlick>
-      <SectionBrands></SectionBrands>
-      <SliderNewProducts></SliderNewProducts>
-      <SectionBanner></SectionBanner>
-      <SectionHotProducts></SectionHotProducts>
-      <SectionPreviewArticles></SectionPreviewArticles>
-      <SectionAboutUs></SectionAboutUs>
-      <SectionGallery></SectionGallery>
-    </div>
+    <main>
+      <HomePageSlick />
+      <SectionBrands />
+      <SliderNewProducts />
+      <SectionBanner />
+      <SectionHotProducts />
+      <SectionPreviewArticles />
+      <SectionAboutUs />
+      <SectionGallery />
+    </main>
   );
 }
-
-HomePage.propTypes = {};
 
 export default HomePage;

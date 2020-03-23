@@ -1,16 +1,16 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import routes, { Link } from '../../../routes';
 
 import { HeaderLogoContainer, LogoHeading } from './header-logo.styles';
 
-function HeaderLogo(props) {
+function HeaderLogo() {
   return (
     <HeaderLogoContainer>
-      <LogoHeading>Jquery Store</LogoHeading>
+      <LogoHeading title="Jquery Store">
+        <Link to={routes.home.path}>Jquery Store</Link>
+      </LogoHeading>
     </HeaderLogoContainer>
   );
 }
-
-HeaderLogo.propTypes = {};
 
 export default HeaderLogo;

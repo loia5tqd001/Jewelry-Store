@@ -1,5 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import routes from '../../../routes';
+import { brands, products } from './header-nav.data';
 
 import {
   MainNav,
@@ -8,78 +9,67 @@ import {
   MainNavLink,
   SubNavList,
   SubNavItem,
+  SubNavLink,
 } from './header-nav.styles';
+
+const StyledMainNavLink = (props) => <MainNavLink exact activeClassName="active" {...props} />;
 
 function HeaderNav(props) {
   return (
     <MainNav>
       <MainNavList>
         <MainNavItem>
-          <MainNavLink>Trang chủ</MainNavLink>
+          <StyledMainNavLink title="Trang chủ" to={routes.home.path}>
+            Trang chủ
+          </StyledMainNavLink>
         </MainNavItem>
 
         <MainNavItem>
-          <MainNavLink>
+          <StyledMainNavLink title="Nhãn hiệu" to={routes.brands.path}>
             Nhãn hiệu
             <ion-icon name="chevron-down-outline"></ion-icon>
-          </MainNavLink>
+          </StyledMainNavLink>
 
           <SubNavList>
-            <SubNavItem>
-              <span>D'ORO</span>
-            </SubNavItem>
-            <SubNavItem>
-              <span>PAVE CLASSICA</span>
-            </SubNavItem>
-            <SubNavItem>
-              <span>TRIO</span>
-            </SubNavItem>
-            <SubNavItem>
-              <span>PAVE ROSE</span>
-            </SubNavItem>
-            <SubNavItem>
-              <span>BOUQUET</span>
-            </SubNavItem>
-            <SubNavItem>
-              <span>DUO</span>
-            </SubNavItem>
+            {brands.map((brand) => (
+              <SubNavItem key={brand.id}>
+                <SubNavLink to={`${routes.brands.path}/${brand.id}`}>{brand.display}</SubNavLink>
+              </SubNavItem>
+            ))}
           </SubNavList>
         </MainNavItem>
 
         <MainNavItem>
-          <MainNavLink>
+          <StyledMainNavLink title="Sản phẩm" to={routes.products.path}>
             Sản phẩm
             <ion-icon name="chevron-down-outline"></ion-icon>
-          </MainNavLink>
+          </StyledMainNavLink>
 
           <SubNavList>
-            <SubNavItem>
-              <span>Nhẫn</span>
-            </SubNavItem>
-            <SubNavItem>
-              <span>Hoa tai</span>
-            </SubNavItem>
-            <SubNavItem>
-              <span>Dây chuyền</span>
-            </SubNavItem>
-            <SubNavItem>
-              <span>Vòng tay</span>
-            </SubNavItem>
+            {products.map((product) => (
+              <SubNavItem key={product.id}>
+                <SubNavLink to={`${routes.products.path}/${product.id}`}>
+                  {product.display}
+                </SubNavLink>
+              </SubNavItem>
+            ))}
           </SubNavList>
         </MainNavItem>
 
         <MainNavItem>
-          <MainNavLink>Blog</MainNavLink>
+          <StyledMainNavLink title="Blog" to={routes.blog.path}>
+            Blog
+          </StyledMainNavLink>
         </MainNavItem>
 
         <MainNavItem>
-          <MainNavLink>Giới thiệu</MainNavLink>
+          <StyledMainNavLink title="Giới thiệu" to={routes.about.path}>
+            Giới thiệu
+          </StyledMainNavLink>
         </MainNavItem>
       </MainNavList>
     </MainNav>
   );
 }
-
-HeaderNav.propTypes = {};
 
 export default HeaderNav;

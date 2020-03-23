@@ -1,26 +1,24 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import DATA from './section-preview-articles.data';
+import routes, { StyledLink } from '../../../routes';
 
 import ArticlePreview from '../../molecules/article-preview.component';
 
-import { SectionContainer, Link, ArticlesContainer } from './section-preview-articles.styles';
-import DATA from './section-preview-articles.data';
+import { SectionContainer, ArticlesContainer } from './section-preview-articles.styles';
 
 function SectionPreviewArticles(props) {
   return (
     <SectionContainer>
       <h2>
-        <Link>Bài viết mới nhất</Link>
+        <StyledLink to={routes.newArticles.path}>Bài viết mới nhất</StyledLink>
       </h2>
       <ArticlesContainer>
-        {DATA.map((item, i) => (
-          <ArticlePreview key={i} {...item} />
+        {DATA.map((item) => (
+          <ArticlePreview key={item.articleId} {...item} />
         ))}
       </ArticlesContainer>
     </SectionContainer>
   );
 }
-
-SectionPreviewArticles.propTypes = {};
 
 export default SectionPreviewArticles;

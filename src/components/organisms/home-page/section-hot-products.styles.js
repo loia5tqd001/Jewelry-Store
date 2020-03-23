@@ -4,10 +4,6 @@ export const SectionContainer = styled.section`
   padding-top: 2rem;
 `;
 
-export const Link = styled.span`
-  ${(props) => props.theme.mixins.hoverColorPrimary};
-`;
-
 export const ProductsContainer = styled.div`
   display: grid;
   /*
