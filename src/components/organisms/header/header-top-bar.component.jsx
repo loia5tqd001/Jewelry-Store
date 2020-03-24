@@ -6,29 +6,34 @@ import {
   StyledLink,
   TextCenter,
   TopBarRight,
+  ResponsiveLabel,
+  HamburgerIcon,
 } from './header-top-bar.styles';
 
-function HeaderTopBar(props) {
+function HeaderTopBar() {
   return (
     <HeaderTopBarContainer>
       <StyledLink to={routes.account.path}>
         <ion-icon name="person-outline"></ion-icon>
-        <span>Tài Khoản</span>
+        <ResponsiveLabel>Tài Khoản</ResponsiveLabel>
       </StyledLink>
 
       <TextCenter>Đảm bảo 100% sự hài lòng</TextCenter>
 
       <TopBarRight>
-        <StyledLink to={routes.search.path}>
+        <StyledLink data-component="search" to={routes.search.path}>
           <ion-icon name="search-outline"></ion-icon>
           <span>Tìm kiếm</span>
         </StyledLink>
 
         <StyledLink to={routes.cart.path}>
           <ion-icon name="cart-outline"></ion-icon>
-          <span>Giỏ hàng</span>
+          <ResponsiveLabel>Giỏ hàng</ResponsiveLabel>
           <span>(1)</span>
         </StyledLink>
+        <HamburgerIcon>
+          <ion-icon name="menu"></ion-icon>
+        </HamburgerIcon>
       </TopBarRight>
     </HeaderTopBarContainer>
   );

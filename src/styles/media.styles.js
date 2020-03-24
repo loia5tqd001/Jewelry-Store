@@ -4,6 +4,7 @@ import { generateMedia, pxToEm } from 'styled-media-query';
 // Use em unit for better accessibility
 export default generateMedia(
   pxToEm({
+    '4k': '2500px',
     huge: '1600px',
     large: '1200px',
     big: '1024px',

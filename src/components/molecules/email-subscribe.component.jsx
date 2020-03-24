@@ -3,7 +3,7 @@ import { ThemeContext } from 'styled-components';
 
 import { InputGroup, Input, Button, Sentence } from './email-subscribe.styles';
 
-function EmailSubscribe(props) {
+function EmailSubscribe() {
   const { colors } = useContext(ThemeContext);
 
   const [subscribed, setSubscribed] = useState(false);

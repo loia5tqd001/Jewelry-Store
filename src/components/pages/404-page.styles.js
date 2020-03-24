@@ -1,14 +1,18 @@
 import styled from 'styled-components';
 
 export const PageContainer = styled.main`
-  min-height: 80vh;
+  min-height: 60vh;
   ${(props) => props.theme.mixins.flexCenter};
   flex-direction: column;
 `;
 
+export const Heading = styled.h1`
+  margin-top: -3rem;
+`;
+
 export const Para = styled.p`
   font-weight: ${(props) => props.theme.fw.light};
-  margin: -2rem auto 4rem;
+  margin: -2rem auto 2rem;
 `;
 
 export const Link = styled.span`

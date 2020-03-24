@@ -10,11 +10,11 @@ export default createGlobalStyle`
     box-sizing: inherit;
   }
 
-  html {
+  html {  
     box-sizing: border-box;
     scroll-behavior: smooth;
     font-size: 62.5%; /* 1rem -> 10px */
-
+    ${media.greaterThan('4k')` font-size: 75%; `}
     ${media.lessThan('huge')` font-size: 56.25%; `} /* 9px */
     ${media.lessThan('medium')` font-size: 53.125%; `} /* 8.5px */
     ${media.lessThan('small')` font-size: 50%; `} /* 8px */

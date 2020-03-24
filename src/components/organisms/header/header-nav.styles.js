@@ -36,6 +36,10 @@ export const SubNavLink = styled(StyledLink)`
 
 export const MainNav = styled.nav`
   ${(props) => props.theme.mixins.flexCenter}
+
+  ${(props) => props.theme.media.lessThan('regular')`
+    display: none;
+  `}
 `;
 
 export const MainNavList = styled.ul`

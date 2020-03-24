@@ -1,7 +1,7 @@
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useHistory } from 'react-router-dom';
 import StyledLink from './components/atoms/styled-link.component';
 
-export { Link, NavLink, StyledLink };
+export { Link, NavLink, StyledLink, useHistory };
 
 // for more convenient Breadcrumb
 // display: ## means the path will not likely be displayed on a breadcrumb
