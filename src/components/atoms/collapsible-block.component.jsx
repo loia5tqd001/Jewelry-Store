@@ -4,6 +4,8 @@ import { ThemeContext } from 'styled-components';
 
 import { Heading, Content } from './collapsible-block.styles';
 
+// NOTE: It's better to just use react-collapsible
+
 // Animated Accordion in React: https://www.youtube.com/watch?v=MAD2HnUFjgg&lc=UgyBPbBQKFDTn4fF8ud4AaABAg
 
 function CollapsibleBlock({ color, heading, children }) {

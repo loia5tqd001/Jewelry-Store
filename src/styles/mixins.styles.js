@@ -45,3 +45,10 @@ export const hoverColorPrimary = css`
     color: ${(props) => props.theme.styles.colorPrimaryDarker3};
   }
 `;
+
+export const transparentizeButton = css`
+  background: ${(props) => props.theme.colors.transparent};
+  cursor: pointer;
+  border: none;
+  outline: none;
+`;

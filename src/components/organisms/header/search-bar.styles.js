@@ -32,10 +32,7 @@ export const Button = styled.button`
   position: absolute;
   color: ${(props) => props.theme.colors.greyLight3};
   font-size: 2.5rem;
-  background: ${(props) => props.theme.colors.transparent};
-  cursor: pointer;
-  border: none;
-  outline: none;
+  ${(props) => props.theme.mixins.transparentizeButton};
   padding: 2rem;
   right: 1rem;
   top: 50%;

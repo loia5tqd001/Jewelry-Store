@@ -12,23 +12,21 @@ import {
   SubNavLink,
 } from './header-nav.styles';
 
-const StyledMainNavLink = (props) => <MainNavLink exact activeClassName="active" {...props} />;
-
-function HeaderNav(props) {
+function HeaderNav() {
   return (
     <MainNav>
       <MainNavList>
         <MainNavItem>
-          <StyledMainNavLink title="Trang chủ" to={routes.home.path}>
+          <MainNavLink title="Trang chủ" to={routes.home.path} exact>
             Trang chủ
-          </StyledMainNavLink>
+          </MainNavLink>
         </MainNavItem>
 
         <MainNavItem>
-          <StyledMainNavLink title="Nhãn hiệu" to={routes.brands.path}>
+          <MainNavLink title="Nhãn hiệu" to={routes.brands.path} exact>
             Nhãn hiệu
             <ion-icon name="chevron-down-outline"></ion-icon>
-          </StyledMainNavLink>
+          </MainNavLink>
 
           <SubNavList>
             {brands.map((brand) => (
@@ -40,10 +38,10 @@ function HeaderNav(props) {
         </MainNavItem>
 
         <MainNavItem>
-          <StyledMainNavLink title="Sản phẩm" to={routes.products.path}>
+          <MainNavLink title="Sản phẩm" to={routes.products.path} exact>
             Sản phẩm
             <ion-icon name="chevron-down-outline"></ion-icon>
-          </StyledMainNavLink>
+          </MainNavLink>
 
           <SubNavList>
             {products.map((product) => (
@@ -57,15 +55,15 @@ function HeaderNav(props) {
         </MainNavItem>
 
         <MainNavItem>
-          <StyledMainNavLink title="Blog" to={routes.blog.path}>
+          <MainNavLink title="Blog" to={routes.blog.path} exact>
             Blog
-          </StyledMainNavLink>
+          </MainNavLink>
         </MainNavItem>
 
         <MainNavItem>
-          <StyledMainNavLink title="Giới thiệu" to={routes.about.path}>
+          <MainNavLink title="Giới thiệu" to={routes.about.path} exact>
             Giới thiệu
-          </StyledMainNavLink>
+          </MainNavLink>
         </MainNavItem>
       </MainNavList>
     </MainNav>
