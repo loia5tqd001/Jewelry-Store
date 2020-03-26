@@ -1,9 +1,10 @@
 import styled, { css } from 'styled-components';
 
-export const Content = styled.div`
-  transition: ${(props) => props.theme.styles.transSlow4};
-  overflow: hidden;
-  font-size: 0.9em;
+export const Container = styled.div`
+  .ReactCollapse--collapse {
+    transition: height ${(props) => props.theme.styles.transSlow5};
+    font-size: 0.9em;
+  }
 `;
 
 export const Heading = styled.h4`
@@ -32,8 +33,8 @@ export const Heading = styled.h4`
   ion-icon {
     font-size: 0.9em;
   }
-  ${(props) => props.isFolded && css`
-    ion-icon {
+  ${(props) => !props.isOpen && css`
+    ion-icon[name="chevron-down-outline"] {
       transform: rotate(180deg);
     }
   `};

@@ -1,28 +1,28 @@
-import React from 'react';
-import Collapsible from 'react-collapsible';
+import React, { useState } from 'react';
+import { Collapse } from 'react-collapse';
 
-import { brands, products } from './side-nav.data';
 import routes, { Link, NavLink } from '../../routes';
+import { brands, products } from './side-nav.data';
 
-import { Container, CloseButton, Nav, NavItem, SubList, SubItem } from './side-nav.styles';
+import { Container, CloseButton, Nav, NavItem, Trigger, SubList, SubItem } from './side-nav.styles';
 
-const CollapsibleTrigger = ({ content, to }) => (
-  <>
-    <NavLink to={to} exact>
-      {content}
-    </NavLink>
-    <ion-icon name="chevron-down-outline"></ion-icon>
-  </>
-);
+const CollapsibleNavItem = ({ heading, to, children }) => {
+  const [isOpen, setIsOpen] = useState(false);
 
-const CollapsibleNavItem = (props) => (
-  <Collapsible
-    openedClassName="open"
-    transitionTime={350}
-    easing="ease-in"
-    {...props}
-  />
-);
+  return (
+    <NavItem onClick={() => setIsOpen(!isOpen)}>
+      <Trigger>
+        <NavLink to={to} exact>
+          {heading}
+        </NavLink>
+        <ion-icon className={isOpen && 'is-open'} name="chevron-down-outline" />
+      </Trigger>
+      <Collapse isOpened={isOpen}>
+        <SubList>{children}</SubList>
+      </Collapse>
+    </NavItem>
+  );
+};
 
 function SideNav() {
   return (
@@ -38,33 +38,21 @@ function SideNav() {
             </NavLink>
           </NavItem>
 
-          <NavItem>
-            <CollapsibleNavItem
-              trigger={<CollapsibleTrigger content="Nhãn hiệu" to={routes.brands.path} />}
-            >
-              <SubList>
-                {brands.map(({ id, display }) => (
-                  <SubItem key={id}>
-                    <Link to={`${routes.products.path}/${id}`}>{display}</Link>
-                  </SubItem>
-                ))}
-              </SubList>
-            </CollapsibleNavItem>
-          </NavItem>
+          <CollapsibleNavItem heading="Nhãn hiệu" to={routes.brands.path}>
+            {brands.map(({ id, display }) => (
+              <SubItem key={id}>
+                <Link to={`${routes.brands.path}/${id}`}>{display}</Link>
+              </SubItem>
+            ))}
+          </CollapsibleNavItem>
 
-          <NavItem>
-            <CollapsibleNavItem
-              trigger={<CollapsibleTrigger content="Sản phẩm" to={routes.products.path} />}
-            >
-              <SubList>
-                {products.map(({ id, display }) => (
-                  <SubItem key={id}>
-                    <Link to={`${routes.products.path}/${id}`}>{display}</Link>
-                  </SubItem>
-                ))}
-              </SubList>
-            </CollapsibleNavItem>
-          </NavItem>
+          <CollapsibleNavItem heading="Sản phẩm" to={routes.products.path}>
+            {products.map(({ id, display }) => (
+              <SubItem key={id}>
+                <Link to={`${routes.products.path}/${id}`}>{display}</Link>
+              </SubItem>
+            ))}
+          </CollapsibleNavItem>
 
           <NavItem>
             <NavLink to={routes.blog.path} exact>

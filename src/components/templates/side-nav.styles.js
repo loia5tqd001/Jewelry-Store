@@ -9,6 +9,10 @@ export const Container = styled.nav`
   width: 32rem;
   background: ${(props) => props.theme.styles.background};
   box-shadow: -0.5rem 0 0.5rem #8881;
+
+  a:active {
+    color: ${(props) => props.theme.styles.colorPrimaryDarker3};
+  }
 `;
 
 export const CloseButton = styled.button`
@@ -34,14 +38,18 @@ export const Nav = styled.nav`
 export const NavItem = styled.li`
   margin: 1rem auto 0.5rem;
 
-  .Collapsible__trigger {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  .ReactCollapse--collapse {
+    transition: height ${(props) => props.theme.styles.transSlow5};
+  }
+`;
 
-    &.is-open > ion-icon[name='chevron-down-outline'] {
-      transform: rotate(180deg);
-    }
+export const Trigger = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  ion-icon.is-open {
+    transform: rotate(180deg);
   }
 `;
 

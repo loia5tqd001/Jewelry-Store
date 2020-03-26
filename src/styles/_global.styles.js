@@ -55,8 +55,4 @@ export default createGlobalStyle`
   h3 {
     letter-spacing: .1rem;
   }
-
-  ion-icon {
-    color: ${(props) => props.theme.styles.colorText};
-  }
 `;
