@@ -1,3 +1,13 @@
+### Naming
+
+- [Atomic architecture structure](https://medium.com/@janelle.wg/atomic-design-pattern-how-to-structure-your-react-application-2bb4d9ca5f97)
+- Component file: `my-component--.jsx` (need the hyphens to make the component file appears precede other types of file like style, test,... when sorting alphabetically)
+- `styled-component` file: `my-component.styled.js`
+- utility related to the component: `my-component.utils.js`
+- data related to the component: `my-component.data.js`
+- test related to the component: `my-component.test.js`
+- ...
+
 ### Setting eslint and Prettier
 
 > If you want to enforce a coding style for your project, consider using _Prettier_ instead of _ESLint_ style rules.
