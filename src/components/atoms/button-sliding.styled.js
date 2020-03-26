@@ -7,24 +7,24 @@ export const Button = styled.button`
   border-radius: 0;
   cursor: pointer;
   outline: none;
-  color: ${(props) => props.fgStatic};
-  border: 1px solid ${(props) => props.bgStatic};
+  color: ${(props) => props['data-fg-static']};
+  border: 1px solid ${(props) => props['data-bg-static']};
 
   transition: ${(props) => props.theme.styles.transSlow4};
   background: linear-gradient(
     to right,
-    ${(props) => props.bgSliding} 0%,
-    ${(props) => props.bgSliding} 50%,
-    ${(props) => props.bgStatic} 50%,
-    ${(props) => props.bgStatic} 100%
+    ${(props) => props['data-bg-sliding']} 0%,
+    ${(props) => props['data-bg-sliding']} 50%,
+    ${(props) => props['data-bg-static']} 50%,
+    ${(props) => props['data-bg-static']} 100%
   );
-  ${(props) => props.disabled && `background: ${props.bgStatic}`};
+  ${(props) => props.disabled && `background: ${props['data-bg-static']}`};
   background-size: 200%;
   background-position-x: 100%;
 
   &:hover {
     background-position-x: 0%;
-    color: ${(props) => !props.disabled && props.fgSliding};
+    color: ${(props) => !props.disabled && props['data-fg-sliding']};
     transition: ${(props) => props.theme.styles.transSlow5};
   }
 
@@ -33,7 +33,7 @@ export const Button = styled.button`
   &::after {
     content: '';
     position: absolute;
-    background: ${(props) => props.bgStatic};
+    background: ${(props) => props['data-bg-static']};
   }
   &::before {
     right: -3px;

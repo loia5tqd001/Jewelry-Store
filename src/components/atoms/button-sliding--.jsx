@@ -17,20 +17,20 @@ ButtonSliding.propTypes = {
   as: PropTypes.oneOf(['button', 'a', Link]),
   disabled: PropTypes.bool,
   fontSize: PropTypes.string,
-  bgStatic: PropTypes.string,
-  fgStatic: PropTypes.string,
-  bgSliding: PropTypes.string,
-  fgSliding: PropTypes.string,
+  'data-bg-static': PropTypes.string,
+  'data-fg-static': PropTypes.string,
+  'data-bg-sliding': PropTypes.string,
+  'data-fg-sliding': PropTypes.string,
 };
 
 ButtonSliding.defaultProps = {
   as: 'button',
   padding: '1.5rem 3rem',
   fontSize: '.9em',
-  bgStatic: 'white',
-  fgStatic: 'black',
-  bgSliding: 'transparent',
-  fgSliding: 'white',
+  'data-bg-static': 'white',
+  'data-fg-static': 'black',
+  'data-bg-sliding': 'transparent',
+  'data-fg-sliding': 'white',
 };
 
 export default ButtonSliding;

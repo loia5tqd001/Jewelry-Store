@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const Container = styled.nav`
   position: fixed;
@@ -9,10 +9,15 @@ export const Container = styled.nav`
   width: 32rem;
   background: ${(props) => props.theme.styles.background};
   box-shadow: -0.5rem 0 0.5rem #8881;
+  transition: transform ${(props) => props.theme.styles.transSlow5};
 
   a:active {
     color: ${(props) => props.theme.styles.colorPrimaryDarker3};
   }
+
+  ${(props) => !props.isOpen && css`
+    transform: translateX(100%);
+  `}
 `;
 
 export const CloseButton = styled.button`

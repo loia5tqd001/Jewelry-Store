@@ -1,9 +1,16 @@
 import React, { useState } from 'react';
 import { Collapse } from 'react-collapse';
 
+import { useSelector, useDispatch } from 'react-redux';
+import { toggleIsSideNavOpen } from '../../redux/navigation/actions';
+import {
+  selectIsSideNavOpen,
+  selectBrands,
+  selectProducts,
+} from '../../redux/navigation/selectors';
+
 import routes, { Link, NavLink } from '../../routes';
 
-import { brands, products } from './side-nav.data';
 import { Container, CloseButton, Nav, NavItem, Trigger, SubList, SubItem } from './side-nav.styled';
 
 const CollapsibleNavItem = ({ heading, to, children }) => {
@@ -25,9 +32,14 @@ const CollapsibleNavItem = ({ heading, to, children }) => {
 };
 
 function SideNav() {
+  const dispatch = useDispatch();
+  const isSideNavOpen = useSelector(selectIsSideNavOpen);
+  const brands = useSelector(selectBrands);
+  const products = useSelector(selectProducts);
+
   return (
-    <Container>
-      <CloseButton>
+    <Container isOpen={isSideNavOpen}>
+      <CloseButton onClick={() => dispatch(toggleIsSideNavOpen())}>
         <ion-icon name="close-outline"></ion-icon>
       </CloseButton>
       <Nav>

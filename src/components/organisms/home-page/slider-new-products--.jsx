@@ -28,7 +28,7 @@ const sliderSettings = {
   ],
 };
 
-function SliderNewProducts(props) {
+function SliderNewProducts() {
   return (
     <div>
       <h2>

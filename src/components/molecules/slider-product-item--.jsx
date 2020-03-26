@@ -66,7 +66,7 @@ SliderProductItem.propTypes = {
   productSale: PropTypes.number,
 };
 
-SliderProductItem.propTypes = {
+SliderProductItem.defaultProps = {
   productSale: 0,
 };
 

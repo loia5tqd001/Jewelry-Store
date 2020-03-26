@@ -1,7 +1,9 @@
 import React from 'react';
 import routes from '../../../routes';
 
-import { brands, products } from './header-nav.data';
+import { useSelector } from 'react-redux';
+import { selectBrands, selectProducts } from '../../../redux/navigation/selectors';
+
 import {
   MainNav,
   MainNavList,
@@ -13,6 +15,9 @@ import {
 } from './header-nav.styled';
 
 function HeaderNav() {
+  const brands = useSelector(selectBrands);
+  const products = useSelector(selectProducts);
+
   return (
     <MainNav>
       <MainNavList>

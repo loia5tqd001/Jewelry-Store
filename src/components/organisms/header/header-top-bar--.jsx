@@ -1,6 +1,9 @@
 import React from 'react';
 import routes from '../../../routes';
 
+import { useDispatch } from 'react-redux';
+import { toggleIsSideNavOpen } from '../../../redux/navigation/actions';
+
 import {
   HeaderTopBarContainer,
   StyledLink,
@@ -11,6 +14,8 @@ import {
 } from './header-top-bar.styled';
 
 function HeaderTopBar() {
+  const dispatch = useDispatch();
+
   return (
     <HeaderTopBarContainer>
       <StyledLink to={routes.account.path}>
@@ -31,7 +36,7 @@ function HeaderTopBar() {
           <ResponsiveLabel>Giỏ hàng</ResponsiveLabel>
           <span>(1)</span>
         </StyledLink>
-        <HamburgerIcon>
+        <HamburgerIcon onClick={() => dispatch(toggleIsSideNavOpen())}>
           <ion-icon name="menu"></ion-icon>
         </HamburgerIcon>
       </TopBarRight>

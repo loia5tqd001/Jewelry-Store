@@ -25,10 +25,10 @@ function EmailSubscribe() {
           />
           <Button
             disabled={subscribed}
-            bgStatic={colors.blueDarker2}
-            fgStatic={colors.white}
-            bgSliding={colors.transparent}
-            fgSliding={colors.greyDark1}
+            data-bg-static={colors.blueDarker2}
+            data-fg-static={colors.white}
+            data-bg-sliding={colors.transparent}
+            data-fg-sliding={colors.greyDark1}
             padding="1rem"
             fontSize="0.9em"
           >
