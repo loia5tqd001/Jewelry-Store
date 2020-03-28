@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import { Collapse } from 'react-collapse';
 
 import { useSelector, useDispatch } from 'react-redux';
-import { toggleIsSideNavOpen } from '../../redux/navigation/actions';
+import { toggleIsSideNavOpen, setIsSideNavOpen } from '../../redux/navigation/actions';
 import {
   selectIsSideNavOpen,
   selectBrands,
@@ -11,18 +11,36 @@ import {
 
 import routes, { Link, NavLink } from '../../routes';
 
-import { Container, CloseButton, Nav, NavItem, Trigger, SubList, SubItem } from './side-nav.styled';
+import {
+  Container,
+  Overlay,
+  CloseButton,
+  Nav,
+  NavList,
+  NavItem,
+  Trigger,
+  SubList,
+  SubItem,
+} from './side-nav.styled';
+
+const ToggleLink = ({ type: Component, ...otherProps }) => {
+  const dispatch = useDispatch();
+  return <Component onClick={() => dispatch(setIsSideNavOpen(false))} {...otherProps} />;
+};
 
 const CollapsibleNavItem = ({ heading, to, children }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <NavItem onClick={() => setIsOpen(!isOpen)}>
+    <NavItem>
       <Trigger>
-        <NavLink to={to} exact>
+        <ToggleLink type={NavLink} to={to} exact>
           {heading}
-        </NavLink>
-        <ion-icon className={isOpen && 'is-open'} name="chevron-down-outline" />
+        </ToggleLink>
+        <ion-icon
+          onClick={() => setIsOpen(!isOpen)}
+          name={`chevron-${isOpen ? 'up' : 'down'}-outline`}
+        />
       </Trigger>
       <Collapse isOpened={isOpen}>
         <SubList>{children}</SubList>
@@ -37,23 +55,30 @@ function SideNav() {
   const brands = useSelector(selectBrands);
   const products = useSelector(selectProducts);
 
+  const toglgeSideNav = useCallback(() => {
+    dispatch(toggleIsSideNavOpen());
+  }, [dispatch]);
+
   return (
     <Container isOpen={isSideNavOpen}>
-      <CloseButton onClick={() => dispatch(toggleIsSideNavOpen())}>
-        <ion-icon name="close-outline"></ion-icon>
-      </CloseButton>
+      <Overlay onClick={toglgeSideNav} />
       <Nav>
-        <ul>
+        <CloseButton onClick={toglgeSideNav}>
+          <ion-icon name="close-outline"></ion-icon>
+        </CloseButton>
+        <NavList>
           <NavItem>
-            <NavLink to={routes.home.path} exact>
+            <ToggleLink type={NavLink} to={routes.home.path} exact>
               Trang chủ
-            </NavLink>
+            </ToggleLink>
           </NavItem>
 
           <CollapsibleNavItem heading="Nhãn hiệu" to={routes.brands.path}>
             {brands.map(({ id, display }) => (
               <SubItem key={id}>
-                <Link to={`${routes.brands.path}/${id}`}>{display}</Link>
+                <ToggleLink type={Link} to={`${routes.brands.path}/${id}`}>
+                  {display}
+                </ToggleLink>
               </SubItem>
             ))}
           </CollapsibleNavItem>
@@ -61,23 +86,25 @@ function SideNav() {
           <CollapsibleNavItem heading="Sản phẩm" to={routes.products.path}>
             {products.map(({ id, display }) => (
               <SubItem key={id}>
-                <Link to={`${routes.products.path}/${id}`}>{display}</Link>
+                <ToggleLink type={Link} to={`${routes.products.path}/${id}`}>
+                  {display}
+                </ToggleLink>
               </SubItem>
             ))}
           </CollapsibleNavItem>
 
           <NavItem>
-            <NavLink to={routes.blog.path} exact>
+            <ToggleLink type={NavLink} to={routes.blog.path} exact>
               Blog
-            </NavLink>
+            </ToggleLink>
           </NavItem>
 
           <NavItem>
-            <NavLink to={routes.about.path} exact>
+            <ToggleLink type={NavLink} to={routes.about.path} exact>
               Giới thiệu
-            </NavLink>
+            </ToggleLink>
           </NavItem>
-        </ul>
+        </NavList>
       </Nav>
     </Container>
   );

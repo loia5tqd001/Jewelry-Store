@@ -2,6 +2,7 @@ export default {
   white: '#ffffff',
   black: '#000000',
   transparent: 'transparent',
+  overlay: '#000b',
 
   greyDark1: '#252a2b',
   greyDark2: '#5c5c5c',
