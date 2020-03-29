@@ -1,6 +1,6 @@
 import React from 'react';
 
-import routes, { StyledLink } from '../../../routes';
+import routes, { StyledLink } from '../../../utils/routes';
 import CollapsibleBlock from '../../atoms/collapsible-block--';
 import EmailSubscribe from '../../molecules/email-subscribe--';
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import routes from './routes';
+import routes from './utils/routes';
 
 import Header from './components/templates/header--';
 import SideNav from './components/templates/side-nav--';

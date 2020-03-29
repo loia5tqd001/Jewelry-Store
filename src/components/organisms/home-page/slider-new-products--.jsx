@@ -1,7 +1,7 @@
 import React from 'react';
 import Slider from 'react-slick';
 
-import routes, { StyledLink } from '../../../routes';
+import routes, { StyledLink } from '../../../utils/routes';
 import SliderProductItem from '../../molecules/slider-product-item--';
 
 import DATA from './slider-new-products.data';

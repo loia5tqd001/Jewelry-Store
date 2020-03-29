@@ -1,5 +1,5 @@
 import React, { useRef, useCallback } from 'react';
-import routes, { useHistory } from '../../../routes';
+import routes, { useHistory } from '../../../utils/routes';
 
 import { Form, InputGroup, Input, Button } from './search-bar.styled';
 

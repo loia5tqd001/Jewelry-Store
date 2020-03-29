@@ -1,6 +1,6 @@
 import React from 'react';
 
-import routes, { Link } from '../../../routes';
+import routes, { Link } from '../../../utils/routes';
 import ImageSlowlyHover from '../../atoms/image-slowly-hover--';
 
 import DATA from './section-brands.data';

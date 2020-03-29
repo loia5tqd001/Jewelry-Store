@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import routes, { Link, StyledLink } from '../../routes';
+import routes, { Link, StyledLink } from '../../utils/routes';
 
 import {
   Container,

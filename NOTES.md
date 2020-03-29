@@ -6,6 +6,7 @@
 - utility related to the component: `my-component.utils.js`
 - data related to the component: `my-component.data.js`
 - test related to the component: `my-component.test.js`
+- hooks related to the component: `my-component.hooks.js`
 - ...
 
 ### Setting eslint and Prettier

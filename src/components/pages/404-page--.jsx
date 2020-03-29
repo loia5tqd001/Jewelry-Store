@@ -1,5 +1,5 @@
 import React from 'react';
-import routes, { StyledLink } from '../../routes';
+import routes, { StyledLink } from '../../utils/routes';
 
 import { PageContainer, Heading, Para, Link } from './404-page.styled';
 

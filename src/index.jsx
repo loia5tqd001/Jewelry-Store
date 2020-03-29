@@ -13,10 +13,8 @@ import colors from './styles/colors';
 import * as animations from './styles/animations';
 import * as mixins from './styles/mixins';
 import * as variables from './styles/variables';
+import './styles/__plugins.js';
 
-import 'normalize.css';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
 
 ReactDOM.render(
   <Provider store={store}>

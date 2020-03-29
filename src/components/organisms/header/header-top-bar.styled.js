@@ -20,6 +20,7 @@ export const ResponsiveLabel = styled.span``;
 
 export const HamburgerIcon = styled.div`
   display: none;
+  cursor: pointer;
 
   ion-icon {
     font-size: 2.5rem;

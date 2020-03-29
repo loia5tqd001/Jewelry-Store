@@ -1,6 +1,6 @@
 import React from 'react';
 
-import routes, { StyledLink } from '../../../routes';
+import routes, { StyledLink } from '../../../utils/routes';
 import ArticlePreview from '../../molecules/article-preview--';
 
 import DATA from './section-preview-articles.data';

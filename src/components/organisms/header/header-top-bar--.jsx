@@ -1,5 +1,5 @@
 import React from 'react';
-import routes from '../../../routes';
+import routes from '../../../utils/routes';
 
 import { useDispatch } from 'react-redux';
 import { toggleIsSideNavOpen } from '../../../redux/navigation/actions';

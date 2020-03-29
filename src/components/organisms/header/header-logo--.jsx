@@ -1,5 +1,5 @@
 import React from 'react';
-import routes, { Link } from '../../../routes';
+import routes, { Link } from '../../../utils/routes';
 
 import { HeaderLogoContainer, LogoHeading } from './header-logo.styled';
 

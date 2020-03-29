@@ -20,13 +20,14 @@ import { keyframes } from 'styled-components';
  * 
  */
 
-export const pulse = keyframes`
-  0%, 10% {
-    opacity: 0.05;
-    transform: scaleX(1.1) scaleY(1.3);
+export const stickyHeader = keyframes`
+  0% {
+    opacity: 0;
+    transform: translateY(-100%)
   }
+
   100% {
     opacity: 1;
-    transform: scale(.9);
+    transform: translateY(0)
   }
 `;

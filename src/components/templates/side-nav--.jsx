@@ -9,7 +9,7 @@ import {
   selectProducts,
 } from '../../redux/navigation/selectors';
 
-import routes, { Link, NavLink } from '../../routes';
+import routes, { Link, NavLink } from '../../utils/routes';
 
 import {
   Container,

@@ -1,5 +1,5 @@
 import React from 'react';
-import routes from '../../../routes';
+import routes from '../../../utils/routes';
 
 import { useSelector } from 'react-redux';
 import { selectBrands, selectProducts } from '../../../redux/navigation/selectors';

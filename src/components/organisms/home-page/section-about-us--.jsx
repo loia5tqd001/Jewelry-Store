@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 
-import routes, { Link } from '../../../routes';
+import routes, { Link } from '../../../utils/routes';
 import ButtonSliding from '../../atoms/button-sliding--';
 
 import DATA from './section-about-us.data';

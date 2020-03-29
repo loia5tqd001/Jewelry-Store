@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import routes, { Link } from '../../routes';
+import routes, { Link } from '../../utils/routes';
 
 import StyledLink from '../atoms/styled-link--';
 import ImageDuoHover from '../atoms/image-duo-hover--';
 
-import { formatVnd, roundVnd } from '../../utils';
+import { formatVnd, roundVnd } from '../../utils/helpers';
 import { getSale } from './slider-product-item.utils';
 
 import {
