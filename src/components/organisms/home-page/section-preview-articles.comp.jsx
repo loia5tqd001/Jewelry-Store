@@ -1,7 +1,7 @@
 import React from 'react';
 
 import routes, { StyledLink } from '../../../utils/routes';
-import ArticlePreview from '../../molecules/article-preview--';
+import ArticlePreview from '../../molecules/article-preview.comp';
 
 import DATA from './section-preview-articles.data';
 import { SectionContainer, ArticlesContainer } from './section-preview-articles.styled';

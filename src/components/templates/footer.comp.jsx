@@ -1,7 +1,7 @@
 import React from 'react';
 
-import FooterTop from '../organisms/footer/footer-top--';
-import FooterBottom from '../organisms/footer/footer-bottom--';
+import FooterTop from '../organisms/footer/footer-top.comp';
+import FooterBottom from '../organisms/footer/footer-bottom.comp';
 
 import { FooterContainer } from './footer.styled';
 

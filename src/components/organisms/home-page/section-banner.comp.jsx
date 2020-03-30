@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import ImageSlowlyHover from '../../atoms/image-slowly-hover--';
+import ImageSlowlyHover from '../../atoms/image-slowly-hover.comp';
 
 import DATA from './section-banner.data';
 import { BannerContainer } from './section-banner.styled';

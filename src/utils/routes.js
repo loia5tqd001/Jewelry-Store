@@ -1,5 +1,5 @@
 import { Link, NavLink, useHistory } from 'react-router-dom';
-import StyledLink from '../components/atoms/styled-link--';
+import StyledLink from '../components/atoms/styled-link.comp';
 
 export { Link, NavLink, StyledLink, useHistory };
 

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
-import StyledLink from '../../atoms/styled-link--';
+import StyledLink from '../../atoms/styled-link.comp';
 
 export const SubNavList = styled.ul`
   text-transform: initial;
