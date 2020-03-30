@@ -1,6 +1,6 @@
 import React from 'react';
 
-import StyledLink from '../../atoms/styled-link--';
+import StyledLink from '../../atoms/styled-link.comp';
 
 import { FooterBottomContainer, SocialList, IconRotate } from './footer-bottom.styled';
 

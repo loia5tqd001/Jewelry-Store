@@ -2,7 +2,7 @@ import React from 'react';
 import ReactMarkdown from 'react-markdown';
 
 import routes, { Link } from '../../../utils/routes';
-import ButtonSliding from '../../atoms/button-sliding--';
+import ButtonSliding from '../../atoms/button-sliding.comp';
 
 import DATA from './section-about-us.data';
 import { SectionContainer, Left, Heading, Right } from './section-about-us.styled';

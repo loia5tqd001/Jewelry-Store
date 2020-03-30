@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import ButtonSliding from '../atoms/button-sliding--';
+import ButtonSliding from '../atoms/button-sliding.comp';
 
 export const InputGroup = styled.div`
   position: relative;
