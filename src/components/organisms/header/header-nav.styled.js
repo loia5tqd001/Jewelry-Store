@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { NavLink } from 'react-router-dom';
 import StyledLink from '../../atoms/styled-link.comp';
 
@@ -7,6 +7,7 @@ export const SubNavList = styled.ul`
   color: initial;
   font-weight: ${(props) => props.theme.fw.thin};
   background: ${(props) => props.theme.styles.background};
+  font-size: 1em;
 
   transition: ${(props) => props.theme.styles.transSlow1};
   transform: scaleY(0);
@@ -32,14 +33,6 @@ export const SubNavItem = styled.li`
 export const SubNavLink = styled(StyledLink)`
   display: block;
   padding: 0.5rem 2rem;
-`;
-
-export const MainNav = styled.nav`
-  ${(props) => props.theme.mixins.flexCenter}
-
-  ${(props) => props.theme.media.lessThan('regular')`
-    display: none;
-  `}
 `;
 
 export const MainNavList = styled.ul`
@@ -78,4 +71,19 @@ export const MainNavLink = styled(NavLink)`
   &.active {
     color: ${(props) => props.theme.styles.colorPrimaryDarker3};
   }
+`;
+
+export const MainNav = styled.nav`
+  ${(props) => props.theme.mixins.flexCenter}
+
+  ${(props) => props.theme.media.lessThan('regular')`
+    display: none;
+  `}
+
+  ${(props) => props.isHeaderStuck && css`
+    ${MainNavItem}, 
+    ${MainNavLink} {
+      margin: 0;
+    }
+  `}
 `;

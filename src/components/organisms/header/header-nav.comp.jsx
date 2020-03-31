@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import routes from '../../../utils/routes';
 
 import { useSelector } from 'react-redux';
@@ -14,12 +15,12 @@ import {
   SubNavLink,
 } from './header-nav.styled';
 
-function HeaderNav() {
+function HeaderNav({ isHeaderStuck }) {
   const brands = useSelector(selectBrands);
   const products = useSelector(selectProducts);
 
   return (
-    <MainNav>
+    <MainNav isHeaderStuck={isHeaderStuck}>
       <MainNavList>
         <MainNavItem>
           <MainNavLink title="Trang chủ" to={routes.home.path} exact>
@@ -74,5 +75,9 @@ function HeaderNav() {
     </MainNav>
   );
 }
+
+HeaderNav.propTypes = {
+  isHeaderStuck: PropTypes.bool.isRequired,
+};
 
 export default HeaderNav;

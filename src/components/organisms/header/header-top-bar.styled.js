@@ -1,14 +1,5 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { Link } from 'react-router-dom';
-
-export const HeaderTopBarContainer = styled.div`
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  font-weight: ${(props) => props.theme.fw.light};
-  font-size: 0.95em;
-  padding: 1rem;
-  background: ${(props) => props.theme.styles.colorPrimary};
-`;
 
 export const TextCenter = styled.p`
   text-transform: uppercase;
@@ -60,4 +51,36 @@ export const TopBarRight = styled.div`
   ${StyledLink}:first-of-type {
     margin-right: 1.5rem;
   }
+`;
+
+export const HeaderTopBarContainer = styled.div`
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  font-weight: ${(props) => props.theme.fw.light};
+  font-size: 0.95em;
+  padding: 1rem;
+  background: ${(props) => props.theme.styles.colorPrimary};
+
+  ${(props) => props.isHeaderStuck && css`
+    order: 1;
+    background: ${(props) => props.theme.colors.transparent};
+    grid-template-columns: repeat(3, auto);
+    grid-gap: 1rem;
+    font-size: 2rem;
+
+    ${TopBarRight} {
+      display: contents;
+    }
+
+    ${TextCenter},
+    ${ResponsiveLabel} {
+      display: none;
+    }
+
+    ${StyledLink},
+    ion-icon {
+      margin-right: 0 !important;
+    }
+
+  `}
 `;
