@@ -20,7 +20,7 @@ export const SubNavList = styled.ul`
   width: max-content;
   border: 1px solid ${(props) => props.theme.colors.greyLight1};
   border-top: 0.2rem solid ${(props) => props.theme.colors.greyDark2};
-  margin-top: -0.2rem;
+  margin-top: 0;
   padding-top: 0.2rem;
 `;
 
@@ -81,9 +81,11 @@ export const MainNav = styled.nav`
   `}
 
   ${(props) => props.isHeaderStuck && css`
-    ${MainNavItem}, 
     ${MainNavLink} {
       margin: 0;
+    }
+    ${MainNavItem}:not(:last-child) {
+      margin-right: 2rem;
     }
   `}
 `;

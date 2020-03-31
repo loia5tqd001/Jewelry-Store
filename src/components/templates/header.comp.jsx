@@ -16,7 +16,7 @@ function Header() {
       <HeaderTopBar isHeaderStuck={isStuck} />
       <HeaderLogo isHeaderStuck={isStuck} />
       <HeaderNav isHeaderStuck={isStuck} />
-      <SearchBar />
+      <SearchBar isHeaderStuck={isStuck} />
     </HeaderContainer>
   );
 }

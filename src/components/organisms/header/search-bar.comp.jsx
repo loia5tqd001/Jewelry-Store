@@ -1,9 +1,10 @@
 import React, { useRef, useCallback } from 'react';
+import PropTypes from 'prop-types';
 import routes, { useHistory } from '../../../utils/routes';
 
 import { Form, InputGroup, Input, Button } from './search-bar.styled';
 
-function SearchBar() {
+function SearchBar({ isHeaderStuck }) {
   const history = useHistory();
   const inputRef = useRef(null);
 
@@ -17,7 +18,7 @@ function SearchBar() {
   );
 
   return (
-    <Form onSubmit={onSubmit}>
+    <Form isHeaderStuck={isHeaderStuck} onSubmit={onSubmit}>
       <InputGroup>
         <Input ref={inputRef} type="text" placeholder="Tìm kiếm sản phẩm" />
         <Button>
@@ -27,5 +28,9 @@ function SearchBar() {
     </Form>
   );
 }
+
+SearchBar.propTypes = {
+  isHeaderStuck: PropTypes.bool.isRequired,
+};
 
 export default SearchBar;

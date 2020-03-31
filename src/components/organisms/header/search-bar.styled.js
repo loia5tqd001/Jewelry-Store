@@ -1,10 +1,14 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const Form = styled.form`
   display: none;
 
   ${(props) => props.theme.media.lessThan('regular')`
     display: block;
+
+    ${props.isHeaderStuck && css`
+      display: none;
+    `}
   `}
 `;
 
