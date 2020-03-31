@@ -13,9 +13,9 @@ function Header() {
 
   return (
     <HeaderContainer isStuck={isStuck} ref={headerRef}>
-      <HeaderTopBar />
-      <HeaderLogo />
-      <HeaderNav />
+      <HeaderTopBar isHeaderStuck={isStuck} />
+      <HeaderLogo isHeaderStuck={isStuck} />
+      <HeaderNav isHeaderStuck={isStuck} />
       <SearchBar />
     </HeaderContainer>
   );

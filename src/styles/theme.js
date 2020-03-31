@@ -1,12 +1,6 @@
 import colors from './colors';
 
 export default {
-  shadowDark: '0 2rem 4rem rgba(0, 0, 0, 0.3)',
-  shadowLight: '0 2rem 5rem rgba(0, 0, 0, 0.06)',
-  borderRound: '.6rem',
-  cardPadding: '1.25rem 1.5rem',
-  pageContainerWidth: '99rem',
-
   fontPrimary: '"Montserrat", sans-serif',
   colorText: colors.greyDark1,
   background: colors.white,
@@ -28,4 +22,5 @@ export default {
   shadowSuttle1: '0.1rem 0.1rem 0.4rem #8881',
   shadowSuttle2: '0 0.2rem 1rem #6664',
   shadowSuttle3: '-0.2rem 0 0.3rem #8884',
+  shadowDown1: '0 0.5rem 1rem #8884',
 };
