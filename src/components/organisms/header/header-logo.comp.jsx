@@ -6,8 +6,8 @@ import { HeaderLogoContainer, LogoHeading } from './header-logo.styled';
 
 function HeaderLogo({ isHeaderStuck }) {
   return (
-    <HeaderLogoContainer>
-      <LogoHeading isHeaderStuck={isHeaderStuck} title="Jquery Store">
+    <HeaderLogoContainer isHeaderStuck={isHeaderStuck}>
+      <LogoHeading title="Jquery Store">
         <Link to={routes.home.path}>Jquery Store</Link>
       </LogoHeading>
     </HeaderLogoContainer>

@@ -7,7 +7,7 @@ export const SliderItem = styled.div`
 export const SaleLabel = styled.span`
   display: block;
   position: absolute;
-  z-index: 999;
+  z-index: 10;
   top: 5%;
   left: 5%;
   padding: 0.5rem 1rem;
