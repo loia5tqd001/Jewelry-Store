@@ -10,6 +10,8 @@ export default generateMedia(
     big: '1024px',
     regular: '992px',
     medium: '768px',
+    smedium: '600px', //https://english.stackexchange.com/a/163611
     small: '480px',
+    tiny: '400px',
   }),
 );

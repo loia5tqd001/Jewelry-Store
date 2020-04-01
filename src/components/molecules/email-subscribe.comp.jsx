@@ -25,12 +25,12 @@ function EmailSubscribe() {
           />
           <Button
             disabled={subscribed}
-            data-bg-static={colors.blueDarker2}
-            data-fg-static={colors.white}
-            data-bg-sliding={colors.transparent}
-            data-fg-sliding={colors.greyDark1}
+            bg_static={colors.blueDarker2}
+            fg_static={colors.white}
+            bg_sliding={colors.transparent}
+            fg_sliding={colors.greyDark1}
             padding="1rem"
-            fontSize="0.9em"
+            font_size="0.9em"
           >
             Đăng ký
           </Button>

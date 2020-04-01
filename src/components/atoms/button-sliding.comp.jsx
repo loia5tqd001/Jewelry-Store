@@ -15,22 +15,26 @@ function ButtonSliding({ children, ...otherProps }) {
 ButtonSliding.propTypes = {
   children: PropTypes.node.isRequired,
   as: PropTypes.oneOf(['button', 'a', Link]),
+  padding: PropTypes.string,
+  padding_responsive: PropTypes.string,
   disabled: PropTypes.bool,
-  fontSize: PropTypes.string,
-  'data-bg-static': PropTypes.string,
-  'data-fg-static': PropTypes.string,
-  'data-bg-sliding': PropTypes.string,
-  'data-fg-sliding': PropTypes.string,
+  font_size: PropTypes.string,
+  bg_static: PropTypes.string,
+  fg_static: PropTypes.string,
+  bg_sliding: PropTypes.string,
+  fg_sliding: PropTypes.string,
 };
 
 ButtonSliding.defaultProps = {
   as: 'button',
   padding: '1.5rem 3rem',
-  fontSize: '.9em',
-  'data-bg-static': 'white',
-  'data-fg-static': 'black',
-  'data-bg-sliding': 'transparent',
-  'data-fg-sliding': 'white',
+  padding_responsive: '1.2rem 2.4rem',
+  disabled: false,
+  font_size: '0.9em',
+  bg_static: 'white',
+  fg_static: 'black',
+  bg_sliding: 'transparent',
+  fg_sliding: 'white',
 };
 
 export default ButtonSliding;

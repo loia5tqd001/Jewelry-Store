@@ -8,7 +8,7 @@ import { SectionContainer } from './section-gallery.styled';
 function SectionGallery() {
   return (
     <SectionContainer>
-      {DATA.map((item, i) => (
+      {DATA.slice(0, 12).map((item, i) => (
         <GalleryItem key={i} {...item} />
       ))}
     </SectionContainer>

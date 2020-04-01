@@ -1,8 +1,11 @@
 import styled from 'styled-components';
 
 export const SectionContainer = styled.section`
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  ${(props) => props.theme.mixins.gridDivideIntoColumns(2)}
+
+  ${(props) => props.theme.media.lessThan('large')`
+    --no-columns: 1;
+  `}
 `;
 
 export const Left = styled.div`
@@ -26,4 +29,8 @@ export const Right = styled.div`
   background: ${(props) => props.theme.styles.backgroundSecondary};
   padding: 10rem;
   line-height: 1.7;
+
+  ${(props) => props.theme.media.lessThan('medium')`
+    padding: 5%;
+  `}
 `;

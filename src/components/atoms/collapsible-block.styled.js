@@ -32,10 +32,21 @@ export const Heading = styled.h4`
 
   ion-icon {
     font-size: 0.9em;
+    display: none;
+
+    ${(props) => props.theme.media.lessThan('smedium')`
+      display: block;
+    `}
   }
-  ${(props) => !props.isOpen && css`
-    ion-icon[name="chevron-down-outline"] {
+
+  ${(props) => props.isOpen && css`
+    ion-icon {
       transform: rotate(180deg);
     }
   `};
+
+  ${(props) => props.theme.media.lessThan('smedium')`
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+  `}
 `;

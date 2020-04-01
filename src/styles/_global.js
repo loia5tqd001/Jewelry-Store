@@ -51,6 +51,11 @@ export default createGlobalStyle`
     font-size: 4rem;
     font-weight: ${(props) => props.theme.fw.normal};
     margin: 5rem auto;
+
+    ${media.lessThan('small')`
+      margin: 3rem auto;
+      font-size: 3.5rem;
+    `}
   }
   h3 {
     letter-spacing: .1rem;

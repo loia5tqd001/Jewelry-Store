@@ -1,10 +1,6 @@
 import styled from 'styled-components';
 import ButtonSliding from '../atoms/button-sliding.comp';
 
-export const InputGroup = styled.div`
-  position: relative;
-`;
-
 export const Input = styled.input`
   padding: 1.5rem 2rem;
   width: 100%;
@@ -18,6 +14,19 @@ export const Button = styled(ButtonSliding)`
   right: 1.5rem;
   top: 50%;
   transform: translateY(-50%);
+`;
+
+export const InputGroup = styled.div`
+  position: relative;
+
+  ${(props) => props.theme.media.between('regular', 'large')`
+    ${Button} {
+      right: 0.5rem;
+    }
+    ${Input} {
+      padding: 1.5rem 1rem;
+    }
+  `}
 `;
 
 export const Sentence = styled.p`

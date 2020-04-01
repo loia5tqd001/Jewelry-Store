@@ -2,13 +2,24 @@ import styled from 'styled-components';
 
 export const SectionContainer = styled.section`
   padding-top: 2rem;
+
+  ${(props) => props.theme.media.lessThan('medium')`
+    padding-top: 0;
+  `}
 `;
 
 export const ProductsContainer = styled.div`
-  display: grid;
-  /*
-    Why repeat(5, 1fr) leaks to blowout: https://css-tricks.com/preventing-a-grid-blowout/ 
-    only either repeat(5, minmax(0, 1fr)) or repeat(5, 20%) will work
-  */
-  grid-template-columns: repeat(5, minmax(0, 1fr)); 
+  ${(props) => props.theme.mixins.gridDivideIntoColumns(5)}
+
+  ${(props) => props.theme.media.lessThan('large')`
+    --no-columns: 4;
+  `}
+
+  ${(props) => props.theme.media.lessThan('regular')`
+    --no-columns: 3;
+  `}
+
+  ${(props) => props.theme.media.lessThan('medium')`
+    --no-columns: 2;
+  `}
 `;

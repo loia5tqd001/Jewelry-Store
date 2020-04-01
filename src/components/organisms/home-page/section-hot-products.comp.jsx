@@ -13,7 +13,7 @@ function SectionHotProducts() {
         <StyledLink to={routes.hotProducts.path}>Sản phẩm bán chạy</StyledLink>
       </h2>
       <ProductsContainer>
-        {DATA.map((item) => (
+        {DATA.slice(0, 10).map((item) => (
           <SliderProductItem key={item.productId} {...item} />
         ))}
       </ProductsContainer>

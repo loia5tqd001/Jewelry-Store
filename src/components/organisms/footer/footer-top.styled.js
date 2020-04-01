@@ -1,9 +1,16 @@
 import styled from 'styled-components';
 
 export const FooterTopContainer = styled.div`
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  ${(props) => props.theme.mixins.gridDivideIntoColumns(4)}
   grid-gap: 2.5rem;
+
+  ${(props) => props.theme.media.lessThan('regular')`
+    --no-columns: 2;
+  `}
+  ${(props) => props.theme.media.lessThan('smedium')`
+    --no-columns: 1;
+    grid-gap: 0.5rem;
+  `}
 `;
 
 export const Li = styled.li`

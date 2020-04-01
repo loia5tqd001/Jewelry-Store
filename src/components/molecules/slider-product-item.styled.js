@@ -23,7 +23,11 @@ export const ProductImage = styled.div`
 
 export const ProductDetail = styled.div`
   text-align: center;
-  padding: 2rem 5rem;
+  padding: 2rem 10%;
+
+  ${(props) => props.theme.media.lessThan('tiny')`
+    padding: 1.5rem 3%;
+  `}
 `;
 
 export const ProductName = styled.h3`
@@ -34,6 +38,11 @@ export const ProductName = styled.h3`
 export const ProductPrice = styled.p`
   font-weight: ${(props) => props.theme.fw.thin};
   letter-spacing: 0.1rem;
+
+  ${(props) => props.theme.media.lessThan('tiny')`
+    letter-spacing: 0;
+    font-size: 0.9em;
+  `}
 `;
 
 export const ProPrice = styled.span`

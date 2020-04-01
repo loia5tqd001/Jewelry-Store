@@ -9,11 +9,13 @@ export default {
   greyLight1: '#eeeeee',
   greyLight2: '#9babab',
   greyLight3: '#bfbfbf',
-  
+
   greyBlue1: '#f2f5fa',
 
   blue: '#b5e2ef',
   blueDarker1: '#90cdde',
   blueDarker2: '#67c1d9',
   blueDarker3: '#57aabf',
+
+  red: '#f24a42',
 };

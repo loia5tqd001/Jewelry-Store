@@ -1,26 +1,23 @@
-import React, { useState, useContext } from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import { ThemeContext } from 'styled-components';
 import { Collapse } from 'react-collapse';
 
+import { useIsOpen } from './collapsible-block.hooks';
 import { Container, Heading } from './collapsible-block.styled';
 
 function CollapsibleBlock({ color, heading, children }) {
   const { colors } = useContext(ThemeContext);
-  const [isOpen, setIsOpen] = useState(true);
+  const { getIsOpen, toggleIsOpen } = useIsOpen();
 
   return (
     <Container>
-      <Heading
-        onClick={() => setIsOpen(!isOpen)}
-        color={color || colors.greyLight2}
-        isOpen={isOpen}
-      >
+      <Heading onClick={toggleIsOpen} color={color || colors.greyLight2} isOpen={getIsOpen}>
         {heading}
         <ion-icon name="chevron-down-outline"></ion-icon>
       </Heading>
 
-      <Collapse isOpened={isOpen}>{children}</Collapse>
+      <Collapse isOpened={getIsOpen}>{children}</Collapse>
     </Container>
   );
 }

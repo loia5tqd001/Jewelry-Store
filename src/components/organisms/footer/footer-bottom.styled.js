@@ -4,6 +4,7 @@ export const FooterBottomContainer = styled.div`
   ${(props) => props.theme.mixins.flexCenter};
   flex-direction: column;
   margin-top: 3rem;
+  text-align: center;
 `;
 
 export const IconRotate = styled.a`

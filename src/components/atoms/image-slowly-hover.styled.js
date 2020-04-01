@@ -16,10 +16,28 @@ export const ActionContainer = styled.div`
   bottom: 1.5rem;
   padding: 1rem 2rem;
   text-transform: uppercase;
+
+  ${(props) => props.theme.media.lessThan('regular')`
+    font-size: 0.9em;
+  `}
+  
+  ${(props) => props.theme.media.lessThan('small')`
+    padding: 0.5rem 1rem;
+  `}
 `;
 
 export const Title = styled.h3`
   font-size: 1.3em;
+
+  ${(props) => props.theme.media.lessThan('regular')`
+    font-weight: ${props.theme.fw.semiBold};
+    letter-spacing: 0;
+  `}
+
+  ${(props) => props.theme.media.lessThan('small')`
+    font-weight: ${props.theme.fw.normal};
+    font-size: 1.2em;
+  `}
 `;
 
 export const ButtonTitle = styled.p`

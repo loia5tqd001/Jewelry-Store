@@ -13,7 +13,7 @@ function SectionPreviewArticles() {
         <StyledLink to={routes.newArticles.path}>Bài viết mới nhất</StyledLink>
       </h2>
       <ArticlesContainer>
-        {DATA.map((item) => (
+        {DATA.slice(0, 3).map((item) => (
           <ArticlePreview key={item.articleId} {...item} />
         ))}
       </ArticlesContainer>
