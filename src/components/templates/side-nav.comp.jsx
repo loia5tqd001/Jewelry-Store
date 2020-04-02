@@ -1,53 +1,16 @@
-import React, { useState, useCallback } from 'react';
-import { Collapse } from 'react-collapse';
-
+import React, { useCallback } from 'react';
+import routes, { Link, NavLink } from '../../utils/routes';
 import { useSelector, useDispatch } from 'react-redux';
-import { toggleIsSideNavOpen, setIsSideNavOpen } from '../../redux/navigation/actions';
+import { toggleIsSideNavOpen } from '../../redux/navigation/actions';
 import {
   selectIsSideNavOpen,
   selectBrands,
   selectProducts,
 } from '../../redux/navigation/selectors';
 
-import routes, { Link, NavLink } from '../../utils/routes';
+import CollapsibleNavItem, { ToggleLink } from '../organisms/side-nav/collapsible-nav-item.comp';
 
-import {
-  Container,
-  Overlay,
-  CloseButton,
-  Nav,
-  NavList,
-  NavItem,
-  Trigger,
-  SubList,
-  SubItem,
-} from './side-nav.styled';
-
-const ToggleLink = ({ type: Component, ...otherProps }) => {
-  const dispatch = useDispatch();
-  return <Component onClick={() => dispatch(setIsSideNavOpen(false))} {...otherProps} />;
-};
-
-const CollapsibleNavItem = ({ heading, to, children }) => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  return (
-    <NavItem>
-      <Trigger>
-        <ToggleLink type={NavLink} to={to} exact>
-          {heading}
-        </ToggleLink>
-        <ion-icon
-          onClick={() => setIsOpen(!isOpen)}
-          name={`chevron-${isOpen ? 'up' : 'down'}-outline`}
-        />
-      </Trigger>
-      <Collapse isOpened={isOpen}>
-        <SubList>{children}</SubList>
-      </Collapse>
-    </NavItem>
-  );
-};
+import { Container, Overlay, CloseButton, Nav, NavList, NavItem, SubItem } from './side-nav.styled';
 
 function SideNav() {
   const dispatch = useDispatch();

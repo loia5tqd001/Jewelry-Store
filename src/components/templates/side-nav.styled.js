@@ -69,18 +69,6 @@ export const NavItem = styled.li`
   }
 `;
 
-export const Trigger = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-`;
-
-export const SubList = styled.ul`
-  font-size: 0.9em;
-  margin-left: 2rem;
-  font-weight: ${(props) => props.theme.fw.light};
-`;
-
 export const SubItem = styled.li`
   margin: 0.5rem auto;
 `;
