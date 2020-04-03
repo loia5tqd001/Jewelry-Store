@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import { ThemeContext } from 'styled-components';
 import { Collapse } from 'react-collapse';
 
-import { useIsOpen } from './collapsible-block.hooks';
-import { Container, Heading } from './collapsible-block.styled';
+import { useIsOpen } from './collapsible-footer-block.hooks';
+import { Container, Heading } from './collapsible-footer-block.styled';
 
-function CollapsibleBlock({ color, heading, children }) {
+function CollapsibleFooterBlock({ color, heading, children }) {
   const { colors } = useContext(ThemeContext);
   const { getIsOpen, toggleIsOpen } = useIsOpen();
 
@@ -22,10 +22,10 @@ function CollapsibleBlock({ color, heading, children }) {
   );
 }
 
-CollapsibleBlock.propTypes = {
+CollapsibleFooterBlock.propTypes = {
   color: PropTypes.string,
   heading: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
 };
 
-export default CollapsibleBlock;
+export default CollapsibleFooterBlock;

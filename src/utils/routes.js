@@ -51,11 +51,11 @@ export default {
     display: 'Sản phẩm',
   },
   hotProducts: {
-    path: '/products/hot-products',
+    path: '/hot-products',
     display: 'Sản phẩm bán chạy',
   },
   newProducts: {
-    path: '/products/new-products',
+    path: '/new-products',
     display: 'Sản phẩm mới',
   },
   brands: {
