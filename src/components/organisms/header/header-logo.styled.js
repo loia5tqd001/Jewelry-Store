@@ -16,7 +16,7 @@ export const HeaderLogoContainer = styled.div`
 
     ${LogoHeading} {
       font-size: 2.5rem;
-      padding: 1rem 2rem;
+      padding: 1rem 1rem 1rem 2rem;
       margin: 0;
     }
   `}

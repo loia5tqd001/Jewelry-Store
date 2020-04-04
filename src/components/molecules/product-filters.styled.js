@@ -2,14 +2,14 @@ import styled from 'styled-components';
 
 export const FilterContainer = styled.div`
   .ReactCollapse--collapse {
-    transition: height ${(props) => props.theme.styles.transSlow5};
+    transition: height ${(props) => props.theme.styles.transSlow1};
     margin-bottom: 0.5rem;
   }
 `;
 
 export const Heading = styled.h3`
   text-transform: uppercase;
-  font-size: 1em;
+  font-size: 1.2em;
   cursor: pointer;
   margin-top: 0.5rem;
   display: inline-flex;
@@ -29,6 +29,7 @@ export const Label = styled.label`
   ${(props) => props.theme.mixins.hoverColorPrimary}
   transition: color ${(props) => props.theme.styles.transFast1};
   user-select: none;
+  font-size: 1.1em;
 
   &::before, &::after {
     content: '';

@@ -22,25 +22,25 @@ export function FilterPrice() {
       <ul>
         <li>
           <Input type="checkbox" id="price1" />
-          <Label for="price1">
+          <Label htmlFor="price1">
             <small>Dưới</small> 500,000đ
           </Label>
         </li>
         <li>
           <Input type="checkbox" id="price2" />
-          <Label for="price2">500,000đ - 1,000,000đ</Label>
+          <Label htmlFor="price2">500,000đ - 1,000,000đ</Label>
         </li>
         <li>
           <Input type="checkbox" id="price3" />
-          <Label for="price3">1,000,000đ - 1,500,000đ</Label>
+          <Label htmlFor="price3">1,000,000đ - 1,500,000đ</Label>
         </li>
         <li>
           <Input type="checkbox" id="price4" />
-          <Label for="price4">2,000,000đ - 5,000,000đ</Label>
+          <Label htmlFor="price4">2,000,000đ - 5,000,000đ</Label>
         </li>
         <li>
           <Input type="checkbox" id="price5" />
-          <Label for="price5">
+          <Label htmlFor="price5">
             <small>Trên</small> 5,000,000đ
           </Label>
         </li>
@@ -55,27 +55,27 @@ export function FilterBrand() {
       <ul>
         <li>
           <Input type="checkbox" id="brand1" />
-          <Label for="brand1">D'ORO</Label>
+          <Label htmlFor="brand1">D'ORO</Label>
         </li>
         <li>
           <Input type="checkbox" id="brand2" />
-          <Label for="brand2">PAVE CLASSICA</Label>
+          <Label htmlFor="brand2">PAVE CLASSICA</Label>
         </li>
         <li>
           <Input type="checkbox" id="brand3" />
-          <Label for="brand3">TRIO</Label>
+          <Label htmlFor="brand3">TRIO</Label>
         </li>
         <li>
           <Input type="checkbox" id="brand4" />
-          <Label for="brand4">PAVE ROSE</Label>
+          <Label htmlFor="brand4">PAVE ROSE</Label>
         </li>
         <li>
           <Input type="checkbox" id="brand5" />
-          <Label for="brand5">BOUQUET</Label>
+          <Label htmlFor="brand5">BOUQUET</Label>
         </li>
         <li>
           <Input type="checkbox" id="brand6" />
-          <Label for="brand6">DUO</Label>
+          <Label htmlFor="brand6">DUO</Label>
         </li>
       </ul>
     </Filter>
@@ -88,19 +88,19 @@ export function FilterProductType() {
       <ul>
         <li>
           <Input type="checkbox" id="product1" />
-          <Label for="product1">Nhẫn</Label>
+          <Label htmlFor="product1">Nhẫn</Label>
         </li>
         <li>
           <Input type="checkbox" id="product2" />
-          <Label for="product2">Hoa tai</Label>
+          <Label htmlFor="product2">Hoa tai</Label>
         </li>
         <li>
           <Input type="checkbox" id="product3" />
-          <Label for="product3">Dây chuyền</Label>
+          <Label htmlFor="product3">Dây chuyền</Label>
         </li>
         <li>
           <Input type="checkbox" id="product4" />
-          <Label for="product4">Vòng tay</Label>
+          <Label htmlFor="product4">Vòng tay</Label>
         </li>
       </ul>
     </Filter>

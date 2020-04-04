@@ -28,7 +28,7 @@ function SliderProductItem({
   productSale,
 }) {
   const to = `${routes.products.path}/${productId}`;
-
+  
   return (
     <SliderItem>
       <ProductImage title={productName}>
