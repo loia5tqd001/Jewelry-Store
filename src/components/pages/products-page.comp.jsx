@@ -3,6 +3,9 @@ import React from 'react';
 import { FilterPrice, FilterBrand } from '../molecules/product-filters.comp';
 import ProductDropdown from '../molecules/product-dropdown.comp';
 import SliderProductItem from '../molecules/slider-product-item.comp';
+import Breadcrumb from '../atoms/breadcrumb.comp';
+
+import routes from '../../utils/routes';
 
 import {
   ImageContainer,
@@ -17,6 +20,7 @@ import DATA from './products-page.data';
 function ProductsPage() {
   return (
     <section>
+      <Breadcrumb paths={[routes.home, routes.products]} />
       <ImageContainer>
         <img
           src="https://file.hstatic.net/1000327411/collection/landingpage_banner_rings.jpg"
