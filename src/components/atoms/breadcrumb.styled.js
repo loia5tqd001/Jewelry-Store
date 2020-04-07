@@ -9,11 +9,9 @@ export const BreadcrumbContainer = styled.div`
 `;
 
 export const BreadcrumbItem = styled.span`
-  margin-right: 1rem;
-
   &::after {
     content: '/';
-    margin-left: 1rem;
+    margin: 1rem;
     color: ${(props) => props.theme.colors.greyLight3};
   }
 `;
