@@ -9,9 +9,9 @@ function Breadcrumb({ paths }) {
     <BreadcrumbContainer>
       {paths.map((value, index) =>
         index === paths.length - 1 ? (
-          <span>{value.display}</span>
+          <span key={index}>{value.display}</span>
         ) : (
-          <BreadcrumbItem>
+          <BreadcrumbItem key={index}>
             <StyledLink to={value.path}>{value.display}</StyledLink>
           </BreadcrumbItem>
         ),
