@@ -26,6 +26,10 @@ export const MainSection = styled.main`
       'aside aside'
       'products products';
   `}
+
+  ${(props) => props.theme.media.lessThan('small')`
+    padding: 0.5em;
+  `}
 `;
 
 export const FilterContainer = styled.aside`
@@ -38,7 +42,13 @@ export const FilterContainer = styled.aside`
 
   ${(props) => props.theme.media.lessThan('regular')`
     position: static;
-    margin: 0 auto 0 4em;
+    margin: 0.5em 2em 0;
+    padding: 0 0 1em 0;
+  `}
+
+  ${(props) => props.theme.media.lessThan('medium')`
+    margin-left: 0.5em;
+    margin-right: 0.5em;
   `}
 `;
 
@@ -47,7 +57,22 @@ export const HeadingContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 1rem 0 3rem;
+  padding: 0 1em 0 2em;
+
+  ${(props) => props.theme.media.lessThan('regular')`
+    margin-right: 1em;
+    margin-top: 1em;
+  `}
+
+  ${(props) => props.theme.media.lessThan('medium')`
+    margin: 1em 0 0 -1em;
+  `}
+
+  ${(props) => props.theme.media.lessThan('smedium')`
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 1em 0 0.5em -1.5em;
+  `}
 `;
 
 export const Heading = styled.h2`
@@ -55,7 +80,11 @@ export const Heading = styled.h2`
   text-align: center;
 
   ${(props) => props.theme.media.lessThan('regular')`
-    margin: 0.5em auto 0 1em;
+    margin: 0;
+  `}
+
+  ${(props) => props.theme.media.lessThan('smedium')`
+    margin-bottom: 0.5em;
   `}
 `;
 
@@ -69,5 +98,8 @@ export const ProductsGrid = styled.div`
   `}
   ${(props) => props.theme.media.lessThan('large')`
     --no-columns: 3;
+  `}
+  ${(props) => props.theme.media.lessThan('smedium')`
+    --no-columns: 2;
   `}
 `;

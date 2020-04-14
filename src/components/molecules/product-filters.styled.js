@@ -15,6 +15,7 @@ export const Heading = styled.h3`
   display: inline-flex;
   align-items: center;
   user-select: none;
+  font-weight: ${(props) => props.theme.fw.semiBold};
 
   ion-icon {
     font-size: 1.1em;
