@@ -13,7 +13,10 @@ function Filters() {
   return (
     <Container>
       <Header onClick={toggleIsOpen}>
-        <span>Bộ lọc sản phẩm</span> <ion-icon name={`chevron-${isOpen ? 'up' : 'down'}-outline`} />
+        <span>Bộ lọc sản phẩm</span>
+        {!isOpenAnyway({ width: window.innerWidth }) && (
+          <ion-icon name={`chevron-${isOpen ? 'up' : 'down'}-outline`} />
+        )}
       </Header>
       <Collapse isOpened={isOpen}>
         <FilterBrand />
