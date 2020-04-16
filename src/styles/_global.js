@@ -28,6 +28,8 @@ export default createGlobalStyle`
     font-size: 1.6rem;
     font-weight: ${(props) => props.theme.fw.normal};
     line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   ul {

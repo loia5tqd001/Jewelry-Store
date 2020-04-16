@@ -88,18 +88,6 @@ export const Heading = styled.h2`
   `}
 `;
 
-export const ProductsGrid = styled.div`
+export const ProductsGridWrapper = styled.div`
   grid-area: products;
-
-  ${(props) => props.theme.mixins.gridDivideIntoColumns(5)}
-
-  ${(props) => props.theme.media.lessThan('huge')`
-    --no-columns: 4;
-  `}
-  ${(props) => props.theme.media.lessThan('large')`
-    --no-columns: 3;
-  `}
-  ${(props) => props.theme.media.lessThan('smedium')`
-    --no-columns: 2;
-  `}
 `;
