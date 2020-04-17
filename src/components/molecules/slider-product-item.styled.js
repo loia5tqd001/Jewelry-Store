@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const SliderItem = styled.div`
-  padding: 1rem;
+  padding: 0.5em;
 `;
 
 export const SaleLabel = styled.span`
@@ -23,7 +23,7 @@ export const ProductImage = styled.div`
 
 export const ProductDetail = styled.div`
   text-align: center;
-  padding: 2rem 10%;
+  padding: 1em 10%;
 
   ${(props) => props.theme.media.lessThan('tiny')`
     padding: 1.5rem 3%;

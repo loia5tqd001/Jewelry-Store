@@ -1,7 +1,7 @@
 import React from 'react';
 
 import routes, { StyledLink } from '../../../utils/routes';
-import CollapsibleBlock from '../../molecules/collapsible-block.comp';
+import CollapsibleBlock from '../../molecules/collapsible-footer-block.comp';
 import EmailSubscribe from '../../molecules/email-subscribe.comp';
 
 import { FooterTopContainer, Li, SubscribeParagraph } from './footer-top.styled';
