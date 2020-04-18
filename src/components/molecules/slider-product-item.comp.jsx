@@ -27,7 +27,7 @@ function SliderProductItem({
   originalPrice,
   productSale,
 }) {
-  const to = `${routes.products.path}/${productId}`;
+  const to = `${routes.productDetail.path}/${productId}`;
   
   return (
     <SliderItem>

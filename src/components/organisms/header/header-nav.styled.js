@@ -75,6 +75,7 @@ export const MainNavLink = styled(NavLink)`
 
 export const MainNav = styled.nav`
   ${(props) => props.theme.mixins.flexCenter}
+  user-select: none;
 
   ${(props) => props.theme.media.lessThan('regular')`
     display: none;

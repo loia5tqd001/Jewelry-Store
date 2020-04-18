@@ -1,7 +1,7 @@
-import { Link, NavLink, useHistory } from 'react-router-dom';
+import { Link, NavLink, useHistory, useParams } from 'react-router-dom';
 import StyledLink from '../components/atoms/styled-link.comp';
 
-export { Link, NavLink, StyledLink, useHistory };
+export { Link, NavLink, StyledLink, useHistory, useParams };
 
 // for more convenient Breadcrumb
 // display: ## means the path will not likely be displayed on a breadcrumb
@@ -49,6 +49,10 @@ export default {
   products: {
     path: '/products',
     display: 'Sản phẩm',
+  },
+  productDetail: {
+    path: '/product-detail',
+    display: 'Chi tiết sản phẩm',
   },
   hotProducts: {
     path: '/hot-products',

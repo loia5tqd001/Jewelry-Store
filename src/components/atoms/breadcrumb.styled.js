@@ -9,7 +9,7 @@ export const BreadcrumbContainer = styled.div`
 `;
 
 export const BreadcrumbItem = styled.span`
-  &::after {
+  &:not(:last-child)::after {
     content: '/';
     margin: 1rem;
     color: ${(props) => props.theme.colors.greyLight3};

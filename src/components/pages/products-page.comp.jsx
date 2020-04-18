@@ -1,5 +1,5 @@
 import React from 'react';
-import routes from '../../utils/routes';
+import routes, { useParams } from '../../utils/routes';
 
 import ProductDropdown from '../molecules/product-dropdown.comp';
 import Breadcrumb from '../atoms/breadcrumb.comp';
@@ -17,9 +17,13 @@ import {
 } from './products-page.styled';
 
 function ProductsPage() {
+  const { collectionId } = useParams();
+  const breadcrumbPaths = [routes.home, routes.products];
+  collectionId && breadcrumbPaths.push(collectionId);
+
   return (
     <PageContainer>
-      <Breadcrumb paths={[routes.home, routes.products]} />
+      <Breadcrumb paths={breadcrumbPaths} />
 
       <ImageContainer>
         <img

@@ -8,6 +8,7 @@ import Footer from './components/templates/footer.comp';
 import NotFoundPage from './components/pages/404-page.comp';
 import HomePage from './components/pages/home-page.comp';
 import ProductsPage from './components/pages/products-page.comp';
+import ProductDetailPage from './components/pages/product-detail-page.comp';
 import AboutPage from './components/pages/about-page.comp';
 
 export default function App() {
@@ -18,7 +19,8 @@ export default function App() {
       <Switch>
         <Route path={routes.home.path} component={HomePage} exact />
         <Route path={routes.products.path} component={ProductsPage} exact />
-        <Route path={`${routes.products.path}/:productId`} component={ProductsPage} exact />
+        <Route path={`${routes.products.path}/:collectionId`} component={ProductsPage} exact />
+        <Route path={`${routes.productDetail.path}/:productId`} component={ProductDetailPage} exact />
         <Route path={routes.about.path} component={AboutPage} exact />
         <Route component={NotFoundPage} />
       </Switch>

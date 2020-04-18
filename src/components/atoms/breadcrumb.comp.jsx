@@ -7,25 +7,28 @@ import { BreadcrumbContainer, BreadcrumbItem } from './breadcrumb.styled';
 function Breadcrumb({ paths }) {
   return (
     <BreadcrumbContainer>
-      {paths.map((value, index) =>
-        index === paths.length - 1 ? (
-          <span key={index}>{value.display}</span>
-        ) : (
-          <BreadcrumbItem key={index}>
+      {paths.map((value, index) => (
+        <BreadcrumbItem key={index}>
+          {typeof value === 'string' ? (
+            <span>{value}</span>
+          ) : (
             <StyledLink to={value.path}>{value.display}</StyledLink>
-          </BreadcrumbItem>
-        ),
-      )}
+          )}
+        </BreadcrumbItem>
+      ))}
     </BreadcrumbContainer>
   );
 }
 
 Breadcrumb.propTypes = {
   paths: PropTypes.arrayOf(
-    PropTypes.shape({
-      path: PropTypes.string.isRequired,
-      display: PropTypes.string.isRequired,
-    }),
+    PropTypes.oneOfType([
+      PropTypes.string.isRequired,
+      PropTypes.shape({
+        path: PropTypes.string.isRequired,
+        display: PropTypes.string.isRequired,
+      }),
+    ]),
   ),
 };
 
