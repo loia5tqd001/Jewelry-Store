@@ -20,36 +20,36 @@ import {
 } from './slider-product-item.styled';
 
 function SliderProductItem({
-  productId,
-  productName,
-  srcImage,
-  srcOnHover,
-  originalPrice,
-  productSale,
+  id,
+  name,
+  image,
+  image2,
+  price,
+  sale,
 }) {
-  const to = `${routes.productDetail.path}/${productId}`;
-  
+  const to = `${routes.productDetail.path}/${id}`;
+
   return (
     <SliderItem>
-      <ProductImage title={productName}>
+      <ProductImage title={name}>
         <Link to={to}>
-          {productSale ? <SaleLabel>{`-${productSale}%`}</SaleLabel> : ''}
-          <ImageDuoHover srcImage={srcImage} srcOnHover={srcOnHover} alt={productName} />
+          {sale ? <SaleLabel>{`-${sale}%`}</SaleLabel> : ''}
+          <ImageDuoHover srcImage={image} srcOnHover={image2} alt={name} />
         </Link>
       </ProductImage>
 
       <ProductDetail>
-        <ProductName title={productName}>
-          <StyledLink to={to}>{productName}</StyledLink>
+        <ProductName title={name}>
+          <StyledLink to={to}>{name}</StyledLink>
         </ProductName>
         <ProductPrice>
-          {productSale ? (
+          {sale ? (
             <>
-              <ProPrice>{formatVnd(roundVnd(getSale(originalPrice, productSale)))}</ProPrice>
-              <ComparePrice>{formatVnd(roundVnd(originalPrice))}</ComparePrice>
+              <ProPrice>{formatVnd(roundVnd(getSale(price, sale)))}</ProPrice>
+              <ComparePrice>{formatVnd(roundVnd(price))}</ComparePrice>
             </>
           ) : (
-            <span>{formatVnd(originalPrice)}</span>
+            <span>{formatVnd(price)}</span>
           )}
         </ProductPrice>
       </ProductDetail>
@@ -58,16 +58,16 @@ function SliderProductItem({
 }
 
 SliderProductItem.propTypes = {
-  productId: PropTypes.oneOfType([PropTypes.string.isRequired, PropTypes.number.isRequired]),
-  productName: PropTypes.string.isRequired,
-  srcImage: PropTypes.string.isRequired,
-  srcOnHover: PropTypes.string.isRequired,
-  originalPrice: PropTypes.number.isRequired,
-  productSale: PropTypes.number,
+  id: PropTypes.oneOfType([PropTypes.string.isRequired, PropTypes.number.isRequired]),
+  name: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+  image2: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
+  sale: PropTypes.number,
 };
 
 SliderProductItem.defaultProps = {
-  productSale: 0,
+  sale: 0,
 };
 
 export default SliderProductItem;

@@ -24,7 +24,8 @@
     "reselect": "^4.0.0",
     "slick-carousel": "^1.8.1",
     "styled-components": "^5.0.1",
-    "styled-media-query": "^2.1.2"
+    "styled-media-query": "^2.1.2",
+    "uuid": "^7.0.3"
   },
   "scripts": {
     "start": "react-scripts start",

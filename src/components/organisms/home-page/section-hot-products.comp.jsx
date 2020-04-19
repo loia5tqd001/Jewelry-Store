@@ -1,7 +1,7 @@
 import React from 'react';
-import DATA from './section-hot-products.data';
-
 import routes, { StyledLink } from '../../../utils/routes';
+import hotProducts from '../../../mock-data/hot-products';
+
 import SliderProductItem from '../../molecules/slider-product-item.comp';
 
 import { SectionContainer, ProductsContainer } from './section-hot-products.styled';
@@ -13,8 +13,8 @@ function SectionHotProducts() {
         <StyledLink to={routes.hotProducts.path}>Sản phẩm bán chạy</StyledLink>
       </h2>
       <ProductsContainer>
-        {DATA.slice(0, 10).map((item) => (
-          <SliderProductItem key={item.productId} {...item} />
+        {hotProducts.slice(0, 10).map((item) => (
+          <SliderProductItem key={item.id} {...item} />
         ))}
       </ProductsContainer>
     </SectionContainer>

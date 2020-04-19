@@ -5,13 +5,6 @@ export const PageContainer = styled.section`
   z-index: 1;
 `;
 
-export const ImageContainer = styled.figure`
-  ${(props) => props.theme.mixins.imageFrame}
-  max-height: 22em;
-  overflow: hidden;
-  opacity: 0.95;
-`;
-
 export const MainSection = styled.main`
   display: grid;
   grid-template-columns: auto 1fr;

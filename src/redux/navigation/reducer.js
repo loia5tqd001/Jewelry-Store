@@ -1,10 +1,7 @@
 import types from './types';
-import { brands, products } from './data';
 
 const initialState = {
   isSideNavOpen: false,
-  brands,
-  products,
 };
 
 export default (state = initialState, { type, payload }) => {

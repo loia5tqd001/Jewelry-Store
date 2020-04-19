@@ -1,8 +1,9 @@
 import routes from '../../../utils/routes';
+import { v4 as uuidv4 } from 'uuid';
 
 export default [
   {
-    id: 1,
+    id: uuidv4(),
     srcImage:
       'https://file.hara.vn/1000113711/file/block_home_category1_4a27b3688c9d4ca285b9e1cdb5bd79b1.jpg',
     title: 'Đại sứ thương hiệu',
@@ -10,7 +11,7 @@ export default [
     path: routes.brandEmbassadors.path,
   },
   {
-    id: 2,
+    id: uuidv4(),
     srcImage:
       'https://file.hara.vn/1000113711/file/block_home_category2_25091c60dbb34a15a87df5b1eedd0c91.jpg',
     title: 'Thương hiệu',
@@ -18,7 +19,7 @@ export default [
     path: routes.brands.path,
   },
   {
-    id: 3,
+    id: uuidv4(),
     srcImage:
       'https://file.hara.vn/1000113711/file/block_home_category3_06f0f915efe14d6faeee0003aab81dbc.jpg',
     title: 'Blog',

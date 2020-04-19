@@ -2,11 +2,9 @@ import React, { useCallback } from 'react';
 import routes, { Link, NavLink } from '../../utils/routes';
 import { useSelector, useDispatch } from 'react-redux';
 import { toggleIsSideNavOpen } from '../../redux/navigation/actions';
-import {
-  selectIsSideNavOpen,
-  selectBrands,
-  selectProducts,
-} from '../../redux/navigation/selectors';
+import { selectIsSideNavOpen } from '../../redux/navigation/selectors';
+import brands from '../../mock-data/brands';
+import collections from '../../mock-data/collections';
 
 import CollapsibleNavItem, { ToggleLink } from '../organisms/side-nav/collapsible-nav-item.comp';
 
@@ -15,8 +13,6 @@ import { Container, Overlay, CloseButton, Nav, NavList, NavItem, SubItem } from 
 function SideNav() {
   const dispatch = useDispatch();
   const isSideNavOpen = useSelector(selectIsSideNavOpen);
-  const brands = useSelector(selectBrands);
-  const products = useSelector(selectProducts);
 
   const toglgeSideNav = useCallback(() => {
     dispatch(toggleIsSideNavOpen());
@@ -37,20 +33,20 @@ function SideNav() {
           </NavItem>
 
           <CollapsibleNavItem heading="Nhãn hiệu" to={routes.brands.path}>
-            {brands.map(({ id, display }) => (
+            {brands.map(({ id, brand }) => (
               <SubItem key={id}>
                 <ToggleLink type={Link} to={`${routes.brands.path}/${id}`}>
-                  {display}
+                  {brand}
                 </ToggleLink>
               </SubItem>
             ))}
           </CollapsibleNavItem>
 
           <CollapsibleNavItem heading="Sản phẩm" to={routes.products.path}>
-            {products.map(({ id, display }) => (
+            {collections.map(({ id, collection }) => (
               <SubItem key={id}>
                 <ToggleLink type={Link} to={`${routes.products.path}/${id}`}>
-                  {display}
+                  {collection}
                 </ToggleLink>
               </SubItem>
             ))}

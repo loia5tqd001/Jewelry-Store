@@ -1,6 +1,8 @@
+import { v4 as uuidv4 } from 'uuid';
+
 export default [
   {
-    articleId: 1,
+    articleId: uuidv4(),
     srcImage: 'https://file.hstatic.net/1000327411/article/blog6_grande.jpg',
     time: 'Thứ Hai 15.10.2018',
     title: 'Sức hút của vàng hồng trong ngành trang sức',
@@ -8,7 +10,7 @@ export default [
       'Vàng hồng là một trong những nguyên liệu chế tác trang sức được các quý cô ưa chuộng nhất hiện nay.Vàng hồng từ lâu đã quen thuộc và trở thành...',
   },
   {
-    articleId: 2,
+    articleId: uuidv4(),
     srcImage: 'https://file.hstatic.net/1000327411/article/blog2_grande.jpg',
     time: 'Thứ Hai 15.10.2018',
     title: 'Kiểu cắt Round - Bí mật của tuyệt tác kim cương',
@@ -16,7 +18,7 @@ export default [
       'Nếu đã trót say mê vẻ đẹp lấp lánh của kim cương chắc hẳn các bạn sẽ không còn xa lạ với kiểu cắt Round nổi tiếng. Nhưng bạn đã...',
   },
   {
-    articleId: 3,
+    articleId: uuidv4(),
     srcImage: 'https://file.hstatic.net/1000327411/article/blog5_grande.jpg',
     time: 'Thứ Hai 15.10.2018',
     title: 'Những biểu tượng nhan sắc gắn liền với nghệ thuật kim hoàn',

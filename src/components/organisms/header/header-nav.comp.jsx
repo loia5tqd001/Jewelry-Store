@@ -1,9 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import routes from '../../../utils/routes';
-
-import { useSelector } from 'react-redux';
-import { selectBrands, selectProducts } from '../../../redux/navigation/selectors';
+import brands from '../../../mock-data/brands';
+import collections from '../../../mock-data/collections';
 
 import {
   MainNav,
@@ -16,9 +15,6 @@ import {
 } from './header-nav.styled';
 
 function HeaderNav({ isHeaderStuck }) {
-  const brands = useSelector(selectBrands);
-  const products = useSelector(selectProducts);
-
   return (
     <MainNav isHeaderStuck={isHeaderStuck}>
       <MainNavList>
@@ -37,7 +33,7 @@ function HeaderNav({ isHeaderStuck }) {
           <SubNavList>
             {brands.map((brand) => (
               <SubNavItem key={brand.id}>
-                <SubNavLink to={`${routes.brands.path}/${brand.id}`}>{brand.display}</SubNavLink>
+                <SubNavLink to={`${routes.brands.path}/${brand.id}`}>{brand.brand}</SubNavLink>
               </SubNavItem>
             ))}
           </SubNavList>
@@ -50,10 +46,10 @@ function HeaderNav({ isHeaderStuck }) {
           </MainNavLink>
 
           <SubNavList>
-            {products.map((product) => (
-              <SubNavItem key={product.id}>
-                <SubNavLink to={`${routes.products.path}/${product.id}`}>
-                  {product.display}
+            {collections.map((collection) => (
+              <SubNavItem key={collection.id}>
+                <SubNavLink to={`${routes.products.path}/${collection.id}`}>
+                  {collection.collection}
                 </SubNavLink>
               </SubNavItem>
             ))}

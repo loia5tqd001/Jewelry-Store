@@ -5,7 +5,6 @@ import { selectCustomStyles } from './product-dropdown.styled';
 
 const options = [
   { value: 'featured-products', label: 'Sản phẩm nổi bật' },
-  { value: 'best-selling', label: 'Sản phẩm bán chạy' },
   { value: 'price-ascending', label: 'Giá: Tăng dần' },
   { value: 'price-descending', label: 'Giá: Giảm dần' },
   { value: 'name-a-z', label: 'Tên: A-Z' },

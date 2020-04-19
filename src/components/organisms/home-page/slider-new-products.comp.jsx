@@ -1,10 +1,10 @@
 import React from 'react';
 import Slider from 'react-slick';
-
 import routes, { StyledLink } from '../../../utils/routes';
+import newProducts from '../../../mock-data/new-products';
+
 import SliderProductItem from '../../molecules/slider-product-item.comp';
 
-import DATA from './slider-new-products.data';
 import { SliderArrow } from './slider-new-products.styled';
 
 const sliderSettings = {
@@ -35,8 +35,8 @@ function SliderNewProducts() {
         <StyledLink to={routes.newProducts.path}>Sản phẩm mới</StyledLink>
       </h2>
       <Slider {...sliderSettings}>
-        {DATA.map((item) => (
-          <SliderProductItem key={item.productId} {...item} />
+        {newProducts.map((item) => (
+          <SliderProductItem key={item.id} {...item} />
         ))}
       </Slider>
     </div>

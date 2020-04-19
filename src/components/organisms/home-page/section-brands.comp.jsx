@@ -1,21 +1,17 @@
 import React from 'react';
-
 import routes, { Link } from '../../../utils/routes';
+import brands from '../../../mock-data/brands';
+
 import ImageSlowlyHover from '../../atoms/image-slowly-hover.comp';
 
-import DATA from './section-brands.data';
 import { SectionContainer } from './section-brands.styled';
 
 function SectionBrands() {
   return (
     <SectionContainer>
-      {DATA.map((item) => (
-        <Link key={item.id} to={`${routes.brands.path}/${item.id}`}>
-          <ImageSlowlyHover
-            srcImage={item.srcImage}
-            title={item.brand}
-            buttonTitle="Mua ngay"
-          />
+      {brands.map((brand) => (
+        <Link key={brand.id} to={`${routes.brands.path}/${brand.id}`}>
+          <ImageSlowlyHover srcImage={brand.image} title={brand.brand} buttonTitle="Mua ngay" />
         </Link>
       ))}
     </SectionContainer>

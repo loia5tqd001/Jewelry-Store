@@ -1,14 +1,15 @@
 import React from 'react';
-import routes, { useParams } from '../../utils/routes';
+import { useParams } from 'react-router-dom';
+import collections from '../../mock-data/collections';
+import products from '../../mock-data/products';
 
 import ProductDropdown from '../molecules/product-dropdown.comp';
-import Breadcrumb from '../atoms/breadcrumb.comp';
 import Filters from '../organisms/products-page/filters.comp';
 import ProductsGrid from '../organisms/products-page/products-grid.comp';
+import PageHeader from '../organisms/products-page/page-header.comp';
 
 import {
   PageContainer,
-  ImageContainer,
   MainSection,
   HeadingContainer,
   Heading,
@@ -18,19 +19,11 @@ import {
 
 function ProductsPage() {
   const { collectionId } = useParams();
-  const breadcrumbPaths = [routes.home, routes.products];
-  collectionId && breadcrumbPaths.push(collectionId);
+  const collection = collections.find((x) => x.id === collectionId);
 
   return (
     <PageContainer>
-      <Breadcrumb paths={breadcrumbPaths} />
-
-      <ImageContainer>
-        <img
-          src="https://file.hstatic.net/1000327411/collection/landingpage_banner_rings.jpg"
-          alt="Nhẫn"
-        />
-      </ImageContainer>
+      <PageHeader collection={collection} />
 
       <MainSection>
         <FilterContainer>
@@ -38,12 +31,14 @@ function ProductsPage() {
         </FilterContainer>
 
         <HeadingContainer>
-          <Heading>Sản phẩm nhẫn</Heading>
+          <Heading>
+            {collection ? `Sản phẩm ${collection.collection.toLowerCase()}` : 'Tất cả sản phẩm'}
+          </Heading>
           <ProductDropdown />
         </HeadingContainer>
 
         <ProductsGridWrapper>
-          <ProductsGrid />
+          <ProductsGrid items={collection ? collection.items : products} />
         </ProductsGridWrapper>
       </MainSection>
     </PageContainer>
