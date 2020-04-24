@@ -9,7 +9,7 @@ export const SliderArrow = styled.div`
 
   &::before,
   &::after {
-    text-shadow: ${(props) => props.theme.styles.shadowSuttle2};
+    text-shadow: ${(props) => props.theme.styles.shadowSubtle2};
     font-size: 4rem;
     ${(props) => props.theme.mixins.absoluteCenter};
   }

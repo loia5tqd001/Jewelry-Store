@@ -12,7 +12,7 @@ export const SaleLabel = styled.span`
   left: 5%;
   padding: 0.5rem 1rem;
   color: ${(props) => props.theme.colors.red};
-  box-shadow: ${(props) => props.theme.styles.shadowSuttle1};
+  box-shadow: ${(props) => props.theme.styles.shadowSubtle1};
   font-weight: ${(props) => props.theme.fw.semiBold};
   background: ${(props) => props.theme.styles.background};
 `;

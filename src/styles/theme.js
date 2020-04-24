@@ -19,8 +19,8 @@ export default {
   transSlow5: '0.5s',
   transFast1: '0.15s',
 
-  shadowSuttle1: '0.1rem 0.1rem 0.4rem #8881',
-  shadowSuttle2: '0 0.2rem 1rem #6664',
-  shadowSuttle3: '-0.2rem 0 0.3rem #8884',
+  shadowSubtle1: '0.1rem 0.1rem 0.4rem #8881',
+  shadowSubtle2: '0 0.2rem 1rem #6664',
+  shadowSubtle3: '-0.2rem 0 0.3rem #8884',
   shadowDown1: '0 0.5rem 1rem #8884',
 };

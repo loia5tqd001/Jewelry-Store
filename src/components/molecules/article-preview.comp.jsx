@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import routes, { Link, StyledLink } from '../../utils/routes';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 import {
   Container,
@@ -17,7 +18,7 @@ function ArticlePreview({ articleId, srcImage, time, title, previewContent }) {
     <Container>
       <ImageContainer>
         <Link to={to} title={title}>
-          <img src={srcImage} alt={title} />
+          <LazyLoadImage src={srcImage} alt={title} />
         </Link>
       </ImageContainer>
       <ContentContainer>

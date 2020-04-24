@@ -13,7 +13,7 @@ export const Form = styled.form`
 `;
 
 export const InputGroup = styled.div`
-  box-shadow: ${(props) => props.theme.styles.shadowSuttle3};
+  box-shadow: ${(props) => props.theme.styles.shadowSubtle3};
   padding: 0.8rem;
   position: relative;
   font-size: 1.1em;

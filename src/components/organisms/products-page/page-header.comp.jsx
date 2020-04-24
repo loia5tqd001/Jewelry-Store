@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import routes from '../../../utils/routes';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 import Breadcrumb from '../../atoms/breadcrumb.comp';
 
@@ -25,7 +26,7 @@ function PageHeader({ collection }) {
       <Breadcrumb paths={breadcrumbPaths} />
 
       <ImageContainer>
-        <img alt="banner" {...imgProperties} />
+        <LazyLoadImage alt="banner" {...imgProperties} />
       </ImageContainer>
     </>
   );

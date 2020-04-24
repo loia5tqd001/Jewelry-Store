@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 export const ImageContainer = styled.div`
   ${(props) => props.theme.mixins.imageFrame};
@@ -7,7 +8,7 @@ export const ImageContainer = styled.div`
   overflow: hidden;
 `;
 
-export const Img = styled.img`
+export const Img = styled(LazyLoadImage)`
   transition: ${(props) => props.theme.styles.transSlow2};
 `;
 
