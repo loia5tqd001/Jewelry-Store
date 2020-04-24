@@ -2,6 +2,7 @@ import React, { lazy, Suspense } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import routes from './utils/routes';
 
+import Loader from './components/atoms/loader.comp';
 import Header from './components/templates/header.comp';
 import SideNav from './components/templates/side-nav.comp';
 import Footer from './components/templates/footer.comp';
@@ -12,14 +13,12 @@ const ProductDetailPage = lazy(() => import('./components/pages/product-detail-p
 const AboutPage = lazy(() => import('./components/pages/about-page.comp'));
 const NotFoundPage = lazy(() => import('./components/pages/404-page.comp'));
 
-const LazyFallback = () => <div style={{ height: '100vh', background: 'white' }} />;
-
 export default function App() {
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Header />
       <SideNav />
-      <Suspense fallback={<LazyFallback />}>
+      <Suspense fallback={<Loader />}>
         <Switch>
           <Route path={routes.home.path} component={HomePage} exact />
           <Route path={routes.products.path} component={ProductsPage} exact />

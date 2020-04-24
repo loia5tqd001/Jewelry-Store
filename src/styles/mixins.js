@@ -71,5 +71,6 @@ export const preventReflow = css`
   img {
     max-width: 100%;
     position: absolute;
+    animation: ${(props) => props.theme.animations.blurIn} 0.5s;
   }
 `;

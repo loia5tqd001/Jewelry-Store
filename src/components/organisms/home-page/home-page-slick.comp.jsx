@@ -1,5 +1,7 @@
 import React from 'react';
 import Slider from 'react-slick';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+
 import routes, { Link } from '../../../utils/routes';
 
 import DATA from './home-page-slick.data';
@@ -27,7 +29,7 @@ function HomePageSlick() {
           title={item.alt}
           key={item.id}
         >
-          <img src={item.src} alt={item.alt} />
+          <LazyLoadImage src={item.src} alt={item.alt} effect="blur"/>
         </SliderItem>
       ))}
     </Slider>

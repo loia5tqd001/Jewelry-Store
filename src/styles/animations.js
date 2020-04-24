@@ -31,3 +31,24 @@ export const stickyHeader = keyframes`
     transform: translateY(0)
   }
 `;
+
+export const loader = keyframes`
+  0% {
+    top: var(--base-size);
+    height: calc(var(--base-size) * 8);
+  }
+  50%,
+  100% {
+    top: calc(var(--base-size) * 3);
+    height: calc(var(--base-size) * 4);
+  }
+`;
+
+export const blurIn = keyframes`
+  0% {
+    filter: blur(15px);
+  }
+  100% {
+    filter: blur(0);
+  }
+`;
