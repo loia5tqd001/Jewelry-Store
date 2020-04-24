@@ -16,7 +16,7 @@ const LazyFallback = () => <div style={{ height: '100vh', background: 'white' }}
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Header />
       <SideNav />
       <Suspense fallback={<LazyFallback />}>
@@ -24,7 +24,11 @@ export default function App() {
           <Route path={routes.home.path} component={HomePage} exact />
           <Route path={routes.products.path} component={ProductsPage} exact />
           <Route path={`${routes.products.path}/:collectionId`} component={ProductsPage} exact />
-          <Route path={`${routes.productDetail.path}/:productId`} component={ProductDetailPage} exact />
+          <Route
+            path={`${routes.productDetail.path}/:productId`}
+            component={ProductDetailPage}
+            exact
+          />
           <Route path={routes.about.path} component={AboutPage} exact />
           <Route component={NotFoundPage} />
         </Switch>
