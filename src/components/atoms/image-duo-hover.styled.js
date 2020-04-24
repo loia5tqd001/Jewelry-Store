@@ -19,7 +19,8 @@ export const ImageOnHover = styled.img`
 
 export const ImageContainer = styled.div`
   ${(props) => props.theme.mixins.imageFrame};
-  position: relative;
+  ${(props) => props.theme.mixins.preventReflow}
+  --aspect-ratio: 1;
 
   &:hover {
     ${ImageStatic} {

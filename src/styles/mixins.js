@@ -53,12 +53,23 @@ export const transparentizeButton = css`
   outline: none;
 `;
 
-// Why repeat(5, 1fr) leaks to blowout: 
-// https://css-tricks.com/preventing-a-grid-blowout/ 
+// Why repeat(5, 1fr) leaks to blowout:
+// https://css-tricks.com/preventing-a-grid-blowout/
 // only either repeat(5, minmax(0, 1fr)) or repeat(5, 20%) will work
 // We need to write `minmax(0, 1fr)` instead of just `1fr` to prevent blowout.
 export const gridDivideIntoColumns = (noColumns) => css`
   --no-columns: ${noColumns};
   display: grid;
   grid-template-columns: repeat(var(--no-columns), minmax(0, 1fr));
+`;
+
+// How to prevent reflow when loading images: https://stackoverflow.com/a/51496478/9787887
+export const preventReflow = css`
+  padding-bottom: calc(var(--aspect-ratio) * 100%);
+  position: relative;
+
+  img {
+    max-width: 100%;
+    position: absolute;
+  }
 `;

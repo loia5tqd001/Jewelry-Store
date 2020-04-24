@@ -1,8 +1,10 @@
 import styled from 'styled-components';
 
 export const SliderItem = styled.div`
-  ${(props) => props.theme.mixins.imageFrame};
   outline: none;
+
+  ${(props) => props.theme.mixins.preventReflow}
+  --aspect-ratio: 600/1920;
 `;
 
 // Example: https://react-slick.neostack.com/docs/example/append-dots/

@@ -2,6 +2,8 @@ import styled from 'styled-components';
 
 export const ImageContainer = styled.div`
   ${(props) => props.theme.mixins.imageFrame};
+  ${(props) => props.theme.mixins.preventReflow}
+  --aspect-ratio: 1;
   overflow: hidden;
 `;
 
@@ -20,7 +22,7 @@ export const ActionContainer = styled.div`
   ${(props) => props.theme.media.lessThan('regular')`
     font-size: 0.9em;
   `}
-  
+
   ${(props) => props.theme.media.lessThan('small')`
     padding: 0.5rem 1rem;
   `}

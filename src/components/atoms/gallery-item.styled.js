@@ -2,8 +2,8 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   ${(props) => props.theme.mixins.imageFrame};
-
-  position: relative;
+  ${(props) => props.theme.mixins.preventReflow}
+  --aspect-ratio: 1;
 
   &::after {
     content: '';

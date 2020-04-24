@@ -1,6 +1,5 @@
 import React from 'react';
 import Slider from 'react-slick';
-
 import routes, { Link } from '../../../utils/routes';
 
 import DATA from './home-page-slick.data';

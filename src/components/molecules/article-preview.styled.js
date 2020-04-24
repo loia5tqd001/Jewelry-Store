@@ -6,6 +6,8 @@ export const Container = styled.div`
 
 export const ImageContainer = styled.div`
   ${(props) => props.theme.mixins.imageFrame};
+  ${(props) => props.theme.mixins.preventReflow}
+  --aspect-ratio: 337/600;
 `;
 
 export const ContentContainer = styled.div`
