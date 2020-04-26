@@ -70,7 +70,20 @@ export const Input = styled.input`
   &:checked + ${Label}::after {
     display: block;
   }
-  &:checked + ${Label}::before {
+  &[type='checkbox']:checked + ${Label}::before {
     border-color: ${(props) => props.theme.colors.greyLight2};
+  }
+  &[type='radio']:checked + ${Label}::before {
+    border-color: ${(props) => props.theme.colors.blueDarker2};
+    background: ${(props) => props.theme.colors.blueDarker2};
+  }
+
+  &[type='radio'] + ${Label} {
+    &::before {
+      border-radius: 50%;
+    }
+    &::after {
+      content: none;
+    }
   }
 `;

@@ -1,29 +1,24 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Select from 'react-select';
+import { useSelector, useDispatch } from 'react-redux';
+import { sorting } from '../../redux/filter-sorting/data';
+import { selectSorting } from '../../redux/filter-sorting/selectors';
+import { setSorting } from '../../redux/filter-sorting/actions';
 
 import { selectCustomStyles } from './product-dropdown.styled';
 
-const options = [
-  { value: 'featured-products', label: 'Sản phẩm nổi bật' },
-  { value: 'price-ascending', label: 'Giá: Tăng dần' },
-  { value: 'price-descending', label: 'Giá: Giảm dần' },
-  { value: 'name-a-z', label: 'Tên: A-Z' },
-  { value: 'name-z-a', label: 'Tên: Z-A' },
-];
-
 function ProductDropdown() {
-  const [selectedOption, setSelectedOption] = useState(options[0]);
+  const curSorting = useSelector(selectSorting);
+  const dispatch = useDispatch();
 
   return (
-    <>
-      <Select
-        options={options}
-        styles={selectCustomStyles}
-        value={selectedOption}
-        onChange={setSelectedOption}
-        isSearchable={false}
-      />
-    </>
+    <Select
+      options={sorting}
+      styles={selectCustomStyles}
+      value={curSorting}
+      onChange={(payload) => dispatch(setSorting(payload))}
+      isSearchable={false}
+    />
   );
 }
 

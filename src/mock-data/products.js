@@ -1,5 +1,4 @@
 import shuffle from 'lodash/shuffle';
-import { PAGING_SIZE, chunk } from './_paging.const';
 
 export const rings = [
   {
@@ -202,5 +201,4 @@ export const necklaces = [
   },
 ];
 
-export const products = shuffle([...rings, ...earings, ...necklaces]);
-export default chunk(products, PAGING_SIZE);
+export default shuffle([...rings, ...earings, ...necklaces]);

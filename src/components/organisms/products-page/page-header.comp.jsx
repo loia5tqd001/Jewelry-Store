@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes, { collectionProps } from '../../../utils/prop-types';
 import routes from '../../../utils/routes';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
@@ -33,10 +33,7 @@ function PageHeader({ collection }) {
 }
 
 PageHeader.propTypes = {
-  collection: PropTypes.shape({
-    collection: PropTypes.string.isRequired,
-    image: PropTypes.string.isRequired,
-  }),
+  collection: PropTypes.shape(collectionProps),
 };
 
 PageHeader.defaultProps = {

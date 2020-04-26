@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import collections from '../../mock-data/collections';
 import products from '../../mock-data/products';
+import { resetFilterSorting } from '../../redux/filter-sorting/actions';
+import { useDispatch } from 'react-redux';
 
 import ProductDropdown from '../molecules/product-dropdown.comp';
 import Filters from '../organisms/products-page/filters.comp';
@@ -20,6 +22,11 @@ import {
 function ProductsPage() {
   const { collectionId } = useParams();
   const collection = collections.find((x) => x.id === collectionId);
+
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(resetFilterSorting());
+  }, [dispatch]);
 
   return (
     <PageContainer>

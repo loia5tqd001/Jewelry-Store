@@ -1,7 +1,6 @@
 import { rings, earings, necklaces } from './products';
-import { PAGING_SIZE, chunk } from './_paging.const';
 
-const DATA = [
+export default [
   {
     id: 'collection_1',
     collection: 'Nhẫn',
@@ -29,8 +28,3 @@ const DATA = [
     items: necklaces,
   },
 ];
-
-export default DATA.map((collection) => ({
-  ...collection,
-  items: chunk(collection.items, PAGING_SIZE),
-}));

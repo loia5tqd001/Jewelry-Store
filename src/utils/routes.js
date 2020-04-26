@@ -50,6 +50,10 @@ export default {
     path: '/products',
     display: 'Sản phẩm',
   },
+  rerenderProducts: {
+    path: '/rerender-products',
+    display: 'Sản phẩm',
+  },
   productDetail: {
     path: '/product-detail',
     display: 'Chi tiết sản phẩm',

@@ -1,5 +1,5 @@
 import React, { lazy, Suspense } from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import routes from './utils/routes';
 
 import Loader from './components/atoms/loader.comp';
@@ -21,6 +21,11 @@ export default function App() {
       <Suspense fallback={<Loader />}>
         <Switch>
           <Route path={routes.home.path} component={HomePage} exact />
+          <Route
+            path={routes.rerenderProducts.path}
+            render={() => <Redirect to={routes.products.path} />}
+            exact
+          />
           <Route path={routes.products.path} component={ProductsPage} exact />
           <Route path={`${routes.products.path}/:collectionId`} component={ProductsPage} exact />
           <Route

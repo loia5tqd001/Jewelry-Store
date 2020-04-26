@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { productProps } from '../../utils/prop-types';
 import routes, { Link } from '../../utils/routes';
 
 import StyledLink from '../atoms/styled-link.comp';
@@ -19,14 +19,7 @@ import {
   ComparePrice,
 } from './slider-product-item.styled';
 
-function SliderProductItem({
-  id,
-  name,
-  image,
-  image2,
-  price,
-  sale,
-}) {
+function SliderProductItem({ id, name, image, image2, price, sale }) {
   const to = `${routes.productDetail.path}/${id}`;
 
   return (
@@ -57,14 +50,7 @@ function SliderProductItem({
   );
 }
 
-SliderProductItem.propTypes = {
-  id: PropTypes.oneOfType([PropTypes.string.isRequired, PropTypes.number.isRequired]),
-  name: PropTypes.string.isRequired,
-  image: PropTypes.string.isRequired,
-  image2: PropTypes.string.isRequired,
-  price: PropTypes.number.isRequired,
-  sale: PropTypes.number,
-};
+SliderProductItem.propTypes = productProps;
 
 SliderProductItem.defaultProps = {
   sale: 0,

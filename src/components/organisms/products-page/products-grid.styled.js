@@ -49,3 +49,21 @@ export const Paginate = styled.div`
     border-bottom: 2px solid currentColor;
   }
 `;
+
+export const NoProduct = styled.div`
+  ${(props) => props.theme.mixins.flexCenter}
+  font-size: 1.5em;
+  height: 50vh;
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+  position: sticky;
+  top: 100px;
+
+  > :last-child {
+    &:not(:hover) {
+      color: ${(props) => props.theme.colors.red};
+    }
+
+    margin-left: 1rem;
+  }
+`;
