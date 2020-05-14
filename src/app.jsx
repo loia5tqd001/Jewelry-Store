@@ -6,6 +6,7 @@ import Loader from './components/atoms/loader.comp';
 import Header from './components/templates/header.comp';
 import SideNav from './components/templates/side-nav.comp';
 import Footer from './components/templates/footer.comp';
+import ScrollToTop from './components/templates/scroll-to-top.comp'
 
 const HomePage = lazy(() => import('./components/pages/home-page.comp'));
 const ProductsPage = lazy(() => import('./components/pages/products-page.comp'));
@@ -16,6 +17,7 @@ const NotFoundPage = lazy(() => import('./components/pages/404-page.comp'));
 export default function App() {
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <ScrollToTop />
       <Header />
       <SideNav />
       <Suspense fallback={<Loader />}>

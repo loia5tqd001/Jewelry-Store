@@ -12,7 +12,6 @@ export default createGlobalStyle`
 
   html {  
     box-sizing: border-box;
-    scroll-behavior: smooth;
     font-size: 62.5%; /* 1rem -> 10px */
     ${media.greaterThan('4k')` font-size: 75%; `} /* 12px */
     ${media.lessThan('huge')` font-size: 56.25%; `} /* 9px */
