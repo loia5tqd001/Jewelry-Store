@@ -10,8 +10,8 @@ export default {
   greyLight2: '#9babab',
   greyLight3: '#bfbfbf',
   greyLight4: '#e5e5e5',
-
-  greyBlue1: '#f2f5fa',
+  greyLight5: '#f3f3f3bb',
+  greyLight6: '#f2f5fa',
 
   blue: '#b5e2ef',
   blueDarker1: '#90cdde',
