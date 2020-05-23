@@ -7,7 +7,7 @@ import Header from './components/templates/header.comp';
 import SideNav from './components/templates/side-nav.comp';
 import Footer from './components/templates/footer.comp';
 import PopupContact from './components/templates/popup-contact.comp';
-import ScrollToTop from './components/templates/scroll-to-top.comp';
+import ScrollToTop, { ScrollToTopIndicator } from './components/templates/scroll-to-top.comp';
 
 const HomePage = lazy(() => import('./components/pages/home-page.comp'));
 const ProductsPage = lazy(() => import('./components/pages/products-page.comp'));
@@ -19,9 +19,10 @@ export default function App() {
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       <ScrollToTop />
+      <ScrollToTopIndicator />
+      <PopupContact />
       <Header />
       <SideNav />
-      <PopupContact />
       <Suspense fallback={<Loader />}>
         <Switch>
           <Route path={routes.home.path} component={HomePage} exact />

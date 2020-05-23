@@ -4,7 +4,7 @@ import ButtonSliding from '../atoms/button-sliding.comp';
 export const modalStyles = {
   overlay: {
     background: '#03111bbb',
-    zIndex: 19,
+    zIndex: 1000,
   },
   content: {
     position: 'absolute',
@@ -14,7 +14,7 @@ export const modalStyles = {
     bottom: 'reset',
     padding: 'reset',
     minWidth: '35rem',
-    zIndex: 20,
+    zIndex: 1001,
     transform: 'translate(-50%, -50%)',
     boxShadow: '0 2rem 5rem #0004',
     borderRadius: '0.5em',
