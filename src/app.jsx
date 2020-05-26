@@ -18,7 +18,7 @@ const NotFoundPage = lazy(() => import('./components/pages/404-page.comp'));
 export default function App() {
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
-      <ScrollToTop />
+      <Route component={ScrollToTop} />
       <ScrollToTopIndicator />
       <PopupContact />
       <Header />
