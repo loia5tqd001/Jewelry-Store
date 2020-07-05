@@ -10,7 +10,7 @@ export const rings = [
       'https://product.hstatic.net/1000327411/product/sp07-3_grande.jpg',
     ],
     price: 1500000,
-    sale: 13,
+    salePrice: 1300000,
   },
   {
     id: 'ring_2',
@@ -22,7 +22,7 @@ export const rings = [
       'https://product.hstatic.net/1000327411/product/sp08-5_grande.jpg',
     ],
     price: 760000,
-    sale: null,
+    salePrice: null,
   },
   {
     id: 'ring_3',
@@ -32,7 +32,7 @@ export const rings = [
       'https://product.hstatic.net/1000327411/product/sp05-2_grande.jpg',
     ],
     price: 1200000,
-    sale: null,
+    salePrice: null,
   },
   {
     id: 'ring_4',
@@ -42,7 +42,7 @@ export const rings = [
       'https://product.hstatic.net/1000327411/product/sp06-2_grande.jpg',
     ],
     price: 1000000,
-    sale: null,
+    salePrice: null,
   },
   {
     id: 'ring_5',
@@ -52,7 +52,7 @@ export const rings = [
       'https://product.hstatic.net/1000327411/product/sp17-2_grande.jpg',
     ],
     price: 1000000,
-    sale: null,
+    salePrice: null,
   },
   {
     id: 'ring_6',
@@ -62,7 +62,7 @@ export const rings = [
       'https://product.hstatic.net/1000327411/product/sp19-5_grande.jpg',
     ],
     price: 1400000,
-    sale: null,
+    salePrice: null,
   },
   {
     id: 'ring_7',
@@ -72,7 +72,7 @@ export const rings = [
       'https://product.hstatic.net/1000327411/product/sp05-6_grande.jpg',
     ],
     price: 1350000,
-    sale: 15,
+    salePrice: 1140000,
   },
 ];
 
@@ -85,7 +85,7 @@ export const earings = [
       'https://product.hstatic.net/1000327411/product/sp02-2_grande.jpg',
     ],
     price: 760000,
-    sale: null,
+    salePrice: null,
   },
   {
     id: 'earing_2',
@@ -95,7 +95,7 @@ export const earings = [
       'https://product.hstatic.net/1000327411/product/sp16-2_grande.jpg',
     ],
     price: 1200000,
-    sale: 18,
+    salePrice: 980000,
   },
   {
     id: 'earing_3',
@@ -105,7 +105,7 @@ export const earings = [
       'https://product.hstatic.net/1000327411/product/sp14-2_grande.jpg',
     ],
     price: 700000,
-    sale: null,
+    salePrice: null,
   },
   {
     id: 'earing_4',
@@ -115,7 +115,7 @@ export const earings = [
       'https://product.hstatic.net/1000327411/product/sp10-2_grande.jpg',
     ],
     price: 1400000,
-    sale: null,
+    salePrice: null,
   },
   {
     id: 'earing_5',
@@ -125,7 +125,7 @@ export const earings = [
       'https://product.hstatic.net/1000327411/product/sp09-2_grande.jpg',
     ],
     price: 800000,
-    sale: null,
+    salePrice: null,
   },
   {
     id: 'earing_6',
@@ -135,7 +135,7 @@ export const earings = [
       'https://product.hstatic.net/1000327411/product/sp03-2_grande.jpg',
     ],
     price: 900000,
-    sale: 11,
+    salePrice: 800000,
   },
   {
     id: 'earing_7',
@@ -145,7 +145,7 @@ export const earings = [
       'https://product.hstatic.net/1000327411/product/sp01-2_grande.jpg',
     ],
     price: 1600000,
-    sale: 9,
+    salePrice: 1450000,
   },
   {
     id: 'earing_8',
@@ -155,7 +155,7 @@ export const earings = [
       'https://product.hstatic.net/1000327411/product/sp11-2_grande.jpg',
     ],
     price: 1100000,
-    sale: null,
+    salePrice: null,
   },
   {
     id: 'earing_9',
@@ -165,7 +165,7 @@ export const earings = [
       'https://product.hstatic.net/1000327411/product/sp13-2_grande.jpg',
     ],
     price: 1400000,
-    sale: null,
+    salePrice: null,
   },
   {
     id: 'earing_10',
@@ -175,7 +175,7 @@ export const earings = [
       'https://product.hstatic.net/1000327411/product/sp12-2_grande.jpg',
     ],
     price: 900000,
-    sale: null,
+    salePrice: null,
   },
 ];
 
@@ -188,7 +188,7 @@ export const necklaces = [
       'https://product.hstatic.net/1000327411/product/sp22-2_grande.jpg',
     ],
     price: 460000,
-    sale: null,
+    salePrice: null,
   },
   {
     id: 'necklace_2',
@@ -198,7 +198,7 @@ export const necklaces = [
       'https://product.hstatic.net/1000327411/product/sp21-2_grande.jpg',
     ],
     price: 1650000,
-    sale: null,
+    salePrice: null,
   },
   {
     id: 'necklace_3',
@@ -208,7 +208,7 @@ export const necklaces = [
       'https://product.hstatic.net/1000327411/product/sp21-4_grande.jpg',
     ],
     price: 1150000,
-    sale: null,
+    salePrice: null,
   },
   {
     id: 'necklace_4',
@@ -218,7 +218,7 @@ export const necklaces = [
       'https://product.hstatic.net/1000327411/product/sp20-2_grande.jpg',
     ],
     price: 500000,
-    sale: null,
+    salePrice: null,
   },
   {
     id: 'necklace_5',
@@ -228,7 +228,7 @@ export const necklaces = [
       'https://product.hstatic.net/1000327411/product/sp20-4_grande.jpg',
     ],
     price: 600000,
-    sale: null,
+    salePrice: null,
   },
   {
     id: 'necklace_6',
@@ -238,7 +238,7 @@ export const necklaces = [
       'https://product.hstatic.net/1000327411/product/sp20-6_grande.jpg',
     ],
     price: 550000,
-    sale: null,
+    salePrice: null,
   },
   {
     id: 'necklace_7',
@@ -248,7 +248,7 @@ export const necklaces = [
       'https://product.hstatic.net/1000327411/product/sp04-2_grande.jpg',
     ],
     price: 1000000,
-    sale: 15,
+    salePrice: 850000,
   },
 ];
 

@@ -19,14 +19,14 @@ import {
   ComparePrice,
 } from './slider-product-item.styled';
 
-function SliderProductItem({ id, name, images, price, sale }) {
+function SliderProductItem({ id, name, images, price, salePrice }) {
   const to = `${routes.productDetail.path}/${id}`;
 
   return (
     <SliderItem>
       <ProductImage title={name}>
         <Link to={to}>
-          {sale ? <SaleLabel>{`-${sale}%`}</SaleLabel> : ''}
+          {salePrice ? <SaleLabel>{`-${getSale(price, salePrice)}%`}</SaleLabel> : ''}
           <ImageDuoHover srcImage={images[0]} srcOnHover={images[1]} alt={name} />
         </Link>
       </ProductImage>
@@ -36,9 +36,9 @@ function SliderProductItem({ id, name, images, price, sale }) {
           <StyledLink to={to}>{name}</StyledLink>
         </ProductName>
         <ProductPrice>
-          {sale ? (
+          {salePrice ? (
             <>
-              <ProPrice>{formatVnd(roundVnd(getSale(price, sale)))}</ProPrice>
+              <ProPrice>{formatVnd(roundVnd(salePrice))}</ProPrice>
               <ComparePrice>{formatVnd(roundVnd(price))}</ComparePrice>
             </>
           ) : (

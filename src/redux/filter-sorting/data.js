@@ -5,23 +5,38 @@ export const prices = [
   },
   {
     label: 'Dưới 500,000đ',
-    callback: ({ price }) => price > 0 && price < 500000,
+    callback: ({ price, salePrice }) => {
+      const finalPrice = salePrice ? salePrice : price;
+      return finalPrice > 0 && finalPrice < 500000;
+    },
   },
   {
     label: '500,000đ - 1,000,000đ',
-    callback: ({ price }) => price >= 500000 && price <= 1000000,
+    callback: ({ price, salePrice }) => {
+      const finalPrice = salePrice ? salePrice : price;
+      return finalPrice >= 500000 && finalPrice <= 1000000;
+    },
   },
   {
     label: '1,000,000đ - 1,500,000đ',
-    callback: ({ price }) => price >= 1000000 && price <= 1500000,
+    callback: ({ price, salePrice }) => {
+      const finalPrice = salePrice ? salePrice : price;
+      return finalPrice >= 1000000 && finalPrice <= 1500000;
+    },
   },
   {
     label: '2,000,000đ - 5,000,000đ',
-    callback: ({ price }) => price >= 2000000 && price <= 5000000,
+    callback: ({ price, salePrice }) => {
+      const finalPrice = salePrice ? salePrice : price;
+      return finalPrice >= 2000000 && finalPrice <= 5000000;
+    },
   },
   {
     label: 'Trên 5,000,000đ',
-    callback: ({ price }) => price > 5000000,
+    callback: ({ price, salePrice }) => {
+      const finalPrice = salePrice ? salePrice : price;
+      return finalPrice > 5000000;
+    },
   },
 ];
 

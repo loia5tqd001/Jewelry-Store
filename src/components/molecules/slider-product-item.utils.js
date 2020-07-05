@@ -1,3 +1,3 @@
-export function getSale(comparePrice, salePercent) {
-  return comparePrice * (1 - salePercent / 100);
+export function getSale(originalPrice, salePrice) {
+  return Math.round(100 - (salePrice / originalPrice) * 100);
 }

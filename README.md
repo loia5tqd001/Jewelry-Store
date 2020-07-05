@@ -40,72 +40,67 @@ The current API doesn't work well when there's no internet. Look more here: http
 
 
 ---
+### Naming
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- [Atomic architecture structure](https://medium.com/@janelle.wg/atomic-design-pattern-how-to-structure-your-react-application-2bb4d9ca5f97)
+- Component file: `my-component.comp.jsx`
+- `styled-component` file: `my-component.styled.js`
+- utility related to the component: `my-component.utils.js`
+- data related to the component: `my-component.data.js`
+- test related to the component: `my-component.test.js`
+- hooks related to the component: `my-component.hooks.js` **(hooks shared between components will be in the folder hooks/ though)**
+- ...
 
-## Available Scripts
+### Setting eslint and Prettier
 
-In the project directory, you can run:
+> If you want to enforce a coding style for your project, consider using _Prettier_ instead of _ESLint_ style rules.
 
-### `yarn start`
+- Source: https://create-react-app.dev/docs/setting-up-your-editor/#displaying-lint-output-in-the-editor
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### React slick
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+- https://react-slick.neostack.com/docs/api
+- Add both `react-slick` and `slick-carousel`
+- Imported `.css` files from `slick-carousel` in `index.jsx`
 
-### `yarn test`
+### Ionicon
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- 100% free, better than Fontawesome (IMO)
+- Included the cdn link in `index.html`
+- Get the more updated link (than the one in the documentation) from the console window:
+  ![](./.github/images/ionicon-warning.png)
 
-### `yarn build`
+### Scrape
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Crawl product list
+```js
+// Sản phẩm mới
+a = Array.from(document.querySelectorAll('.wrapper-collection-2 .product-block'))
+// Sản phẩm bán chạy
+a = Array.from(document.querySelectorAll('.wrapper-collection-2 .product-block'))
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+b = a.map((x) => {
+  const productName = x.querySelector('h3.pro-name a').title;
+  const price = x.querySelector('.pro-price');
+  let originalPrice = 0;
+  if (price.classList.contains('highlight')) {
+    originalPrice = price.querySelector('.pro-price-del').innerText;
+  } else {
+    originalPrice = price.innerText;
+  }
+  originalPrice = +originalPrice.replace(/,|₫/g, '');
+  const sale = x.querySelector('.product-sale span');
+  const productSale = sale ? +sale.innerText.replace(/-|%/g, '') : null;
+  const pictures = x.querySelectorAll('picture');
+  const srcImage = pictures[0].children[1].srcset.slice(2);
+  const srcOnHover = pictures[1].children[1].srcset.slice(2);
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+  return {
+    productName,
+    srcImage,
+    srcOnHover,
+    originalPrice,
+    productSale,
+  };
+});
+```

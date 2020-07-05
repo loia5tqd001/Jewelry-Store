@@ -6,7 +6,7 @@ export const productProps = {
   name: PropTypes.string.isRequired,
   images: PropTypes.arrayOf(PropTypes.string).isRequired,
   price: PropTypes.number.isRequired,
-  sale: PropTypes.number,
+  salePrice: PropTypes.number,
 };
 
 export const collectionProps = {
