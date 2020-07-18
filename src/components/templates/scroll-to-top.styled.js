@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components';
 export const Container = styled.button`
   position: fixed;
   z-index: 999;
-  left: 3rem;
+  right: 3rem;
   bottom: 5rem;
   width: 4rem;
   height: 4rem;
