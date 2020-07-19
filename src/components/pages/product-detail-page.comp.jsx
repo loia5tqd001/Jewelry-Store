@@ -66,7 +66,7 @@ function ProductDetailPage() {
             fg_static={colors.white}
             bg_sliding={colors.white}
             fg_sliding={colors.greyDark1}
-            padding="1.5em"
+            padding="1.5em"c
           >
             Thêm vào giỏ
           </ButtonSliding>
