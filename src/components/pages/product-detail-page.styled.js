@@ -10,6 +10,10 @@ export const Container = styled.main`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 5em;
+  
+  ${(props) => props.theme.media.lessThan('regular')`
+    grid-template-columns: 1fr;
+  `}
 `;
 
 export const ProductInfo = styled.div`
@@ -37,3 +41,43 @@ export const ProductPrice = styled.p`
 export const Spacer = styled.div`
   margin-top: 5em;
 `;
+
+export const SpecList = styled.ul`
+  margin: auto auto 1em;
+  max-width: 100rem;
+`;
+
+export const SpecItem = styled.li`
+  &:not(:first-child) {
+    border-top: 1px solid ${(props) => props.theme.colors.greyLight1};
+  }
+  
+  padding: 0.5em 0 0.75em;
+  ${(props) => props.theme.media.lessThan('smedium')`
+    padding: 0.4em 0 0.6em;
+  `}
+`;
+
+export const SpecName = styled.span`
+  color: ${(props) => props.theme.colors.greyDark2};
+  display: inline-block;
+  width: 50%;
+  /*
+  ${(props) => props.theme.media.lessThan('smedium')`
+    width: 20em;
+  `}
+   */
+`;
+
+export const SpecContainer = styled.div`
+  padding: 2em;
+`;
+
+export const RatingContainer = styled.div`
+  margin: auto auto 1em;
+  max-width: 100rem;
+  width: 100%;  
+  padding: 2em;
+`;
+
+

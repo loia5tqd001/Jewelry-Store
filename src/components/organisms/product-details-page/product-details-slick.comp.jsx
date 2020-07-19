@@ -2,14 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Carousel } from 'react-responsive-carousel';
 
-import { Container } from './product-details-slick.styled';
+import { Container, CarouselContainer } from './product-details-slick.styled';
 
 function ProductDetailsSlick({ images }) {
   return (
     <Container>
       <Carousel>
-        {images.map((src) => (
-          <div>
+        {images.map((src, index) => (
+          <div key={index}>
             <img src={src} alt="carousel item" />
           </div>
         ))}
