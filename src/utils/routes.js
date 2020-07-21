@@ -42,6 +42,26 @@ export default {
     path: '/account',
     display: '##Tài khoản##',
   },
+  accountAddresses: {
+    path: '/account/addresses',
+    display: '##Danh sách địa chỉ##',
+  },
+  accountProducts: {
+    path: '/account/products',
+    display: '##Danh sách sản phẩm##',
+  },
+  accountLogin: {
+    path: '/account/login',
+    display: '##Đăng nhập##',
+  },
+  accountRecover: {
+    path: '/account/recover',
+    display: '##Quên mật khẩu##',
+  },
+  accountRegister: {
+    path: '/account/register',
+    display: '##Đăng ký##',
+  },
   cart: {
     path: '/cart',
     display: 'Giỏ hàng',

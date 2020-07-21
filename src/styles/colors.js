@@ -17,6 +17,9 @@ export default {
   blueDarker1: '#90cdde',
   blueDarker2: '#67c1d9',
   blueDarker3: '#57aabf',
+  blueFacebook: '#3b5998',
+
 
   red: '#f24a42',
+  redGoogle: '#de5246',
 };

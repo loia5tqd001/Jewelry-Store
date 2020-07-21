@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { ThemeProvider } from 'styled-components';
+import { SnackbarProvider } from 'notistack';
 
 import App from './app';
 import store from './redux/store';
@@ -19,8 +20,10 @@ import './styles/__plugins.js';
 ReactDOM.render(
   <Provider store={store}>
     <ThemeProvider theme={{ ...variables, styles, media, colors, animations, mixins }}>
-      <GlobalStyle />
-      <App />
+      <SnackbarProvider>
+        <GlobalStyle/>
+        <App/>
+      </SnackbarProvider>
     </ThemeProvider>
   </Provider>,
   document.getElementById('root'),

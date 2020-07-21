@@ -1,6 +1,7 @@
 import React, { lazy, Suspense } from 'react';
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import routes from './utils/routes';
+import { useSubscribeUser } from './hooks/use-subscribe-user';
 
 import Loader from './components/atoms/loader.comp';
 import Header from './components/templates/header.comp';
@@ -13,9 +14,12 @@ const HomePage = lazy(() => import('./components/pages/home-page.comp'));
 const ProductsPage = lazy(() => import('./components/pages/products-page.comp'));
 const ProductDetailPage = lazy(() => import('./components/pages/product-detail-page.comp'));
 const AboutPage = lazy(() => import('./components/pages/about-page.comp'));
+const AccountPages = lazy(() => import('./components/pages/account-pages.comp'));
 const NotFoundPage = lazy(() => import('./components/pages/404-page.comp'));
 
 export default function App() {
+  useSubscribeUser();
+
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Route component={ScrollToTop} />
@@ -39,6 +43,7 @@ export default function App() {
             exact
           />
           <Route path={routes.about.path} component={AboutPage} exact />
+          <Route path={routes.account.path} component={AccountPages} />
           <Route component={NotFoundPage} />
         </Switch>
       </Suspense>

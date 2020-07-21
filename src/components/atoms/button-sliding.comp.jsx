@@ -6,7 +6,7 @@ import { Button } from './button-sliding.styled';
 
 function ButtonSliding({ children, ...otherProps }) {
   return (
-    <Button title={children} {...otherProps}>
+    <Button title={typeof children === 'string' ? children : ''} {...otherProps}>
       {children}
     </Button>
   );

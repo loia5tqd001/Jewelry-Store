@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Carousel } from 'react-responsive-carousel';
 
-import { Container, CarouselContainer } from './product-details-slick.styled';
+import { Container } from './product-details-slick.styled';
 
 function ProductDetailsSlick({ images }) {
   return (

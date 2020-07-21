@@ -7,7 +7,7 @@ export const Button = styled.button`
   border-radius: 0;
   cursor: pointer;
   outline: none;
-  color: ${(props) => props.fg_static};
+  color: ${(props) => props.fg_static} !important;
   border: 1px solid ${(props) => props.bg_static};
 
   transition: ${(props) => props.theme.styles.transSlow4};
@@ -24,7 +24,7 @@ export const Button = styled.button`
 
   &:hover {
     background-position-x: 0%;
-    color: ${(props) => !props.disabled && props.fg_sliding};
+    color: ${(props) => !props.disabled && props.fg_sliding} !important;
     transition: ${(props) => props.theme.styles.transSlow5};
   }
 

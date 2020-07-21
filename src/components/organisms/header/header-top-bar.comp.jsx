@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import routes from '../../../utils/routes';
 
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { toggleIsSideNavOpen } from '../../../redux/navigation/actions';
 
 import {
@@ -13,15 +13,19 @@ import {
   ResponsiveLabel,
   HamburgerIcon,
 } from './header-top-bar.styled';
+import { selectCurrentUser } from '../../../redux/user/selectors';
 
 function HeaderTopBar({ isHeaderStuck }) {
   const dispatch = useDispatch();
+  const currentUser = useSelector(selectCurrentUser);
 
   return (
     <HeaderTopBarContainer isHeaderStuck={isHeaderStuck}>
       <StyledLink to={routes.account.path}>
         <ion-icon name="person-outline"></ion-icon>
-        <ResponsiveLabel>Tài Khoản</ResponsiveLabel>
+        <ResponsiveLabel>
+          {currentUser?.displayName || 'Tài Khoản'}
+        </ResponsiveLabel>
       </StyledLink>
 
       <TextCenter>Đảm bảo 100% sự hài lòng</TextCenter>

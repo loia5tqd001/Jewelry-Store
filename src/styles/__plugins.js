@@ -11,3 +11,5 @@ import 'react-lazy-load-image-component/src/effects/blur.css';
 import './plugins/react-modal-transition.css';
 
 import 'react-tabs/style/react-tabs.css';
+
+import './plugins/notistack-normal-text.css';
