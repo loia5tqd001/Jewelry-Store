@@ -43,7 +43,7 @@ export function ScrollToTopIndicator() {
 
   return (
     <Container onClick={scrollToTopSmoothly} atTop={atTop}>
-      <ion-icon name="caret-up"></ion-icon>
+      <ion-icon name="caret-up"/>
     </Container>
   );
 }

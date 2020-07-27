@@ -42,7 +42,7 @@ function PopupContact() {
       <Container>
         <ContentWrapper>
           <CloseButton onClick={onSubmit}>
-            <ion-icon name="close-outline"></ion-icon>
+            <ion-icon name="close-outline"/>
           </CloseButton>
           <Heading>Đăng ký nhận bản tin</Heading>
           <p>Chúng tôi sẽ cập nhật các chương trình khuyến mãi đến bạn.</p>

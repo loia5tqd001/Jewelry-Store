@@ -1,14 +1,16 @@
-import React, { useContext } from 'react';
+import React, { useState, useContext } from 'react';
+import { Tab, TabList, TabPanel, Tabs } from 'react-tabs';
 import { ThemeContext } from 'styled-components';
+import { useSelectProductById } from '../../redux/products/hooks';
 import routes from '../../utils/routes';
 import ReactMarkdown from 'react-markdown';
+import { useParams, useHistory } from 'react-router-dom';
 
 import Breadcrumb from '../atoms/breadcrumb.comp';
 import Counter from '../atoms/counter.comp';
 import ButtonSliding from '../atoms/button-sliding.comp';
 import ProductDetailsSlick from '../organisms/product-details-page/product-details-slick.comp';
 import SliderRelatedProducts from '../organisms/product-details-page/slider-related-products.comp';
-import RatingCommentTabs from '../organisms/product-details-page/rating-comment-tabs.comp';
 
 import {
   Container,
@@ -19,13 +21,22 @@ import {
   SpecList,
   SpecItem,
   SpecName,
-  SpecContainer,
-  RatingContainer,
+  TabsContainer,
+  RedPrice,
+  CrossedPrice,
 } from './product-detail-page.styled';
-import { info, images, productSpec } from './product-detail-page.data';
+import { info, productSpec } from './product-detail-page.data';
+import { useDispatch } from 'react-redux';
+import { addProduct } from '../../redux/cart/actions';
+import { formatVnd } from '../../utils/helpers';
 
 function ProductDetailPage() {
+  const dispatch = useDispatch();
   const { colors } = useContext(ThemeContext);
+  const [counter, setCounter] = useState(1);
+  const { productId } = useParams();
+  const product = useSelectProductById(productId);
+  const history = useHistory();
 
   return (
     <div>
@@ -34,45 +45,74 @@ function ProductDetailPage() {
       />
       <Container>
         {/*Product slick*/}
-        <ProductDetailsSlick images={images}/>
+        <ProductDetailsSlick images={product?.images} />
+
         {/*Product info*/}
         <ProductInfo>
-          <ProductName>Diamond Ring</ProductName>
-          <ProductPrice>1,400,000₫</ProductPrice>
-          <Counter min={1} value={1} onIncrement={() => null} onDecrement={() => null}/>
+          <ProductName>{product?.name}</ProductName>
+          <ProductPrice>
+            {product?.salePrice ? (
+              <>
+                <RedPrice>{formatVnd(product?.price)}</RedPrice>
+                <CrossedPrice>{formatVnd(product?.salePrice)}</CrossedPrice>
+              </>
+            ) : (
+              formatVnd(product?.price)
+            )}
+          </ProductPrice>
+          <Counter
+            min={1}
+            value={counter}
+            onIncrement={() => setCounter(counter + 1)}
+            onDecrement={() => setCounter(counter - 1)}
+          />
           <ButtonSliding
             bg_static={colors.blueDarker2}
             fg_static={colors.white}
             bg_sliding={colors.white}
             fg_sliding={colors.greyDark1}
             padding="1.5em"
+            onClick={() => {
+              dispatch(addProduct({ product, amount: counter }));
+              history.push(routes.cart.path);
+            }}
           >
             Thêm vào giỏ
           </ButtonSliding>
-          <ReactMarkdown escapeHtml={false} source={info}/>
+          <ReactMarkdown escapeHtml={false} source={info} />
         </ProductInfo>
       </Container>
 
-      {/*Product's specification*/}
-      <SpecContainer>
-        <h2>Thông số</h2>
-        <SpecList>
-          {productSpec.map((spec) => (
-            <SpecItem key={spec.name}>
-              <SpecName>{spec.name}: </SpecName>
-              <span>{spec.value}</span>
-            </SpecItem>
-          ))}
-        </SpecList>
-      </SpecContainer>
+      {/*Product's specification, rating, comments*/}
+      <TabsContainer>
+        <Tabs>
+          <TabList>
+            <Tab>Thông số</Tab>
+            <Tab>Đánh giá</Tab>
+            <Tab>Bình luận</Tab>
+          </TabList>
 
-      {/*Product's rating, comments*/}
-      <RatingContainer>
-        <RatingCommentTabs/>
-      </RatingContainer>
+          <TabPanel>
+            <SpecList>
+              {productSpec.map((spec) => (
+                <SpecItem key={spec.name}>
+                  <SpecName>{spec.name}: </SpecName>
+                  <span>{spec.value}</span>
+                </SpecItem>
+              ))}
+            </SpecList>
+          </TabPanel>
+          <TabPanel>
+            <h2>Chưa có đánh giá nào</h2>
+          </TabPanel>
+          <TabPanel>
+            <h2>Chưa có bình luận nào</h2>
+          </TabPanel>
+        </Tabs>
+      </TabsContainer>
 
-      <SliderRelatedProducts/>
-      <Spacer/>
+      <SliderRelatedProducts />
+      <Spacer />
     </div>
   );
 }

@@ -252,4 +252,10 @@ export const necklaces = [
   },
 ];
 
-export default shuffle([...rings, ...earrings, ...necklaces]);
+const products = shuffle([...rings, ...earrings, ...necklaces]);
+export const getAllProducts = async () => {
+  const delay = (ms) => new Promise((res) => setTimeout(res, ms));
+  // delay utility in js: https://stackoverflow.com/a/47480429/9787887
+  await delay(Math.random() * 1500 + 150);
+  return products;
+}

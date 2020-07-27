@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { selectAmountProductInCart } from '../../../redux/cart/selectors';
 import routes from '../../../utils/routes';
 
 import { useDispatch, useSelector } from 'react-redux';
@@ -18,11 +19,12 @@ import { selectCurrentUser } from '../../../redux/user/selectors';
 function HeaderTopBar({ isHeaderStuck }) {
   const dispatch = useDispatch();
   const currentUser = useSelector(selectCurrentUser);
+  const cartCount = useSelector(selectAmountProductInCart);
 
   return (
     <HeaderTopBarContainer isHeaderStuck={isHeaderStuck}>
       <StyledLink to={routes.account.path}>
-        <ion-icon name="person-outline"></ion-icon>
+        <ion-icon name="person-outline"/>
         <ResponsiveLabel>
           {currentUser?.displayName || 'Tài Khoản'}
         </ResponsiveLabel>
@@ -32,17 +34,17 @@ function HeaderTopBar({ isHeaderStuck }) {
 
       <TopBarRight>
         <StyledLink data-component="search" to={routes.search.path}>
-          <ion-icon name="search-outline"></ion-icon>
+          <ion-icon name="search-outline"/>
           <ResponsiveLabel>Tìm kiếm</ResponsiveLabel>
         </StyledLink>
 
         <StyledLink to={routes.cart.path}>
-          <ion-icon name="cart-outline"></ion-icon>
+          <ion-icon name="cart-outline"/>
           <ResponsiveLabel>Giỏ hàng</ResponsiveLabel>
-          <span>(1)</span>
+          <span>({cartCount})</span>
         </StyledLink>
         <HamburgerIcon onClick={() => dispatch(toggleIsSideNavOpen())}>
-          <ion-icon name="menu"></ion-icon>
+          <ion-icon name="menu"/>
         </HamburgerIcon>
       </TopBarRight>
     </HeaderTopBarContainer>

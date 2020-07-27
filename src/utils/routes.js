@@ -31,7 +31,7 @@ export default {
     display: 'Chính sách đổi trả',
   },
   privacyPolicy: {
-    path: '/privary-policy',
+    path: '/privacy-policy',
     display: 'Chính sách bảo mật',
   },
   termsOfService: {

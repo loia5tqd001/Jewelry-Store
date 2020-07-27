@@ -22,7 +22,7 @@ function SearchBar({ isHeaderStuck }) {
       <InputGroup>
         <Input ref={inputRef} type="text" placeholder="Tìm kiếm sản phẩm" />
         <Button>
-          <ion-icon name="search"></ion-icon>
+          <ion-icon name="search"/>
         </Button>
       </InputGroup>
     </Form>

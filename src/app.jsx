@@ -1,7 +1,9 @@
-import React, { lazy, Suspense } from 'react';
+import React, { lazy, Suspense, useEffect } from 'react';
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import routes from './utils/routes';
 import { useSubscribeUser } from './hooks/use-subscribe-user';
+import { fetchProductsAsync } from './redux/products/actions';
+import { useDispatch } from 'react-redux';
 
 import Loader from './components/atoms/loader.comp';
 import Header from './components/templates/header.comp';
@@ -19,6 +21,11 @@ const NotFoundPage = lazy(() => import('./components/pages/404-page.comp'));
 
 export default function App() {
   useSubscribeUser();
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchProductsAsync());
+  }, [dispatch]);
 
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>

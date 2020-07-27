@@ -14,16 +14,16 @@ function SideNav() {
   const dispatch = useDispatch();
   const isSideNavOpen = useSelector(selectIsSideNavOpen);
 
-  const toglgeSideNav = useCallback(() => {
+  const toggleSideNav = useCallback(() => {
     dispatch(toggleIsSideNavOpen());
   }, [dispatch]);
 
   return (
     <Container isOpen={isSideNavOpen}>
-      <Overlay onClick={toglgeSideNav} />
+      <Overlay onClick={toggleSideNav} />
       <Nav>
-        <CloseButton onClick={toglgeSideNav}>
-          <ion-icon name="close-outline"></ion-icon>
+        <CloseButton onClick={toggleSideNav}>
+          <ion-icon name="close-outline"/>
         </CloseButton>
         <NavList>
           <NavItem>

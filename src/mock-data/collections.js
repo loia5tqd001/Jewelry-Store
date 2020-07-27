@@ -1,4 +1,4 @@
-import { rings, earings, necklaces } from './products';
+import { rings, earrings, necklaces } from './products';
 
 export default [
   {
@@ -11,7 +11,7 @@ export default [
     id: 'collection_2',
     collection: 'Hoa tai',
     image: 'https://file.hstatic.net/1000327411/collection/landingpage_banner_earrings.jpg',
-    items: earings,
+    items: earrings,
   },
   {
     id: 'collection_3',

@@ -3,6 +3,7 @@ import styled, { css } from 'styled-components';
 export const Button = styled.div`
   cursor: pointer;
   font-weight: ${(props) => props.theme.fw.bold};
+  user-select: none;
 
   ${(props) =>
     props.disabled &&

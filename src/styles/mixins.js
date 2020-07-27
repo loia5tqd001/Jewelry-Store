@@ -1,6 +1,6 @@
 import { css } from 'styled-components';
 
-// mitigate blurried text when applying scaling transform:
+// mitigate blurred text when applying scaling transform:
 // https://github.com/NearHuscarl/nearacademy/blob/12dad8a0b8ad3daf374fbd3deaff024b3209f261/src/styles.js#L66-L73
 export const applyScale = (scaleStatement) => css`
   backface-visibility: hidden;

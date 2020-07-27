@@ -27,7 +27,7 @@ function HeaderNav({ isHeaderStuck }) {
         <MainNavItem>
           <MainNavLink title="Nhãn hiệu" to={routes.brands.path} exact>
             Nhãn hiệu
-            <ion-icon name="chevron-down-outline"></ion-icon>
+            <ion-icon name="chevron-down-outline"/>
           </MainNavLink>
 
           <SubNavList>
@@ -42,7 +42,7 @@ function HeaderNav({ isHeaderStuck }) {
         <MainNavItem>
           <MainNavLink title="Sản phẩm" to={routes.products.path} exact>
             Sản phẩm
-            <ion-icon name="chevron-down-outline"></ion-icon>
+            <ion-icon name="chevron-down-outline"/>
           </MainNavLink>
 
           <SubNavList>
