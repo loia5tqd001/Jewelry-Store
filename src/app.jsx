@@ -18,6 +18,7 @@ const ProductDetailPage = lazy(() => import('./components/pages/product-detail-p
 const CartPage = lazy(() => import('./components/pages/cart-page.comp'));
 const AboutPage = lazy(() => import('./components/pages/about-page.comp'));
 const AccountPages = lazy(() => import('./components/pages/account-pages.comp'));
+const SearchPage = lazy(() => import('./components/pages/search-page.comp'));
 const NotFoundPage = lazy(() => import('./components/pages/404-page.comp'));
 
 export default function App() {
@@ -52,6 +53,7 @@ export default function App() {
           />
           <Route path={routes.cart.path} component={CartPage} exact />
           <Route path={routes.about.path} component={AboutPage} exact />
+          <Route path={routes.search.path} component={SearchPage} exact />
           <Route path={routes.account.path} component={AccountPages} />
           <Route component={NotFoundPage} />
         </Switch>
