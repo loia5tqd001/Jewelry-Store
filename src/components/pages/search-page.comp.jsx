@@ -5,7 +5,7 @@ import { SearchButton, Form, SearchInput } from './search-page.styled';
 import { searchProduct } from './search-page.utils';
 import ProductsGrid from '../organisms/search-page/products-grid.comp';
 
-function SearchPage(props) {
+function SearchPage() {
   const allProducts = useSelector(selectAllProducts);
   const [searchKey, setSearchKey] = useState('');
   const preventCb = useCallback((e) => e.preventDefault(), []);

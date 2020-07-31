@@ -1,4 +1,4 @@
-import local from '../../../mock-data/local';
+import local from '../../mock-data/local';
 
 export const getProvinces = () => {
   return local.map((province) => ({

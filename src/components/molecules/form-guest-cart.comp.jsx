@@ -2,9 +2,9 @@ import React, { useState, useCallback } from 'react';
 import Select from 'react-select';
 import { useHistory } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import { selectGuest } from '../../../redux/cart/selectors';
-import { submitGuest } from '../../../redux/cart/actions';
-import routes from '../../../utils/routes';
+import { selectGuest } from '../../redux/cart/selectors';
+import { submitGuest } from '../../redux/cart/actions';
+import routes from '../../utils/routes';
 
 import { getProvinces, getDistricts, getWards } from './form-guest-cart.utils';
 import {
@@ -15,8 +15,6 @@ import {
   MarginTop,
   RadioButton,
   TextInput,
-  PayButton,
-  MarginAuto,
   CustomSelectContainer,
 } from './form-guest-cart.styled';
 
@@ -179,8 +177,6 @@ function FormGuestCart() {
             name="requirement"
           />
         </Row>
-        <PayButton>Đặt hàng</PayButton>
-        <MarginAuto>Bạn có thể chọn hình thức thanh toán sau khi đặt hàng</MarginAuto>
       </form>
     </Container>
   );

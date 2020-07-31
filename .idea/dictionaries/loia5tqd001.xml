@@ -8,15 +8,20 @@
       <w>chưa</w>
       <w>chương</w>
       <w>chạy</w>
+      <w>chắc</w>
+      <w>chọn</w>
       <w>chủng</w>
+      <w>công</w>
       <w>dưới</w>
       <w>dạng</w>
       <w>dịch</w>
       <w>embassadors</w>
       <w>firebaseapp</w>
+      <w>giao</w>
       <w>giảm</w>
       <w>giới</w>
       <w>hiệu</w>
+      <w>hoặc</w>
       <w>hàng</w>
       <w>hình</w>
       <w>khoản</w>
@@ -30,20 +35,26 @@
       <w>luận</w>
       <w>lòng</w>
       <w>lượng</w>
+      <w>muốn</w>
       <w>ngay</w>
       <w>ngày</w>
       <w>người</w>
+      <w>nhân</w>
       <w>nhãn</w>
       <w>nhất</w>
       <w>nhẫn</w>
       <w>nhận</w>
       <w>nhập</w>
       <w>nhật</w>
+      <w>nhắn</w>
       <w>niệm</w>
       <w>nàng</w>
       <w>persistor</w>
       <w>phân</w>
+      <w>phút</w>
+      <w>phương</w>
       <w>phẩm</w>
+      <w>phục</w>
       <w>quên</w>
       <w>smedium</w>
       <w>spead</w>
@@ -51,11 +62,13 @@
       <w>tham</w>
       <w>thiệu</w>
       <w>thoi</w>
+      <w>thành</w>
       <w>thân</w>
       <w>thêm</w>
       <w>thông</w>
       <w>thương</w>
       <w>thấy</w>
+      <w>thức</w>
       <w>tiếp</w>
       <w>tiết</w>
       <w>tiền</w>
@@ -74,12 +87,16 @@
       <w>tăng</w>
       <w>tặng</w>
       <w>tổng</w>
+      <w>viên</w>
       <w>viết</w>
       <w>vàng</w>
       <w>xanh</w>
       <w>điều</w>
+      <w>điện</w>
       <w>đánh</w>
+      <w>đóng</w>
       <w>đăng</w>
+      <w>được</w>
     </words>
   </dictionary>
 </component>

@@ -9,7 +9,7 @@ import {
 import { formatVnd } from '../../utils/helpers';
 import routes, { Link } from '../../utils/routes';
 
-import CartItem from '../organisms/cart-page/cart-item.comp';
+import CartItem from '../molecules/cart-item.comp';
 import ButtonSliding from '../atoms/button-sliding.comp';
 
 import {
@@ -22,7 +22,7 @@ import {
   ButtonActions,
 } from './cart-page.styled';
 
-function CartPage(props) {
+function CartPage() {
   const cartItems = useSelector(selectItemsInCart);
   const itemsCount = useSelector(selectAmountProductInCart);
   const totalMoney = useSelector(selectTotalMoney);

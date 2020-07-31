@@ -13,7 +13,7 @@ import AccountRegister from '../organisms/account-pages/account-register.comp';
 // styles
 import { PageContainer } from './account-pages.styled';
 
-function AccountPages(props) {
+function AccountPages() {
   const currentUser = useSelector(selectCurrentUser);
 
   return (

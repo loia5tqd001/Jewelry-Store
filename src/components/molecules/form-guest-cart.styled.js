@@ -57,13 +57,13 @@ export const NoOptionMessage = styled.p`
 export const TextInput = styled.input`
   padding: 0.75em;
   border-radius: 4px;
-  border: 1px solid ${(props) => props.theme.colors.greyLight6};
+  border: 1px solid ${(props) => props.theme.colors.greyLight3};
   transition: 0.15s;
   /* outline-radius: https://stackoverflow.com/a/6810937/9787887 */
   outline: none;
   &:focus {
-    box-shadow: 0 0 0 1px ${(props) => props.theme.colors.blue4};
-    border-color: ${(props) => props.theme.colors.blue4};
+    box-shadow: 0 0 0 1px ${(props) => props.theme.colors.greyLight3};
+    //border-color: ${(props) => props.theme.colors.blue4};
   }
 `;
 
