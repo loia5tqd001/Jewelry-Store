@@ -15,6 +15,7 @@ import ScrollToTop, { ScrollToTopIndicator } from './components/templates/scroll
 const HomePage = lazy(() => import('./components/pages/home-page.comp'));
 const ProductsPage = lazy(() => import('./components/pages/products-page.comp'));
 const ProductDetailPage = lazy(() => import('./components/pages/product-detail-page.comp'));
+const CartPage = lazy(() => import('./components/pages/cart-page.comp'));
 const AboutPage = lazy(() => import('./components/pages/about-page.comp'));
 const AccountPages = lazy(() => import('./components/pages/account-pages.comp'));
 const NotFoundPage = lazy(() => import('./components/pages/404-page.comp'));
@@ -49,6 +50,7 @@ export default function App() {
             component={ProductDetailPage}
             exact
           />
+          <Route path={routes.cart.path} component={CartPage} exact />
           <Route path={routes.about.path} component={AboutPage} exact />
           <Route path={routes.account.path} component={AccountPages} />
           <Route component={NotFoundPage} />

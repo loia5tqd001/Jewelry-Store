@@ -9,6 +9,13 @@ export const Button = styled.button`
   outline: none;
   color: ${(props) => props.fg_static} !important;
   border: 1px solid ${(props) => props.bg_static};
+  
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  ion-icon {
+    margin-right: 0.3em;
+  }
 
   transition: ${(props) => props.theme.styles.transSlow4};
   background: linear-gradient(

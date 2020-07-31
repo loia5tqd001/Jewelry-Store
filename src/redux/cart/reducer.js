@@ -25,35 +25,35 @@ export default (state = initialState, { type, payload }) => {
       };
     }
 
-    // case types.TAKEOUT_1_PRODUCT: {
-    //   return {
-    //     ...state,
-    //     items: Takeout1ProductFromCart(state.items, payload),
-    //   };
-    // }
-    //
-    // case types.REMOVE_PRODUCT: {
-    //   return {
-    //     ...state,
-    //     items: removeProductFromCart(state.items, payload),
-    //   };
-    // }
-    //
-    // case types.EMPTY_CART: {
-    //   return {
-    //     ...state,
-    //     items: [],
-    //     isInCart: true,
-    //   };
-    // }
-    //
-    // case types.SUBMIT_GUEST: {
-    //   return {
-    //     ...state,
-    //     guest: payload,
-    //     isInCart: false,
-    //   };
-    // }
+    case types.TAKEOUT_1_PRODUCT: {
+      return {
+        ...state,
+        items: Takeout1ProductFromCart(state.items, payload),
+      };
+    }
+
+    case types.REMOVE_PRODUCT: {
+      return {
+        ...state,
+        items: removeProductFromCart(state.items, payload),
+      };
+    }
+
+    case types.EMPTY_CART: {
+      return {
+        ...state,
+        items: [],
+        isInCart: true,
+      };
+    }
+
+    case types.SUBMIT_GUEST: {
+      return {
+        ...state,
+        guest: payload,
+        isInCart: false,
+      };
+    }
 
     default:
       return state;

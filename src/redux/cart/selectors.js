@@ -10,7 +10,7 @@ export const selectItems = createSelector(
 export const selectItemsInCart = createSelector(
   [selectCart],
   (cart) => cart.isInCart ? cart.items : [],
-)
+);
 
 export const selectAmountProductInCart = createSelector(
   [selectItemsInCart],
@@ -24,19 +24,20 @@ export const selectTotalMoney = createSelector(
   [selectItems],
   (items) =>
     items.reduce(
-      (acc, cur) => acc + cur.amount * cur.product.price,
-      0),
-);
+      (acc, cur) => acc + cur.amount * (cur.product.salePrice || cur.product.price),
+      0,
+    ),
+  );
 
 export const selectTotalMoneyInCart = createSelector(
   [selectItemsInCart],
   (items) =>
     items.reduce(
-      (acc, cur) => acc + cur.amount * cur.product.price,
+      (acc, cur) => acc + cur.amount * (cur.product.salePrice || cur.product.price),
       0),
 );
 
 export const selectGuest = createSelector(
   [selectCart],
   (cart) => cart.guest,
-)
+);

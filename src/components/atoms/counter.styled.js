@@ -17,6 +17,7 @@ export const Container = styled.div`
   width: max-content;
   display: flex;
   border-radius: 2px;
+  align-self: start;
 
   ${Button} {
     background: ${(props) => props.theme.styles.backgroundSecondary};
