@@ -1,0 +1,39 @@
+{
+  "files": {
+    "static/js/0.d945bf88.chunk.js": "/Jewelry-Store/static/js/0.d945bf88.chunk.js",
+    "static/js/1.b2e99002.chunk.js": "/Jewelry-Store/static/js/1.b2e99002.chunk.js",
+    "static/js/2.e5ca62d2.chunk.js": "/Jewelry-Store/static/js/2.e5ca62d2.chunk.js",
+    "main.css": "/Jewelry-Store/static/css/main.f4b72529.chunk.css",
+    "main.js": "/Jewelry-Store/static/js/main.6da877cc.chunk.js",
+    "runtime-main.js": "/Jewelry-Store/static/js/runtime-main.52ea25ba.js",
+    "static/css/5.7f53a171.chunk.css": "/Jewelry-Store/static/css/5.7f53a171.chunk.css",
+    "static/js/5.bb833834.chunk.js": "/Jewelry-Store/static/js/5.bb833834.chunk.js",
+    "static/js/6.6096be37.chunk.js": "/Jewelry-Store/static/js/6.6096be37.chunk.js",
+    "static/js/7.2263654d.chunk.js": "/Jewelry-Store/static/js/7.2263654d.chunk.js",
+    "static/js/8.799550cb.chunk.js": "/Jewelry-Store/static/js/8.799550cb.chunk.js",
+    "static/js/9.4944626a.chunk.js": "/Jewelry-Store/static/js/9.4944626a.chunk.js",
+    "static/js/10.05725d21.chunk.js": "/Jewelry-Store/static/js/10.05725d21.chunk.js",
+    "static/js/11.0a6d4b61.chunk.js": "/Jewelry-Store/static/js/11.0a6d4b61.chunk.js",
+    "static/js/12.220dc38f.chunk.js": "/Jewelry-Store/static/js/12.220dc38f.chunk.js",
+    "static/js/13.7d4747a5.chunk.js": "/Jewelry-Store/static/js/13.7d4747a5.chunk.js",
+    "static/js/14.80ce8ae8.chunk.js": "/Jewelry-Store/static/js/14.80ce8ae8.chunk.js",
+    "static/js/15.4cf04e51.chunk.js": "/Jewelry-Store/static/js/15.4cf04e51.chunk.js",
+    "static/js/16.62d413b6.chunk.js": "/Jewelry-Store/static/js/16.62d413b6.chunk.js",
+    "static/js/17.53a6bef5.chunk.js": "/Jewelry-Store/static/js/17.53a6bef5.chunk.js",
+    "static/js/18.610ec149.chunk.js": "/Jewelry-Store/static/js/18.610ec149.chunk.js",
+    "index.html": "/Jewelry-Store/index.html",
+    "precache-manifest.f14dbdf8c7c2d6df4eb2409994767e6c.js": "/Jewelry-Store/precache-manifest.f14dbdf8c7c2d6df4eb2409994767e6c.js",
+    "service-worker.js": "/Jewelry-Store/service-worker.js",
+    "static/js/0.d945bf88.chunk.js.LICENSE.txt": "/Jewelry-Store/static/js/0.d945bf88.chunk.js.LICENSE.txt",
+    "static/js/5.bb833834.chunk.js.LICENSE.txt": "/Jewelry-Store/static/js/5.bb833834.chunk.js.LICENSE.txt",
+    "static/js/8.799550cb.chunk.js.LICENSE.txt": "/Jewelry-Store/static/js/8.799550cb.chunk.js.LICENSE.txt",
+    "static/media/slick-theme.css": "/Jewelry-Store/static/media/slick.f97e3bbf.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.52ea25ba.js",
+    "static/css/5.7f53a171.chunk.css",
+    "static/js/5.bb833834.chunk.js",
+    "static/css/main.f4b72529.chunk.css",
+    "static/js/main.6da877cc.chunk.js"
+  ]
+}
