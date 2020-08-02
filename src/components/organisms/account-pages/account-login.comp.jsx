@@ -109,7 +109,10 @@ function AccountLogin(props) {
               fg_sliding={colors.greyDark1}
               padding="1.5em"
               children="Đăng nhập với Google"
-              onClick={signInWithGoogle}
+              onClick={async (e) => {
+                e.preventDefault();
+                await signInWithGoogle();
+              }}
             />
             <ButtonSliding
               bg_static={colors.blueFacebook}
@@ -118,7 +121,10 @@ function AccountLogin(props) {
               fg_sliding={colors.greyDark1}
               padding="1.5em"
               children="Đăng nhập với Facebook"
-              onClick={signInWithFacebook}
+              onClick={async (e) => {
+                e.preventDefault();
+                await signInWithFacebook();
+              }}
             />
           </ButtonContainer>
         </Form>

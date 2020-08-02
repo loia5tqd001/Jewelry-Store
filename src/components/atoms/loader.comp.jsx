@@ -6,9 +6,9 @@ function Loader() {
   return (
     <Container>
       <StyledLoader>
-        <div></div>
-        <div></div>
-        <div></div>
+        <div/>
+        <div/>
+        <div/>
       </StyledLoader>
     </Container>
   );
