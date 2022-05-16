@@ -11,7 +11,7 @@
     "@testing-library/user-event": "^7.1.2",
     "body-scroll-lock": "^3.0.2",
     "firebase": "^7.16.1",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
     "normalize.css": "^8.0.1",
     "notistack": "^0.9.17",
     "react": "^16.12.0",
